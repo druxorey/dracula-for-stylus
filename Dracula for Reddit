@@ -1,12 +1,11 @@
 /* ==UserStyle==
 @name           Dracula for Reddit
-@namespace      USO Archive
 @author         Modified by Druxorey; Made by chickenblast
-@description    `Soothing pastel theme for Reddit`
+@description    "A dracula inspired theme for the modern reddit UI"
 @version        1.0
-@license        CC0-1.0
-@preprocessor   uso
+@license        GNU General Public License v3.0
 ==/UserStyle== */
+
 @-moz-document url-prefix("https://www.reddit.com/") {
 
     :root,
