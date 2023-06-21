@@ -4,7 +4,7 @@
 @version        1.0
 @description    "Are you tired of the same boring colors on Google Drive? Then try this modern color style based on the Dracula theme"
 @author         Modified by Druxorey
-@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/dracula-for-google-drive
+@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/Styles/dracula-for-google-drive
 @preprocessor	stylus
 
 @var	color	accentColor		"Accent Color"		#bd93f9
