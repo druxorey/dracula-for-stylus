@@ -3,7 +3,7 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 # Google Docs
 
-![This is an image](docs.png)
+![This is an image](youtube-small.png)
 
 # Google Drive
 
