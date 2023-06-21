@@ -3,7 +3,7 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 ## Google Docs
 
-![This is an image](docspng)
+![This is an image](docs.png)
 
 ## Google Drive
 
@@ -19,6 +19,7 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 ## Credits
 
+- Original color theme by https://github.com/dracula/dracula-theme
 - Original google docs style by Walter winghongchan
 - Original  reddit style by chickenblast
 - Original youtube style by winghongchan
