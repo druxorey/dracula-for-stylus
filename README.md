@@ -25,5 +25,6 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 - Original color theme by https://github.com/dracula/dracula-theme
 - Original google docs style by Walter winghongchan
-- Original  reddit style by chickenblast
+- Original reddit style by chickenblast
 - Original youtube style by winghongchan
+- Original whatsapp style by vednoc
