@@ -4,7 +4,7 @@
 @version        1.0
 @description    "Are you tired of the same boring colors on Google Docs? Then try this modern color style based on the Dracula theme"
 @author         Modified by Druxorey; Made by Walter winghongchan
-@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/Dracula%20for%20Reddit
+@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/dracula-for-youtube
 @license        GNU General Public License v3.0
 @preprocessor   less
 @var            select document-filter "Document filter" {"none:None": "none", "dim:Dim": "contrast(80%) brightness(90%)", "invert:Invert*": "var(--darkfilter)"}
