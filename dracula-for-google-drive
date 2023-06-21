@@ -7,11 +7,11 @@
 @homepageURL    https://github.com/druxorey/StylusThemes/blob/main/dracula-for-google-drive
 @preprocessor	stylus
 
-@var	color	accentColor		"Accent Color"			#bd93f9
-@var	color	darkColor		"Dark Color"			#282a36
-@var	color	dark2			"Dark 2"				#1d1e27
-@var	color	dark3			"Dark 3"				#1d1e27
-@var	color	dark4			"Dark 4"				#bd93f9
+@var	color	accentColor		"Accent Color"		#bd93f9
+@var	color	darkColor		"Dark Color"		#282a36
+@var	color	dark2			"Dark 2"		#1d1e27
+@var	color	dark3			"Dark 3"		#1d1e27
+@var	color	dark4			"Dark 4"		#bd93f9
 @var	color	text1			"Primary Text Color"	#bd93f9
 @var	color	text2			"Secondary Text Color"	#f8f8f2
 @var	color	text3			"Tertiary Text Color"	#f8f8f2
