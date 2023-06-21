@@ -17,6 +17,10 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 ![This is an image](youtube.png)
 
+## WhatsApp
+
+![This is an image](whatsapp.png)
+
 ## Credits
 
 - Original color theme by https://github.com/dracula/dracula-theme
