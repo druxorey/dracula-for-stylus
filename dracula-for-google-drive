@@ -1,0 +1,2176 @@
+/* ==UserStyle==
+@name           Dracula for Reddit
+@namespace      https://userstyles.world/user/druxorey
+@version        1.0
+@description    "Are you tired of the same boring colors on Google Drive? Then try this modern color style based on the Dracula theme"
+@author         Modified by Druxorey
+@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/dracula-for-google-drive
+@preprocessor	stylus
+
+@var	color	accentColor		"Accent Color"			#bd93f9
+@var	color	darkColor		"Dark Color"			#282a36
+@var	color	dark2			"Dark 2"				#1d1e27
+@var	color	dark3			"Dark 3"				#1d1e27
+@var	color	dark4			"Dark 4"				#bd93f9
+@var	color	text1			"Primary Text Color"	#bd93f9
+@var	color	text2			"Secondary Text Color"	#f8f8f2
+@var	color	text3			"Tertiary Text Color"	#f8f8f2
+@var	number	overlayOpacity	"Overlay Opacity"		[0.08, 0, 0.5, 0.01]
+@var	number	overlayOpacity2	"Overlay Opacity 2"		[0.14, 0, 0.5, 0.01]
+@var	number	disabledOpacity	"Disabled Opacity"		[0.38, 0, 1, 0.01]
+
+@var	select	activationMode	"Enable Based On"		["Always", "System:System Setting*", "Never"]
+@var	select	embedOn			"Enable For Embeds"		["Match:Match Setting", "Always", "System", "Never"]
+@var	select	enableShare		"Enable For Share Menu" ["Match:Match Setting", "Always", "System", "Never"]
+==/UserStyle== */
+white = text1;
+light = text2;
+dark1 = darkColor;
+accent = accentColor;
+
+detransparentify(top, bottom = #fff, opacity) {
+	rgb(
+		(1 - opacity) * red(bottom) + opacity * red(top),
+		(1 - opacity) * green(bottom) + opacity * green(top),
+		(1 - opacity) * blue(bottom) + opacity * blue(top)
+	);
+}
+
+/* === MAIN === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activate() {
+		// ROOT VARIABLES
+		.vhoiae.KkxPLb {
+			--dt-background: darkColor;
+			--dt-on-background: text1;
+			--dt-outline: dark2;
+			--dt-on-disabled: #25282a;
+			--dt-disabled: #35383b;
+			--dt-inverse-on-surface: dark4;
+			--dt-inverse-surface: dark2;
+			--dt-on-surface-variant: text3;
+			--dt-on-surface: text3;
+			--dt-surface-variant: dark1;
+			--dt-surface1: dark2;
+			--dt-surface1-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+			--dt-surface2: #fff;
+			--dt-surface2-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+			--dt-surface3: dark1;
+			--dt-surface3-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+			--dt-surface4: #fff;
+			--dt-surface4-shadow: 0 2px 3px 0 rgba(60, 64, 67, 0.3), 0 6px 10px 4px rgba(60, 64, 67, 0.15);
+			--dt-surface5: #fff;
+			--dt-surface5-shadow: 0 4px 4px 0 rgba(60, 64, 67, 0.3), 0 8px 12px 6px rgba(60, 64, 67, 0.15);
+			--dt-surface: dark2;
+			--dt-scrim: rgba(32, 33, 36, 0.6);
+			--dt-on-primary-container: #3c4043;
+			--dt-on-primary: #fff;
+			--dt-primary-action-state-layer: accentColor;
+			--dt-primary-action-stateful: accentColor;
+			--dt-primary-action: accentColor;
+			--dt-primary-container-icon: accentColor;
+			--dt-primary-container-link: accentColor;
+			--dt-primary-container: #e8f0fe;
+			--dt-primary-icon: #fff;
+			--dt-primary-link: #fff;
+			--dt-primary-outline: #185abc;
+			--dt-primary: #1a73e8;
+			--dt-on-secondary-container: text3;
+			--dt-on-secondary: #fff;
+			--dt-secondary-action-state-layer: #3c4043;
+			--dt-secondary-action-stateful: #202124;
+			--dt-secondary-action: text2;
+			--dt-secondary-container-icon: #3c4043;
+			--dt-secondary-container-link: accentColor;
+			--dt-secondary-container: #1d1e27;
+			--dt-secondary-icon: #fff;
+			--dt-secondary-link: #fff;
+			--dt-secondary-outline: #3c4043;
+			--dt-secondary: #3c4043;
+			--dt-on-tertiary-container: #3c4043;
+			--dt-on-tertiary: #fff;
+			--dt-tertiary-action-state-layer: #137333;
+			--dt-tertiary-action-stateful: #0d652d;
+			--dt-tertiary-action: #137333;
+			--dt-tertiary-container-icon: #137333;
+			--dt-tertiary-container-link: #137333;
+			--dt-tertiary-container: #e6f4ea;
+			--dt-tertiary-icon: #fff;
+			--dt-tertiary-link: #fff;
+			--dt-tertiary-outline: #137333;
+			--dt-tertiary: #188038;
+			--dt-error-action-state-layer: #c5221f;
+			--dt-error-action-stateful: #b31412;
+			--dt-error-action: #c5221f;
+			--dt-error-container-icon: #c5221f;
+			--dt-error-container-link: #c5221f;
+			--dt-error-container: #fce8e6;
+			--dt-error-icon: #fff;
+			--dt-error-link: #fff;
+			--dt-error-outline: #b31412;
+			--dt-error: #d93025;
+			--dt-on-error-container: #3c4043;
+			--dt-on-error: #fff;
+			--dt-on-warning-container: #3c4043;
+			--dt-on-warning: #202124;
+			--dt-warning-action-state-layer: #ea8600;
+			--dt-warning-action-stateful: #202124;
+			--dt-warning-action: #3c4043;
+			--dt-warning-container-icon: #3c4043;
+			--dt-warning-container-link: #3c4043;
+			--dt-warning-container: #fef7e0;
+			--dt-warning-icon: #3c4043;
+			--dt-warning-link: #3c4043;
+			--dt-warning-outline: #ea8600;
+			--dt-warning: #f9ab00;
+		}
+
+		body {
+			color: light;
+			background-color: darkColor;
+		}
+
+		body[jsaction='UjQMac:.CLIENT;wINJic:.CLIENT'] {
+			background: none;
+			backdrop-filter: blur(10px);
+		}
+
+		.g3Fmkb {
+			background: var(--dt-background);
+		}
+
+		:focus {
+			outline-color: accentColor;
+		}
+
+		input {
+			font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+		}
+
+		::placeholder {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: light !important;
+			opacity: 1 !important;
+			/* Firefox */
+		}
+
+		a {
+			color: accentColor;
+		}
+
+		.a-Va-Zb-vb:focus, .a-Va-Zb-vb:hover {
+			border: 1px solid transparent;
+			box-shadow: inset 0 -2px 0 0 accentColor;
+		}
+
+		/* drive text next to logo */
+		.gb_Vc .gb_Xd {
+			color: text2;
+		}
+
+		.gb_0c .gb_2d {
+			color: text2;
+		}
+
+		/* various top menu bar/navbar things */
+		.ak25Me {
+			border-bottom: none;
+		}
+
+		.gb_qa svg, .gb_Cc svg, .gb_Zc .gb_fe, .gb_Oc .gb_fe {
+			color: light;
+			fill: light;
+		}
+
+		.gb_pa svg, .gb_Ac svg, .gb_Wc .gb_5d, .gb_Mc .gb_5d {
+			color: light;
+		}
+
+		.a-qc-La {
+			background: transparent;
+		}
+
+		.a-U-J-x {
+			color: light;
+		}
+
+		.a-U-ye-ha > .a-U-J .a-U-Ze svg, .a-U-xc-J .a-Ng-c-wk svg, .a-U-J .a-U-Ze svg {
+			fill: light;
+		}
+
+		.Hb-ja-Na .a-U-xc:focus .a-U-ye.a-U-Vd-jh>.a-U-J {
+			background-color: dark3;
+			border-color: accentColor;
+		}
+
+		.a-U-ye-ha > .a-U-J > .a-U-J-x {
+			color: accentColor;
+		}
+
+		.a-Ng-c-ha svg {
+			fill: accentColor;
+		}
+
+		.a-D-B {
+			background-color: dark2;
+		}
+
+		/* app switcher icon active state */
+		.gb_C[aria-expanded=true] .gb_Ve, .gb_C[aria-expanded=true] .gb_We {
+			fill: accentColor;
+		}
+
+		/* some icons */
+		.gb_qa svg, .gb_Bc svg, .gb_Xc .gb_6d, .gb_Nc .gb_6d {
+			color: light;
+		}
+
+		/* svg icons */
+		.a-s-fa-Ha-pa {
+			fill: light;
+		}
+
+		header#gb {
+			background-color: dark2 !important;
+		}
+
+		.gb_sa svg, .gb_Fc svg, .gb_8c .gb_he, .gb_Rc .gb_he {
+			color: light;
+		}
+
+		/* == SCROLL BAR == */
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		.a-t-j .a-s-oe:focus::-webkit-scrollbar-track, .a-t-j .a-s-oe:hover::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		body::-webkit-scrollbar-track-piece {
+			background-color: transparent;
+			border-color: transparent;
+		}
+
+		::-webkit-scrollbar-track:hover {
+			background-color: unset;
+		}
+
+		/* == LEFT SIDEBAR == */
+		/* left sidebar background */
+		.ZHllM, .ALpC8b {
+			background: dark1;
+		}
+
+		/* left sidebar item hover */
+		:not(.a-U-ye-ha)>.a-U-J:hover, :not(.a-U-ye-ha)>.a-U-J-W {
+			background-color: dark2;
+		}
+
+		/* active left sidebar item */
+		.a-U-ye-ha > .a-U-J {
+			background-color: rgba(accentColor, 0.2);
+		}
+
+		/* drag and drop over left sidebar item */
+		.a-U-ye:not(.a-U-ye-ha) .a-U-J.a-l-Sa-Wa-ka {
+			background-color: rgba(accentColor, 0.2);
+		}
+
+		/* new button */
+		.a-ec-Gd .Kzazxf.x6jRSb {
+			background-color: dark3;
+			color: white;
+			box-shadow: 0 1px 2px 0 rgba(black, overlayOpacity), 0 1px 3px 1px rgba(black, overlayOpacity);
+		}
+
+		.a-ec-Gd .Kzazxf.x6jRSb:hover, .a-ec-Gd .Kzazxf.x6jRSb:focus {
+			background-color: dark2;
+		}
+
+		.a-U-J-x {
+			color: light;
+		}
+
+		/* FILE CREATION MENU */
+		/* dividers between file type and arrow */
+		.a-S8Cb5b-aa:before {
+			border-left-color: rgba(text1, overlayOpacity);
+		}
+
+		/* TOP BAR */
+		.gb_oa svg, .gb_Ec svg, .gb_1c .gb_3d, .gb_Qc .gb_3d {
+			color: light;
+		}
+
+		/* search bar */
+		// .gb_Se {
+		// 	background: dark1;
+
+		// 	&.gb_Te {
+		// 		background: dark3;
+		// 	}
+		// }
+		// .gb_Xe {
+		// 	background: dark1;
+		// 
+		// 	&.gb_Ze {
+		// 		background: dark3;
+		// 	}
+		// }
+		.gb_ye {
+			background: dark1;
+
+			&.gb_ze {
+				background: dark3;
+			}
+		}
+
+		// .gb_4e, .gb_Ue, .gb_Te, .gb_Ne {
+		// background: darkColor !important;
+		// }
+		// .gb_Me {
+		// background: dark3;
+		// }
+		// .gb_Qe {
+		// background: dark1;
+		// }
+		// .gb_Le {
+		// background: darkColor;
+		// }
+		.gb_rf, .gb_of, .gb_gf, .gb_ff, .gb_cf {
+			color: white !important;
+
+			&::placeholder {
+				color: light !important;
+			}
+		}
+
+		/* search bar active */
+		.gb_7e.gb_8e, .gb_Ve.gb_We, .gb_Ue.gb_Ve, .gb_Te.gb_Ue {
+			background: dark3 !important;
+			transition: 0.2s ease-in-out;
+		}
+
+		.gb_Le.gb_Me {
+			background: dark3;
+		}
+
+		.gb_Qe.gb_Re {
+			background: dark3;
+		}
+
+		/* search bar active icons */
+		.gb_Ne.gb_Oe button svg {
+			color: light;
+		}
+
+		/* search bar bg */
+		.a-D-B-WErN3d-j {
+			border-bottom-color: dark3;
+		}
+
+		/* search bar input (old) */
+		.gb_ef, .gb_Te.gb_Ue .gb_ef, .gb_8e, .gb_Ne.gb_Oe .gb_8e, .gb_6e, .gb_Le.gb_Me .gb_6e {
+			color: white;
+			caret-color: white;
+		}
+
+		/* search bar input */
+		// .gb_df {
+		// 	color: text2;
+		// }
+		// .gb_if, .gb_Xe.gb_Ze .gb_if {
+		// 	color: text2;
+		// }
+		.gb_Te:not(.gb_bf), .gb_ye.gb_ze .gb_Te {
+			color: text2;
+		}
+
+
+		/* search bar input active */
+		.gb_Se.gb_Te .gb_df {
+			color: text1;
+		}
+
+		/* search bar buttons while search is active */
+		.gb_Te.gb_Ue button svg {
+			color: white;
+		}
+
+		/* current folder */
+		.h-R-w-d.a-l-S-Pc-w-d, .Q62IOe {
+			color: white;
+		}
+
+		.a-l-S-Pc-w-d.h-R-w-d-W {
+			background-color: dark3;
+		}
+
+		.a-l-S-Pc-w-d.h-R-w-d-pb {
+			background-color: rgba(accentColor, 0.1);
+			color: accentColor;
+		}
+
+		.a-D-B .a-l-S-Pc-w-d.h-R-w-d-pb .a-w-d-aa-zd svg {
+			fill: accentColor;
+		}
+
+		/* top toolbar icons */
+		.a-c-d.h-R-d-pb, .Hb-ja-Na .a-c-d.h-R-d-Pb.h-R-d-pb:not(.h-R-d-db), .a-c-d:not(.h-R-d-db):active {
+			background-color: dark3;
+		}
+
+		/* toolbar icons */
+		.XV0XSd .a-d-c svg {
+			fill: light;
+			opacity: 1;
+		}
+
+		/* toolbar icons disabled */
+		.h-R-d-db .a-d-c svg {
+			opacity: disabledOpacity;
+		}
+
+		.Ewn2Sd.C0fwCb .wo35tf {
+			fill: light;
+			opacity: 0.5;
+		}
+
+		.a-D-B .a-c-d.h-R-d-rc svg, .a-D-B .a-c-d.h-R-d-pb svg, .a-D-B .Hb-ja-Na .a-c-d.h-R-d-Pb.h-R-d-pb:not(.h-R-d-db) svg, .a-D-B .a-c-d:not(.h-R-d-db):active svg {
+			fill: accentColor;
+		}
+
+		.a-c-d.h-R-d-rc {
+			background: rgba(accentColor, 0.2);
+		}
+
+		/* top toolbar icons hover */
+		.Hb-ja-Na .a-c-d:not(.h-R-d-db):focus, .Hb-ja-Na .a-c-d:not(.h-R-d-db).h-R-d-Pb, .a-c-d:not(.h-R-d-db):hover, .a-c-d.h-R-d-W:not(.h-R-d-db) {
+			background-color: dark3;
+		}
+
+		.a-c-d:hover, .a-c-d.h-R-d-W {
+			border: none;
+			background-color: dark3;
+		}
+
+		/* top toolbar icons divider */
+		.a-d-vc {
+			border-color: dark3;
+		}
+
+		/* file path ellipsis */
+		.o-Yc-Vf-d svg {
+			fill: light;
+		}
+
+		.o-Yc-Vf-d.h-d-pb svg, .Hb-ja-Na .o-Yc-Vf-d.h-d-pb.h-d-Pb svg {
+			fill: accent;
+		}
+
+		.o-Yc-Vf-d.h-d-pb, .o-Yc-Vf-d.h-d-pb.h-d-W {
+			background-color: rgba(accent, overlayOpacity);
+		}
+
+		.Hb-ja-Na .o-Yc-Vf-d.h-d-Pb, .Hb-ja-Na .o-Yc-Vf-d.h-d-pb.h-d-Pb {
+			border-color: accent;
+		}
+
+		/* current file path bg */
+		.a-D-B-x {
+			background-color: darkColor;
+		}
+
+		.a-s-Ba-Ak {
+			border-bottom-color: dark3;
+		}
+
+		/* current file path folders */
+		.o-Yc-o-T {
+			color: light;
+		}
+
+		.o-Yc-o-T:hover, .Hb-ja-Na .o-Yc-o-T:focus:hover {
+			background-color: dark3;
+		}
+
+		/* current folder dropdown icon */
+		.a-l-S-Pc-w-d .a-w-d-aa-zd svg {
+			fill: white;
+		}
+
+		/* quick access heading */
+		.VV2Bdf {
+			color: light;
+		}
+
+		/* == GENERAL FILE DISPLAY == */
+		/* file display on drag and drop hover */
+		.a-l-Sa-Wa-ka {
+			background-color: rgba(accentColor, overlayOpacity2);
+			box-shadow: inset 2px 2px accentColor, inset -2px -2px accentColor, 0 1px 2px rgba(darkColor, 10%);
+		}
+
+		/* folder icons with default color */
+		/* .B56cNe svg[fill='#5f6368'] {
+			fill: text3;
+		} */
+		/* == FILE LIST VIEW == */
+		/* file list background */
+		.PolqHc {
+			background: transparent;
+		}
+
+		/* file list, shared with me file list */
+		.aabwZd .WYuW0e, .a-t-cb {
+			color: text3;
+			fill: light;
+			border-bottom-color: dark3;
+		}
+
+		.aabwZd .WYuW0e .M3pype[data-column-field='6'] {
+			color: light;
+			fill: light;
+		}
+
+		/* shared with me file names */
+		.l-t-T-V > .l-Ab-T-r {
+			color: light;
+		}
+
+		.a-t-J {
+			color: light;
+		}
+
+		/* SELECTED ITEMS */
+		/* list entry background */
+		.s55KNe:not(.KBj6Qd) .GZwC2b .jGNTYb, .aabwZd:not(.KBj6Qd) .GZwC2b, .a-t-J-ha {
+			background-color: detransparentify(accentColor, darkColor, overlayOpacity);
+			color: accentColor;
+		}
+
+		.a-t-J-ha .l-t-T-V > .l-Ab-T-r {
+			color: accentColor;
+		}
+
+		.aabwZd:not(.KBj6Qd) .GZwC2b .M3pype .YUNZ4c {
+			color: accentColor;
+			fill: accentColor;
+		}
+
+		/* file list offline disabled items */
+		.a-cc .aabwZd .WYuW0e .ACGwFc .M3pype, .a-cc .aabwZd .WYuW0e .M3pype .YUNZ4c, .a-cc .l-oi-cc .l-t-T-V > .l-Ab-T-r, .l-oi-ka .l-t-T-V > .l-Ab-T-r, .a-cc .l-oi-cc .a-t-cb, .l-oi-ka .a-t-cb {
+			color: rgba(light, disabledOpacity);
+		}
+
+		/* file name */
+		/* note: place after styling for offline/disabled items, otherwise file name will not be highlighted when selected */
+		.aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field='6'] {
+			color: accentColor;
+			fill: accentColor !important;
+		}
+
+		/* file list group time/date headings e.g. 'today', 'earlier this week' in shared list */
+		.a-ok-Ji-ga {
+			color: white;
+		}
+
+		.a-t-j .a-ok-Ji-D {
+			border-color: text3;
+		}
+
+		/* ditto in trash */
+		.aabwZd .Tguc8d {
+			background-color: transparent;
+			border-color: dark3;
+			border-top-color: transparent;
+			color: white;
+		}
+
+		/* file list :focus border */
+		.Hb-ja-Na .s55KNe .WYuW0e [role='row']:focus .jGNTYb::after, .Hb-ja-Na .aabwZd .WYuW0e [role='row']:focus::before {
+			border-color: accentColor;
+		}
+
+		/* file list :focus border in search results */
+		.Hb-ja-Na .a-t-J-ha.a-t-J-Vd-ja.a-t-J-Vd-jh > .a-t-cb:first-child > .a-t-cb-Ef-Ja > .a-t-cb-oa, .Hb-ja-Na .a-t-J-ha.a-t-J:focus > .a-t-cb:first-child > .a-t-cb-Ef-Ja > .a-t-cb-oa, .Hb-ja-Na .a-t-J-Vd-ja.a-t-J-Vd-jh .a-t-cb-oa, .Hb-ja-Na .a-t-J-ha.a-t-J:focus .a-t-cb-oa, .Hb-ja-Na .a-t-J-ha.a-t-J-Vd-ja.a-t-J-Vd-jh .a-t-cb:last-child > .a-t-cb-Ef-Ja > .a-t-cb-oa, .Hb-ja-Na .a-t-J-ha.a-t-J:focus > .a-t-cb:last-child > .a-t-cb-Ef-Ja > .a-t-cb-oa {
+			border-color: accentColor;
+		}
+
+		/* file list last editor */
+		.aabwZd .WYuW0e .M3pype .YUNZ4c {
+			color: rgba(light, 0.5);
+		}
+
+		/* file list text placeholder that appears before text is loaded */
+		.Oni9ib {
+			background: dark3;
+		}
+
+		/* file list headers */
+		.N7iPof, .a-t-D {
+			background-color: darkColor;
+			border-bottom-color: dark3 !important;
+		}
+
+		.iZz7md, .a-t-D-cb {
+			color: light;
+		}
+
+		.iZz7md.aaQsNb:hover, .iZz7md.aaQsNb:hover svg, .iZz7md .I2rTXb:focus, .iZz7md .I2rTXb:focus svg {
+			color: white;
+			fill: white;
+		}
+
+		.a-t-hd-Il-w-d:focus, .a-t-hd-Il-w-d:hover, .a-t-D-ip:focus, .a-t-D-ip:hover {
+			color: white;
+			fill: white;
+		}
+
+		.a-t-hd-Il-w-d:focus .a-t-hd-Il-c svg, .a-t-hd-Il-w-d:hover .a-t-hd-Il-c svg {
+			fill: white;
+		}
+
+		/* file list headers sort direction arrow */
+		.KZ6CTb.a-c-d svg {
+			fill: light;
+		}
+
+		.a-t-D-hd-Il-j:focus .a-t-hd-mhHukc-aa svg, .a-t-D-hd-Il-j:hover .a-t-hd-mhHukc-aa svg, .a-t-D-hd-Il-j .a-t-hd-mhHukc-aa svg {
+			fill: light;
+		}
+
+		.a-t-D-hd-Il-j .a-t-hd-mhHukc-aa-j:focus svg, .a-t-D-hd-Il-j .a-t-hd-mhHukc-aa-j:hover svg, .a-s-Xc-ag-fa-Te .a-t-D-V-j:focus .a-t-hd-mhHukc-aa svg, .a-s-Xc-ag-fa-Te .a-t-D-V-j:hover .a-t-hd-mhHukc-aa svg {
+			fill: white;
+		}
+
+		/* right click context menu dropdown */
+		.h-w {
+			background-color: dark2;
+		}
+
+		.a-w-Mr::after {
+			background: none;
+		}
+
+		/* right click context menu icons */
+		.a-v-c-mh {
+			opacity: 1;
+		}
+
+		.h-v-x, .h-v-x svg {
+			color: text2;
+			fill: text3;
+		}
+
+		.h-Yo {
+			border-top-color: dark3;
+		}
+
+		.h-v-db .h-v-Ol, .h-v-db .h-v-x {
+			color: rgba(text2, 0.3) !important;
+		}
+
+		/* hover */
+		.h-v-pc, .h-v-W {
+			background-color: dark3;
+		}
+
+		.h-v-pc .h-v-x, .h-v-W .h-v-x {
+			color: light;
+		}
+
+		/* right click context menu: available offline toggle, disabled */
+		.a-v-c-Ge use[fill='#FFF'][href='#tf-a'] {
+			fill: darkColor;
+		}
+
+		.a-v-c-Ge use[fill='#000'][href='#tf-a'] {
+			fill: text2;
+		}
+
+		.a-v-c-Ge use[fill='#FFF'][href='#tf-c'] {
+			fill: text3;
+		}
+
+		/* right click context menu: available offline toggle, enabled */
+		.a-v-c-Ge use[fill='#fff'] {
+			fill: darkColor;
+		}
+
+		.a-v-c-Ge use[fill='#4285F4'], .a-v-c-Ge circle[fill='#4285F4'] {
+			fill: accentColor;
+		}
+
+		/* file list search results footer for file path */
+		.a-S-dc {
+			background-color: darkColor;
+			color: light;
+			border-top-color: dark3;
+		}
+
+		.a-S-dc-Q-r {
+			color: light;
+		}
+
+		.a-S-dc-ds:focus, .a-S-dc-ds:hover, .a-S-dc-Q-A:focus, .a-S-dc-Q-A:hover {
+			color: text1;
+		}
+
+		.OelKyd {
+			background: dark1;
+			border-color: transparent;
+		}
+
+		.usP4bb.sj692e {
+			--gm-neutraltextbutton-ink-color: var(--dt-secondary-action, #3c4043);
+			--gm-neutraltextbutton-state-color: var(--dt-primary-action-state-layer, #1967d2);
+			--gm-neutraltextbutton-ink-color--stateful: var(--dt-primary-action-stateful, #185abc);
+		}
+
+		/* context menu question mark help icon popup explanation e.g. what are shortcuts */
+		.Y6NKxf {
+			background-color: darkColor;
+			box-shadow: 0 1px 3px 0 rgba(dark3, 0.3), 0 4px 8px 3px rgba(dark3, 0.15);
+		}
+
+		/* search results offline icons next to file name */
+		.l-t-Op-cc-j .Auu9lc > .l-c-cc {
+			fill: light;
+		}
+
+		/* file list icons next to file name (shared file, starred, offline, etc.) */
+		.aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field='6'] svg, .l-t-T-j .l-t-sb-c-ha svg {
+			fill: accentColor;
+		}
+
+		.a-t-J-ha .l-t-Op-cc-j .Auu9lc > .l-c-cc {
+			fill: accentColor;
+		}
+
+		/* file list action items counter icon */
+		.ocLVN-Y-Sn-og {
+			border: none;
+			background-color: dark3;
+		}
+
+		/* file list action items counter icon text */
+		.ocLVN-Y-Sn-og-yc {
+			color: light;
+		}
+
+		.ocLVN-Y-Sn-og:hover {
+			background-color: dark2;
+		}
+
+		/* file list action items counter icon when item is selected */
+		.aabwZd:not(.KBj6Qd) .GZwC2b .ocLVN-Y-Sn-og {
+			background-color: accentColor;
+		}
+
+		.aabwZd:not(.KBj6Qd) .GZwC2b .ocLVN-Y-Sn-og .ocLVN-Y-Sn-og-yc {
+			color: darkColor;
+		}
+
+		.a-t-J-ha .ocLVN-Y-Sn-og {
+			background-color: accentColor;
+		}
+
+		.a-t-J-ha .ocLVN-Y-Sn-og .ocLVN-Y-Sn-og-yc {
+			color: darkColor;
+		}
+
+		/* file list action items pop-up */
+		.ocLVN-w-ia .h-w {
+			background-Color: dark2;
+		}
+
+		.ocLVN-w-ia .g-ia-Ud .g-ia-Jd {
+			border-color: dark2 transparent;
+		}
+
+		/* quick access suggestions unloaded placeholder */
+		.xI4DIe, .Wj69db, .A3bYpd {
+			background: dark3;
+		}
+
+		/* quick access suggestions */
+		.L202Xe {
+			background: dark2;
+			border-color: dark2;
+		}
+
+		.pMw0s .g5SSAf .ta-gc-np-Nd {
+			background-color: dark3;
+		}
+
+		.RwLyCe {
+			border-top-color: dark2;
+		}
+
+		.eAQ1W {
+			color: text2;
+		}
+
+		.Vl9rfc {
+			color: text3;
+		}
+
+		.l-u-Ab-zb {
+			background-color: dark3;
+		}
+
+		.Ccie2c:focus {
+			transition: 0.5s !important;
+		}
+
+		.Ccie2c:focus .L202Xe, .Ccie2c.Pb .L202Xe {
+			border-color: transparent;
+		}
+
+		.Ccie2c:focus .L202Xe, .Ccie2c.Pb .L202Xe, .Ccie2c:focus .v2devc, .Ccie2c.Pb .v2devc {
+			background-color: detransparentify(accentColor, darkColor, overlayOpacity);
+			color: white;
+		}
+
+		.Ccie2c:focus .eAQ1W, .Ccie2c.Pb .eAQ1W {
+			color: accentColor;
+		}
+
+		.Ccie2c:focus .Vl9rfc, .Ccie2c.Pb .Vl9rfc {
+			color: text3;
+		}
+
+		/* == FILE GRID VIEW == */
+		/* background of tiles in my drive */
+		.s55KNe .jGNTYb {
+			background-color: dark3;
+			border-color: transparent;
+		}
+
+		/* text color in my drive */
+		.WYuW0e {
+			color: white;
+		}
+
+		/* background of tiles in shared/search */
+		.l-u-xb {
+			background-color: dark3;
+			border-color: transparent;
+		}
+
+		/* text color in shared/search */
+		.l-u-V {
+			color: white;
+		}
+
+		/* background of tiles in computers */
+		.l-u-xb.l-u-o {
+			border-color: transparent;
+		}
+
+		/* note: selected text/background colors for files in my drive are the same as in the list view */
+		/* selected text color in shared/search */
+		.l-u-ha .l-u-V {
+			color: accentColor;
+		}
+
+		/* selected background color in shared/search */
+		.l-u-ha {
+			background-color: detransparentify(accentColor, darkColor, overlayOpacity);
+		}
+
+		/* :focus border in shared/search */
+		.Hb-ja-Na .a-u-xb-j:focus .l-u-xb {
+			border-color: accentColor;
+		}
+
+		/* file type headings */
+		.s55KNe .Tguc8d {
+			color: light;
+		}
+
+		/* sort options selector */
+		.ZqJeHd.a-c-d.a-r-d {
+			color: light;
+		}
+
+		.a-u-hd-Mb-dd .a-hd-Il-w-d {
+			color: light;
+		}
+
+		/* sort options arrow */
+		.a-u-hd-Mb-dd .a-hd-Il-mhHukc-d svg {
+			opacity: 1;
+		}
+
+		/* == INFO SIDEBAR == */
+		.a-ub-Gd, .a-ub-oa, .y-C-Ed-V, .y-C {
+			background-color: darkColor;
+			border-color: transparent;
+		}
+
+		.y-C-ka:hover, .y-C-ka:active, .y-C-ka:focus {
+			background-color: unset;
+		}
+
+		.y-C-ka-T.y-C-xj-ka:hover, .y-C-ka-T.y-C-xj-ka:active, .y-C-ka-T.y-C-xj-ka:focus, .y-C-ka-T .y-C-xj-ka:hover, .y-C-ka-T .y-C-xj-ka:active, .y-C-ka-T .y-C-xj-ka:focus {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.a-ub-Gd {
+			border-left: 1px solid dark2;
+		}
+
+		/* info sidebar tabs */
+		.a-ub-ra-B > .h-ra-B > .h-ra {
+			color: light;
+		}
+
+		.Hb-ja-Na .a-ub-ra-B > .h-ra-B > .h-ra.h-ra-ha:focus {
+			background-color: unset;
+			outline-color: accentColor;
+		}
+
+		.a-ub-ra-B > .h-ra-B > .h-ra:hover > .a-ra-Mb-j > .a-ra-Mb {
+			border-bottom-color: dark;
+		}
+
+		.a-ub-ra-B > .h-ra-B {
+			border-bottom-color: dark3;
+		}
+
+		/* info sidebar tabs active */
+		.a-ub-ra-B > .h-ra-B > .h-ra-ha {
+			color: accentColor;
+		}
+
+		/* info sidebar tabs active bottom border */
+		.a-ub-ra-B > .h-ra-B > .h-ra.h-ra-ha > .a-ra-Mb-j > .a-ra-Mb {
+			border-bottom-color: accentColor;
+		}
+
+		/* info sidebar text */
+		.y-C-sa-RvPyde, .y-C-H-Sb {
+			color: white;
+		}
+
+		/* info sidebar activity stream general text color */
+		.y-C-q-D, .y-C-Ed-V, .y-C-Ya, .y-C-q-j, .y-C-fh-Bf-r, .y-C-fh-Bf-Jj {
+			color: text3;
+		}
+
+		/* info sidebar title */
+		.a-Mg-V-T, .a-Mg-YsLxq-V-T {
+			color: white;
+		}
+
+		.a-Mg-V:focus > .a-Mg-V-T, .a-Mg-V:hover > .a-Mg-V-T {
+			color: accentColor;
+		}
+
+		/* info sidebar item locate in folder icon */
+		.y-C-ka:hover .y-C-lg svg, .y-C-ka:active .y-C-lg svg, .y-C-ka:focus .y-C-lg svg {
+			fill: light !important;
+		}
+
+		.y-C-lg:hover svg, .y-C-lg:active svg, .y-C-lg:focus svg, .y-C-ka:hover .y-C-lg:hover svg, .y-C-ka:active .y-C-lg:active svg, .y-C-ka:focus .y-C-lg:focus svg {
+			fill: light;
+		}
+
+		/* INFO SIDEBAR DETAILS */
+		/* headings */
+		.a-q-Lf-V, .a-q-Jc-V {
+			color: text1;
+		}
+
+		img[src$='empty_state_details.png'] {
+			content: url('https://raw.github.com/Gravitonic/userstyles/main/empty_state_details.png');
+		}
+
+		/* folder icon preview background */
+		.l-Mg-wg-o .a-q-zb-j {
+			background-color: dark2;
+			border: transparent;
+		}
+
+		.a-q-Jc-Pj-Ya, .a-q-Lf-me-Z-r {
+			color: light;
+		}
+
+		/* sharing settings icon */
+		.a-q-me-Z-c svg {
+			fill: text3;
+		}
+
+		/* owner and collaborators divider */
+		.H-qa-ud.H-qa-ud-Dg {
+			border-right-color: rgba(text1, overlayOpacity);
+		}
+
+		/* additional editors display (+n) */
+		.H-qa-Ma-d-Jb {
+			border-color: text3;
+		}
+
+		.H-qa-Ma-d-ga {
+			color: text3;
+		}
+
+		/* info sidebar folder container */
+		.y-C-je {
+			border-color: dark3;
+		}
+
+		/* shared with me file list background */
+		.a-t-j .a-gd-j {
+			background-color: darkColor;
+		}
+
+		/* == SHARED WITH ME == */
+		/* shared file suggestions heading */
+		.HclN9d {
+			color: text2;
+		}
+
+		/* suggestion card */
+		.Onyn4c {
+			background-color: transparent;
+			border-color: dark4;
+		}
+
+		.ObPBWd {
+			color: text1;
+		}
+
+		.N1Qolf {
+			color: text2;
+		}
+
+		.gqNuu {
+			color: text3;
+		}
+
+		.ObPBWd {
+			border-bottom-color: dark4;
+		}
+
+		/* placeholders for text while loading */
+		.vr5Aaf, .sUluqb, .XnpCh {
+			background-color: dark3;
+		}
+
+		/* placeholder for icon while loading */
+		.c4vRU {
+			background-color: dark3;
+		}
+
+		/* INFO SIDEBAR: ACTIVITY STREAM */
+		/* no recorded activity before date message */
+		.y-E-Xc-Ma-hi-r {
+			color: text3;
+		}
+
+		/* you are offline message */
+		.a-Mg-cc {
+			color: text3;
+		}
+
+		/* show all button for long lists of flies */
+		.y-C-rh-d {
+			color: accent;
+		}
+
+		.y-C-rh-d-Pb {
+			background-color: rgba(accent, overlayOpacity);
+		}
+
+		.y-C-rh-d-W {
+			background-color: rgba(accent, overlayOpacity);
+		}
+
+		.y-C-rh-d-W.y-C-rh-d-Pb {
+			background-color: rgba(accent, overlayOpacity2);
+		}
+
+		/* INFO SIDEBAR: DETAILS PANE WITH NO FOLDER SELECTED */
+		/* Select a file or folder to view its details */
+		.a-q-Xc-Ab {
+			color: text3;
+		}
+
+		/* INFO SIDEBAR: DETAILS PANE */
+		/* information labels */
+		.a-q-Jc-bj {
+			color: text3;
+		}
+
+		/* current location on hover */
+		.a-q-rj-r:focus, .a-q-rj-r:hover {
+			color: accent;
+		}
+
+		/* description placeholder */
+		.a-q-Lb-go {
+			color: text3;
+		}
+
+		/* caption tracks placeholder */
+		.a-q-Ki {
+			color: text3;
+		}
+
+		/* viewer download permission info */
+		.a-q-Ed-Js-j {
+			color: text3;
+		}
+
+		/* share icon next to folder */
+		.H-qa-H-d-c div svg path {
+			fill: light;
+		}
+
+		/* storage percentage used */
+		.B-ZB7aWe-UvFRu {
+			box-shadow: none;
+		}
+
+		.B-ZB7aWe-UvFRu.L3Yhxc-Ya {
+			background-color: accentColor !important;
+			box-shadow: 2px 0 0 accentColor !important;
+		}
+
+		.B-Nd-ZB7aWe-UvFRu {
+			background-color: dark3;
+		}
+
+		/* storage numerical value used */
+		.ub-ml-Pr .USrqEe-ml-Pr-gi .cr-hTVF2c-r {
+			color: text3;
+		}
+
+		/* storage top border divider */
+		.a-U-xc > .a-da-fc-Ug::after, .a-U-xc > .a-da-ji::before, .a-U-xc > .a-da-Ul::before {
+			border-color: dark3;
+		}
+
+		/* buy storage button */
+		.uJtSke.paynGb:not(:disabled) {
+			color: accent;
+			border-color: dark3;
+		}
+
+		.uJtSke.paynGb:active:not(:disabled), .uJtSke.paynGb:focus:not(:disabled), .uJtSke.paynGb:hover:not(:disabled) {
+			color: accent;
+			border-color: dark3;
+		}
+
+		.uJtSke.paynGb .VfPpkd-Jh9lGc:after, .uJtSke.paynGb .VfPpkd-Jh9lGc:before {
+			background-color: accent;
+		}
+
+		/* .VfPpkd-d.VfPpkd-d-Qu-INsAgc.VfPpkd-d-Qu-dgl2Hf.Rj2Mlf.OLiIxf.PDpWxe.P62QJc.xFWpbf.uJtSke.paynGb {
+			display: none;
+		} */
+		/* side panel with gcal, tasks, etc. */
+		.a-Kk7lMc-ae3xF-j {
+			border-left: transparent;
+		}
+
+		/* == SEARCH RESULTS == */
+		/* search result 'did you mean' suggestions */
+		.WfiJb {
+			color: text3;
+		}
+
+		.glX3de {
+			background-color: dark1;
+			border-color: dark3;
+
+			&:hover {
+				color: text2;
+				fill: text1;
+			}
+
+			&.u3bW4e { // active state
+				background-color: rgba(light, overlayOpacity);
+				color: text1;
+			}
+		}
+
+		.VfPpkd-ksKsZd-XxIAqe::before, .VfPpkd-ksKsZd-XxIAqe::after {
+			background-color: text2;
+		}
+
+		.glX3de.u3bW4e {
+		}
+
+		/* == SEARCH SUGGESTIONS == */
+		.cloudsearch_suggestion_overlay {
+			background: dark2;
+		}
+
+		.cloudsearch_suggestion_filter_section {
+			border-color: dark2;
+		}
+
+		.UHqLAb .vARBRb[aria-selected='true'], .UHqLAb .vARBRb:focus, .dc[aria-selected='true'], .dc:focus {
+			background: dark3;
+			outline-color: dark3;
+		}
+
+		.Ke58ze {
+			color: text2;
+		}
+
+		.cloudsearch_suggestion_footer_section {
+			border-color: dark2;
+		}
+
+		.h1Utz {
+			color: accentColor;
+		}
+
+		.a-jn-yd {
+			background-color: dark2;
+		}
+
+		.a-jn-yd {
+			color: text2;
+		}
+
+		/* search suggestion hover */
+		.a-s-yd-J.a-s-yd-Sa > * {
+			background-color: dark3;
+		}
+
+		/* more search tools background */
+		.a-jn-Ma-nb-J {
+			background-color: darkColor;
+			border-top-color: dark3;
+			color: light;
+		}
+
+		/* search results suggestions */
+		.gssb_e, .gssb_m {
+			background-color: dark2;
+			color: white;
+			border-top-color: transparent;
+		}
+
+		/* search results suggestion separator */
+		.gssb_l {
+			background-color: dark3;
+		}
+
+		/* search results suggestion hover */
+		.gssb_i {
+			background-color: dark3;
+		}
+
+		.gssb_i > .gssb_a.gsfs {
+			border-left-color: accentColor;
+		}
+
+		/* search results suggestion subtitle */
+		.asor_e {
+			color: light;
+		}
+
+		/* == ADVANCED SEARCH DIALOG == */
+		.h-uj {
+			background: dark2;
+		}
+
+		/* search filter names */
+		.a-Va-Zb-ga {
+			color: light;
+		}
+
+		/* search setting inputs */
+		.h-R-w-d.g-Qb {
+			color: white;
+		}
+
+		/* divider */
+		.a-Va-Zb-ut {
+			border-top-color: dark3;
+		}
+
+		/* == POPUP DIALOGS == */
+		/* popup dialog background */
+		.lb-k {
+			background-color: darkColor;
+			color: white;
+		}
+
+		/* popup dialog heading background */
+		.lb-k-V {
+			background-color: unset;
+		}
+
+		/* popup dialog heading */
+		.lb-k-V-r {
+			color: white;
+		}
+
+		/* popup cancel button */
+		.a-Lk .lb-k-Gb>button::before, .a-X-k-Gb>button::before {
+			box-shadow: inset 0 0 0 1px accent;
+		}
+
+		/* popup confirmation button */
+		.a-Lk .lb-k-Gb .h-De-Y, .a-X-k-Gb .h-De-Y {
+			background-color: accentColor;
+			color: dark1;
+		}
+
+		.a-Lk .lb-k-Gb .h-De-Y:focus, .a-X-k-Gb .h-De-Y:focus, .a-Lk .lb-k-Gb .h-De-Y:hover, .a-X-k-Gb .h-De-Y:hover {
+			background-color: accentColor;
+			color: dark1;
+		}
+
+		/* popup input box container */
+		.lb-k-x {
+			background: transparent;
+		}
+
+		/* popup input box */
+		.g-Gh {
+			background-color: darkColor;
+			color: white;
+			border-radius: 2px;
+			box-shadow: none;
+		}
+
+		.g-Gh:focus {
+			border-color: accentColor;
+		}
+
+		/* popup dropdown box */
+		.h-R-w-d.g-Qb {
+			background-color: darkColor;
+			color: white;
+			border-radius: 2px;
+			box-shadow: none;
+		}
+
+		.h-R-w-d.g-Qb:focus, .h-R-w-d.g-Qb:hover {
+			box-shadow: inset 0 -2px 0 0 accentColor;
+		}
+
+		.a-Va-Zb-vb {
+			box-shadow: none;
+		}
+
+		/* cancel button */
+		.a-Lk .lb-k-Gb > button {
+			color: white;
+			background-color: dark3;
+		}
+
+		/* BUTTONS/INPUTS */
+		/* cancel/light button */
+		.a-Lk .g-d-wd:not(.g-d-db), .a-Lk .g-d-wd:not(.g-d-db):focus, .a-Lk .g-d-wd:not(.g-d-db).g-d-Pb {
+			color: light;
+		}
+
+		/* cance/light button hover */
+		.a-Lk .g-d-wd:not(.g-d-db).g-d-W {
+			color: white;
+		}
+
+		/* submit/highlighted button */
+		.a-Lk .g-d-Y:not(.g-d-db), .a-Lk .g-d-Y:not(.g-d-db):focus, .a-Lk .g-d-Y:not(.g-d-db).g-d-Pb {
+			background-color: accentColor;
+			color: dark1;
+		}
+
+		/* link button */
+		.a-Ws-nb-Oh-Ma-A {
+			color: accentColor;
+
+			&:active {
+				background-color: dark3;
+				color: accentColor;
+			}
+		}
+
+		.a-Ws-nb-Oh-Ma-A::before {
+			box-shadow: inset 0 0 0 1px accentColor;
+		}
+
+		/* checkbox unchecked */
+		.g-Qa {
+			border-color: rgba(light, 0.5);
+			background-color: transparent;
+		}
+
+		/* checkbox checked */
+		.g-Qa.g-Qa-rc {
+			border-color: accentColor;
+			fill: accentColor;
+			background: white;
+		}
+
+		/* input text */
+		.g-Qb .h-v-x {
+			color: white;
+		}
+
+		/* == FILE UPLOAD NOTIFICATION == */
+		/* upload notification header bar */
+		.af {
+			background-color: dark3;
+		}
+
+		.a-Cd-oa {
+			background-color: dark1;
+			border-color: dark1;
+		}
+
+		.Ea-oa {
+			border-color: dark2;
+		}
+
+		.Ea-oa.Ea-G {
+			color: light;
+		}
+
+		.z-Ea-Lm {
+			color: rgba(light, 0.5);
+		}
+
+		/* upload count bar */
+		.le-Ba {
+			background-color: dark2;
+			border-color: dark2;
+		}
+
+		.a-Cd-Ba-j {
+			border-color: dark2;
+		}
+
+		/* cancel, retry buttons */
+		.le-Ba-d {
+			color: accent;
+		}
+
+		/* upload file list */
+		.Ea-j.Ea-Lj:hover {
+			background-color: rgba(accent, overlayOpacity);
+		}
+
+		/* upload file list: upload canceled text */
+		.z-Ea-gj-r {
+			color: text3;
+		}
+
+		/* upload progress circle */
+		.f-G svg circle[fill='#4285f4'] {
+			fill: accent;
+		}
+
+		.Ea-j .W-d .d-za svg circle[fill='#ccc'] {
+			fill: dark3;
+		}
+
+		.f-Pn svg circle[fill='#FFFFFF'] {
+			fill: dark3;
+		}
+
+		/* == TOASTS / BOTTOM LEFT NOTIFICATIONS == */
+		.a-la-B.g-Yd.a-Ff-B {
+			background-color: dark3;
+		}
+
+		/* close button */
+		.a-la-Xf-d {
+			opacity: 1;
+
+			&:hover {
+				.a-s-fa-Ha-pa {
+					fill: text1;
+				}
+			}
+		}
+
+		/* search result filters */
+		/* e.g. searching in [folder], file type, etc. */
+		.glX3de {
+			mix-blend-mode: normal;
+		}
+
+		.glX3de.KKjvXb {
+			background: rgba(accentColor, 0.1);
+			color: accentColor;
+			--mdc-ripple-color: accentColor;
+		}
+
+		/* == TRASH == */
+		/* trash automatic deletion warning */
+		.XzbSje.w8ecmf.VLrnY {
+			background-color: dark2;
+			border-color: dark2;
+		}
+
+		.XzbSje {
+			color: light;
+		}
+
+		/* empty trash button */
+		.uFAPIe.qoCZef:not(:disabled) {
+			color: light;
+		}
+
+		.uFAPIe.qoCZef:active:not(:disabled), .uFAPIe.qoCZef:focus:not(:disabled), .uFAPIe.qoCZef:hover:not(:disabled) {
+			color: white;
+		}
+
+		/* == COMPUTERS == */
+		.ab-S-c-j img {
+			height: 171px;
+			width: 172px;
+			z-index: 1000;
+			padding-left: 172px;
+			box-sizing: border-box;
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 570 571.34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23E8F0FE' d='M510.8 152.2H200.2c-6.2 0-11.2 5-11.2 11.2v203.3c0 6.2 5 11.2 11.2 11.2h310.5c6.2 0 11.2-5 11.2-11.2V163.4c.1-6.2-4.9-11.2-11.1-11.2z' style='fill:%23282d35;fill-opacity:1'/%3E%3Cpath fill='%23D2E3FC' d='M207 171h297v189H207z' style='fill:%232f3642;fill-opacity:1'/%3E%3Cpath fill='%23E8F0FE' d='M342 413.7c0 9.9-8.1 18-18 18h-36v9.2h144v-9.2h-36c-9.9 0-18-7.8-18-17.7v-9l-.1-27H342v35.7z' style='fill:%232f3642;fill-opacity:1'/%3E%3Cpath fill='%23E8F0FE' d='M303.6 234H56.7c-6.3 0-11.4 5.1-11.4 11.4V441H315V245.4c0-6.3-5.1-11.4-11.4-11.4z' style='fill:%23282d35;fill-opacity:1'/%3E%3Cpath fill='%23E8F0FE' d='M303.5 232.2H189V368c0 6.3 5.1 11.3 11.3 11.3H315V243.7c0-6.4-5.1-11.5-11.5-11.5z' style='fill:%23282d35;fill-opacity:1'/%3E%3Cpath fill='%23D2E3FC' d='M36 422.5h288V441H36z'/%3E%3Cpath fill='%23D2E3FC' d='M36 422.5h288V441H36z' style='fill:%232f3642;fill-opacity:1;stroke:none'/%3E%3Cpath fill='%231A73E8' d='M297 360h-78.7c-6.2 0-11.3-5.1-11.3-11.3V252h78.7c6.2 0 11.3 5.1 11.3 11.3V360z' style='fill:%238ab4f8;fill-opacity:1'/%3E%3Cpath fill='%23D2E3FC' d='M200.2 378c-6.2 0-11.2-5-11.2-11.2V252H63v153h234v-27h-96.8z' style='fill:%232f3642;fill-opacity:1'/%3E%3Cpath fill='%23FFF' d='M252 283.4v-8l-10.7 10.7 10.7 10.7v-8c8.8 0 16 7.2 16 16 0 2.7-.7 5.3-1.9 7.5l3.9 3.9c2.1-3.3 3.3-7.2 3.3-11.4.1-11.8-9.5-21.4-21.3-21.4zm0 37.4c-8.8 0-16-7.2-16-16 0-2.7.7-5.3 1.9-7.5l-3.9-3.9c-2.1 3.3-3.3 7.2-3.3 11.4 0 11.8 9.6 21.4 21.4 21.4v8l10.7-10.7-10.8-10.7v8z' style='fill:%23000;fill-opacity:1'/%3E%3C/svg%3E");
+		}
+
+		/* learn more link */
+		.ab-S-Wg a:link {
+			color: accent;
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activate();
+		}
+	} else if (activationMode == 'Always') {
+		activate();
+	}
+}
+
+/* === RIGHT SIDE PANEL === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	// Side Panel
+	activateSidePanel() {
+		.Kk7lMc-Wc-Da.Kk7lMc-Yb-Il-j, .Kk7lMc-Wc-Tn.Kk7lMc-Yb-Il-j.Kk7lMc-Yb-Il-j {
+			background-color: dark2;
+		}
+
+		.Kk7lMc-QWPxkf-d.Yb-Il-d-rc .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Kk7lMc-QWPxkf-d.Yb-Il-d-rc .Yb-Il-d-c-Nd {
+			background-color: dark3;
+		}
+
+		.Kk7lMc-QWPxkf-d.Yb-Il-d-rc.Yb-Il-d-W .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Kk7lMc-QWPxkf-d.Yb-Il-d-rc.Yb-Il-d-W .Yb-Il-d-c-Nd, .Yb-Il-d-W .Yb-Il-d-c-Nd, .Yb-Il-d-pb .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Yb-Il-d-ha .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Yb-Il-d-Pb .Yb-Il-d-c-Nd {
+			background-color: dark3;
+		}
+
+		.Kk7lMc-QWPxkf-d.Yb-Il-d-rc.Yb-Il-d-Pb .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Kk7lMc-QWPxkf-d.Yb-Il-d-rc.Yb-Il-d-Pb .Yb-Il-d-c-Nd, .Yb-Il-d-Pb .Yb-Il-d-c-Nd, .Yb-Il-d-Pb.Yb-Il-d-W .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Yb-Il-d-W .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Yb-Il-d-pb .Yb-Il-d-c-Nd, .Kk7lMc-Wc-Tn .Yb-Il-d-ha.Yb-Il-d-W .Yb-Il-d-c-Nd {
+			background-color: dark3;
+		}
+
+		/* open and close icon */
+		.Yb-Il-d-c {
+			fill: text3;
+		}
+
+		.Yb-Il-d-c-j[style='background-image: url(https://www.gstatic.com/images/icons/material/system/1x/add_grey600_24dp.png)'] {
+			filter: brightness(1.3);
+		}
+
+		/* separator between apps and add apps button */
+		.Kk7lMc-Yb-Il-vc {
+			border-top-color: text3;
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateSidePanel();
+		}
+	} else if (activationMode == 'Always') {
+		activateSidePanel();
+	}
+}
+
+/* === FILE MOVE MENU === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activateFileMoveMenu() {
+		.e-F-V-Ta.e-Qf-Qd {
+			background-color: dark3;
+		}
+
+		.e-rf.e-Bd .e-F-aa-ed .e-F-aa-Wb {
+			border-color: dark3 transparent;
+		}
+
+		.e-F-V-Ta .e-D-o-T {
+			color: white;
+		}
+
+		.e-rf.e-F {
+			color: light;
+		}
+
+		/* hover over folder in list */
+		.e-Bd .e-F-v-qg .e-F-v-Qb {
+			background: dark3;
+		}
+
+		.e-Bd .e-F-v-W .e-F-v-Qb, .e-Bd .e-F-v-W.e-F-v-qg .e-F-v-Qb {
+			background: accentColor;
+		}
+
+		/* close icon */
+		.e-Bc-va-ra {
+			filter: invert(1);
+		}
+
+		/* back icon */
+		.e-Bc-Nq-Xd-d {
+			filter: invert(1);
+		}
+
+		/* create new folder icon */
+		.e-Bc-o-qb {
+			filter: invert(1);
+		}
+
+		.e-Bc-Ek-aa-be {
+			filter: invert(1);
+		}
+
+		.a-Lk .g-d::before {
+			box-shadow: inset 0 0 0 1px accentColor;
+		}
+
+		/* disabled 'Move Here' button */
+		.a-Lk .g-d.g-d-db {
+			color: rgba(light, 0.5);
+		}
+
+		/* file list focus border */
+		.e-Bd .e-x-j {
+			border-top-color: rgba(light, 0.25);
+			border-bottom-color: rgba(light, 0.25);
+		}
+
+		.Hb-ja-Na .e-Bd .e-x-j:focus {
+			border-color: accentColor;
+		}
+
+		.a-Lk .g-d:not(.g-d-db).g-d-R:active, .a-Lk .g-d:not(.g-d-db).g-d-R.g-d-Sa {
+			background-color: rgba(darkColor, 0.25);
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateFileMoveMenu();
+		}
+	} else if (activationMode == 'Always') {
+		activateFileMoveMenu();
+	}
+}
+
+/* === WELCOME MESSAGE === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activateWelcome() {
+		/* a place for all your files */
+		.guXkdd {
+			color: text1;
+		}
+
+		/* list of file types */
+		.zl82Bc {
+			color: text2;
+		}
+
+		/* info popup icon */
+		.VRs7I {
+			fill: text3;
+		}
+
+		/* info popup */
+		.dCrPI {
+			background: dark2;
+		}
+
+		/* You can drag files or folders right into Drive */
+		.SCe7Ib {
+			color: text3;
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateWelcome();
+		}
+	} else if (activationMode == 'Always') {
+		activateWelcome();
+	}
+}
+
+/* === ORGANIZATION ACCOUNTS === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activateOrgAcct() {
+		/* account switcher dropdown button */
+		.gb_ia {
+			background-color: dark3;
+			border-color: dark3;
+
+			&:hover {
+				background-color: detransparentify(accentColor, dark3, overlayOpacity);
+				border-color: detransparentify(accentColor, dark3, overlayOpacity2);
+			}
+
+			&:focus {
+				border-color: darkColor;
+				background-color: darkColor;
+			}
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateOrgAcct();
+		}
+	} else if (activationMode == 'Always') {
+		activateOrgAcct();
+	}
+}
+
+/* === SHARED DRIVES === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activate() {
+		/* == WELCOME MESSAGES == */
+		.JN7Q2c {
+			color: text1;
+		}
+
+		/* create shared drive button */
+		.oWBWHf.paynGb:not(:disabled) {
+			background-color: accentColor;
+			color: dark1;
+		}
+
+		/* How to use shared drives on your team */
+		.cBZb5e {
+			color: accent;
+		}
+
+		/* == ACTIONS TOOLBAR == */
+		/* toolbar background */
+		.S630me {
+			background: transparent;
+		}
+
+		/* hidden shared drive button */
+		.a-D-B .a-Ba-Ed .a-r-d.h-R-d, .mXlnof .a-s-Ba-Ak .a-r-d.h-R-d {
+			color: accent;
+		}
+
+		.a-Ba-Ed .a-r-d:not(.h-R-d-db).h-R-d-W, .a-Ba-Ed .a-r-d:not(.h-R-d-db).h-R-d:hover, .mXlnof .a-s-Ba-Ak .a-r-d:not(.h-R-d-db).h-R-d-W, .mXlnof .a-s-Ba-Ak .a-r-d:not(.h-R-d-db).h-R-d:hover {
+			background: rgba(accent, overlayOpacity);
+		}
+
+		.a-Ba-Ed .a-r-d:not(.h-R-d-db).h-R-d-Sa, .a-Ba-Ed .a-r-d:not(.h-R-d-db).h-R-d:active, .mXlnof .a-s-Ba-Ak .a-r-d:not(.h-R-d-db).h-R-d-Sa, .mXlnof .a-s-Ba-Ak .a-r-d:not(.h-R-d-db).h-R-d:active {
+			background: rgba(accent, overlayOpacity2);
+		}
+
+		/* number of people in shared drive */
+		.a-D-B .a-D-B-x .o-Yc-Ej, .aQh4x .o-Yc-Ej {
+			color: text3;
+		}
+
+		/* == NO HIDDEN SHARED DRIVES MESSAGE == */
+		.ab-S-Wg {
+			color: text2;
+		}
+
+		/* == EMPTY SHARED DRIVE MESSAGE == */
+		/* Drop files here or create something new */
+		.i0V6Le {
+			color: text2;
+		}
+
+		/* == SHARED DRIVES GRID VIEW == */
+		.l-u-fc-a-j .l-u-V {
+			background: dark1;
+			color: text2;
+		}
+
+		.l-u-ha .l-u-fc-a-q-Ej {
+			color: text3;
+		}
+
+		/* when selected */
+		.l-u-ha .l-u-fc-a-q-Ed {
+			background: detransparentify(accent, dark1, overlayOpacity);
+			color: accent;
+		}
+
+		.l-u-xb {
+			border-color: dark3;
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activate();
+		}
+	} else if (activationMode == 'Always') {
+		activate();
+	}
+}
+
+/* === SETTINGS MENU === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/drive.*") {
+	activate() {
+		.ca-k .lb-k-V {
+			background-color: dark2;
+		}
+
+		/* settings menu sidebar hover */
+		.ca-k-ra-B>.h-ra-B>.h-ra:hover {
+			background-color: dark2;
+		}
+
+		.ca-k-ra-B>.h-ra-B>.h-ra:hover>.a-ra-Mb-j>.a-ra-Mb {
+			border-color: text3;
+		}
+
+		/* view items taking up storage link */
+		.ca-k-ml-Pr .USrqEe-ml-Pr-gi .ml-Pr-kg .ml-Pr-A {
+			color: accent;
+		}
+
+		/* links */
+		.kc-A {
+			color: accent;
+		}
+
+		.ca-k-wb-M .c {
+			fill: accent;
+		}
+
+		/* not recommended on public or shared computers help text */
+		.ca-k-wb-bd-r {
+			color: text3;
+		}
+
+		/* dividers */
+		.ca-k-wb-j {
+			border-color: dark3;
+		}
+
+		.ca-k-oa {
+			border-left-color: dark3;
+		}
+
+		/* == MANAGE APPS == */
+		/* dividers */
+		.a-fd-ba-lp, .a-fd-ba-Q {
+			border-color: dark3;
+		}
+
+		/* app description */
+		.a-fd-ba-Q-ij {
+			color: text3;
+		}
+
+		/* use by default checkbox label */
+		.a-fd-ba-Q-Qa-ga {
+			color: text3;
+		}
+
+		/* options buttons */
+		button.RTMQvb.uHoRpf.h-sb-Ic.fCmhtc.hc0pBf {
+			background-color: dark2;
+			color: text1;
+
+			/* options buttons: hover */
+			&:not(.VuWATc) {
+				&:hover, &.sXaDqb-W, &:focus, &.sXaDqb-Pb {
+					background-color: dark3;
+				}
+			}
+		}
+
+		.RTMQvb::before {
+			box-shadow: inset 0 0 0 1px accent;
+		}
+	}
+
+	if (activationMode == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activate();
+		}
+	} else if (activationMode == 'Always') {
+		activate();
+	}
+}
+
+/* === SHARE MENU === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/sharing.*") {
+	activateShare() {
+		/* == SHARE MENU DIALOG == */
+		.ea-Rc-n {
+			display: none;
+		}
+
+		.GmCard {
+			background: darkColor;
+		}
+
+		/* title bar */
+		/* title bar: title */
+		.boqDrivesharedialogCommonTitlebarTitleBar .Heading .Title {
+			color: white;
+		}
+
+		/* title bar: settings button */
+		.boqDrivesharedialogCommonTitlebarTitleBar .SettingsButton {
+			color: rgba(light, 0.5);
+		}
+
+		.boqDrivesharedialogCommonTitlebarTitleBar .DisabledSettingsButton {
+			color: rgba(light, 0.5);
+			// same as not disabled button because orignal styles apply opacity to disable button already
+		}
+
+		/* input */
+		.boqDrivePeopleWebMultiselectInputchipInputBase {
+			caret-color: accentColor;
+			color: white;
+		}
+
+		/* input autocomplete */
+		.boqDrivePeopleWebMultiselectInputchipWrapper:after {
+			color: rgba(light, 0.3);
+		}
+
+		/* input suggestions dropdown */
+		.mdc-menu-surface {
+			background-color: dark2;
+		}
+
+		.GmMenu .mdc-deprecated-list {
+			color: light;
+		}
+
+		.mdc-deprecated-list-item__secondary-text {
+			color: rgba(light, 0.3);
+		}
+
+		/* shared permissions list */
+		.boqDrivesharedialogPermissionslistPermissionrowMain .boqDrivesharedialogPermissionslistPermissionrowPrimary {
+			color: white;
+		}
+
+		.boqDrivesharedialogPermissionslistPermissionrowMain .boqDrivesharedialogPermissionslistPermissionrowSecondary {
+			color: light;
+		}
+
+		.appsDriveElementsMaterialScrollcontainerSeamCoverTop, .appsDriveElementsMaterialScrollcontainerSeamCoverBottom {
+			border-top-color: darkColor;
+		}
+
+		.boqDrivesharedialogPermissionslistPermissionsummarySummary {
+			color: light;
+		}
+
+		.boqDrivePeopleWebBubbleBaseEl.hasPhoto {
+			background: transparent;
+		}
+
+		/* avatar background */
+		.boqDrivePeopleWebBubbleAvatarAvatar.hasPhoto {
+			background-color: transparent;
+		}
+
+		/* link menu */
+		/* link menu: url box */
+		.boqDrivesharedialogLinkLinkcopyUrlsBoxSpecificPeople {
+			background-color: dark2;
+			color: light;
+		}
+
+		.boqDrivesharedialogLinkLinksummaryLinkPermissionsSummary {
+			color: light;
+		}
+
+		.boqDrivesharedialogLinkLinksummaryLinkPermissionsSummary .boqDrivesharedialogLinkLinksummaryBolded {
+			color: white;
+		}
+
+		.boqDrivesharedialogLinkLinkpermissionVisibilityMenuTextButton.mdc-button:not(:disabled) {
+			color: white;
+		}
+
+		.boqDrivesharedialogLinkLinkpermissionLinkPermissionRow:hover, .boqDrivesharedialogLinkLinkpermissionLinkPermissionRow:focus-within {
+			background: dark3;
+		}
+
+		.boqDrivesharedialogLinkLinkpermissionLinkPermissionSummary {
+			color: light;
+		}
+
+		/* link menu: access type dropdown checkmark */
+		.boqDrivesharedialogLinkLinkvisibilityselectorMenuItem.mdc-deprecated-list-item .mdc-deprecated-list-item__graphic {
+			color: accentColor;
+		}
+
+		/* share menu ui elements */
+		/* checkbox background */
+		.GmCheckbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .GmCheckbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .GmCheckbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+			border-color: accentColor;
+			background-color: accentColor;
+		}
+
+		/* checkbox background on hover */
+		.GmCheckbox:hover .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .GmCheckbox:hover .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .GmCheckbox:hover .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+			border-color: darken(accentColor, 5);
+			background-color: darken(accentColor, 5);
+		}
+
+		/* checkbox background on active */
+		.GmCheckbox:active:active .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .GmCheckbox:active:active .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .GmCheckbox:active:active .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+			border-color: darken(accentColor, 10);
+			background-color: darken(accentColor, 10);
+		}
+
+		.appsMaterialWizButtonPaperbuttonTextColored, .appsMaterialWizButtonPaperbuttonTextColored .exportButtonNestedLink {
+			color: accentColor;
+		}
+
+		.appsDriveElementsMaterialFormfield_filledFieldContainer {
+			background: dark3;
+		}
+
+		.appsDriveElementsMaterialFormfield_filledFieldContainer:hover {
+			background: dark2;
+		}
+
+		.appsDriveElementsMaterialFormfield_filledFieldContainer, .appsDriveElementsMaterialFormfield_filledFieldContainer::after {
+			border-bottom-color: accentColor;
+		}
+
+		.GmButtonText:not(:disabled) {
+			color: accentColor;
+		}
+
+		.GmFillButton:not(:disabled) {
+			background-color: accentColor;
+			color: dark1;
+		}
+
+		.GmButtonGreyInkText:disabled {
+			color: rgba(white, 0.5);
+		}
+
+		.GmButtonText:hover:not(:disabled), .GmButtonText:active:not(:disabled), .GmButtonText:not(.gm-focus-hidden):focus:not(:disabled), .GmButtonText.mdc-ripple-upgraded--background-focused:not(:disabled) {
+			color: accentColor;
+		}
+
+		.boqDrivesharedialogPermissionslistPermissionrowListItem:hover .boqDrivesharedialogPermissionslistPermissionrowPermissionRow, .boqDrivesharedialogPermissionslistPermissionrowListItem:focus-within .boqDrivesharedialogPermissionslistPermissionrowPermissionRow {
+			background-color: dark3;
+		}
+
+		.boqDrivesharedialogCommonTitlebarTitleBar .boqDrivesharedialogCommonTitlebarIconContainer {
+			background-color: accentColor;
+		}
+
+		.mdc-form-field {
+			color: light;
+		}
+
+		.appsMaterialWizTextinputTextareaFilled .appsMaterialWizTextinputTextareaMainContent, .appsMaterialWizTextinputTextareaFilled:not(.isDisabled):hover .appsMaterialWizTextinputTextareaMainContent {
+			background-color: dark3;
+		}
+
+		.appsMaterialWizTextinputTextareaEl.isFocused .appsMaterialWizTextinputTextareaFloatingLabel {
+			color: accentColor;
+		}
+
+		.appsMaterialWizTextinputTextareaInput {
+			caret-color: accentColor;
+		}
+
+		.appsMaterialWizTextinputTextareaFocusUnderline {
+			background-color: accentColor;
+		}
+
+		.GmButtonGreyInkText:not(:disabled) {
+			color: rgba(light, 0.5);
+		}
+
+		.GmButtonGreyInkText:hover:not(:disabled), .GmButtonGreyInkText:active:not(:disabled), .GmButtonGreyInkText:not(.gm-focus-hidden):focus:not(:disabled), .GmButtonGreyInkText.mdc-ripple-upgraded--background-focused:not(:disabled) {
+			color: rgba(light, 0.8);
+		}
+
+		.GmFillButton:disabled {
+			color: rgba(light, 0.5);
+		}
+	}
+
+	if (enableShare == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateShare();
+		}
+	} else if (enableShare == 'Always') {
+		activateShare();
+	} else if (enableShare == 'Match') {
+		if (activationMode == 'System') {
+			@media (prefers-color-scheme: dark) {
+				activateShare();
+			}
+		} else if (activationMode == 'Always') {
+			activateShare();
+		}
+	}
+}
+
+/* === EMBEDS === */
+@-moz-document regexp("https?:\/\/drive\.google\.com\/embeddedfolderview.*") {
+	activateEmbeds() {
+		.flip-embedded {
+			background: dark1;
+		}
+
+		.flip-list-view .flip-entry {
+			color: text2;
+			border-color: rgba(white, overlayOpacity2);
+		}
+
+		.flip-list-view .flip-entry:hover {
+			background-color: rgba(white, overlayOpacity);
+		}
+
+		.flip-entry-title:hover {
+			color: accentColor;
+		}
+
+		.flip-list-view .flip-list-header {
+			color: light;
+			border-bottom-color: light;
+		}
+
+		.flip-list-title-header {
+			color: accentColor;
+		}
+	}
+
+	if (embedOn == 'System') {
+		@media (prefers-color-scheme: dark) {
+			activateEmbeds();
+		}
+	} else if (embedOn == 'Always') {
+		activateEmbeds();
+	}
+}
