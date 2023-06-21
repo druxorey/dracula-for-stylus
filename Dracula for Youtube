@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name Dracula for Youtube
 @namespace https://github.com/druxorey/StylusThemes/tree/main
-@homepageURL https://github.com/druxorey/StylusThemes/tree/main
-@version 3.0.8
-@description Soothing pastel theme for YouTube
-@author isabelroses
+@homepageURL https://raw.githubusercontent.com/druxorey/StylusThemes/main/Dracula%20for%20Youtube
+@version 1.0
+@description "Are you tired of the same boring colors on Youtube? Then try this modern color style based on the Dracula theme"
+@author Modified by Druxorey; Made by isabelroses
 @license GNU General Public License v3.0
 @preprocessor less
 @var select lightTheme "Light Theme" ["latte:Latte*", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha"]
