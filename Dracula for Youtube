@@ -1,17 +1,16 @@
 /* ==UserStyle==
-@name Dracula for Youtube
-@namespace https://github.com/druxorey/StylusThemes/tree/main
-@homepageURL https://raw.githubusercontent.com/druxorey/StylusThemes/main/Dracula%20for%20Youtube
-@version 1.0
-@description "Are you tired of the same boring colors on Youtube? Then try this modern color style based on the Dracula theme"
-@author Modified by Druxorey; Made by isabelroses
-@license GNU General Public License v3.0
-@preprocessor less
-@var select lightTheme "Light Theme" ["latte:Latte*", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha"]
-@var select darkTheme "Dark Theme" ["latte:Latte", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accentColour  "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red*", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Grey"]
-@var checkbox logo "Logo" 0
-@var checkbox oledOn "Enable black bars" 0
+@name           Dracula for Google Docs
+@namespace      https://userstyles.world/user/druxorey
+@version        1.0
+@description    "Are you tired of the same boring colors on Google Docs? Then try this modern color style based on the Dracula theme"
+@author         Modified by Druxorey; Made by Walter winghongchan
+@homepageURL    https://github.com/druxorey/StylusThemes/blob/main/Dracula%20for%20Reddit
+@license        GNU General Public License v3.0
+@preprocessor   less
+@var            select document-filter "Document filter" {"none:None": "none", "dim:Dim": "contrast(80%) brightness(90%)", "invert:Invert*": "var(--darkfilter)"}
+@var            number document-contrast "Document contrast while inverted" [76, 40, 100, 1, "%"]
+@var            checkbox respect-pageless-document-color "Respect page color of pageless documents while a document filter is applied. May be laggy." 0
+@var            checkbox has-selector-missing-warning "Warn me if the :has() selector is not available in my browser." 1
 ==/UserStyle== */
 @-moz-document regexp('https?:\\/\\/(?!gaming\\.)(?!consent\\.)(?!vr\\.)(?!music\\.)(?!tv\\.)(?!artists\\.)(?!studio\\.).*youtube(?!kids\\.).*\\.com\\/(?!premium|howyoutubeworks).*$') {
 
