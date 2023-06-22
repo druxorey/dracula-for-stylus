@@ -3,23 +3,23 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 ## Google Docs
 
-![This is an image](docs.png)
+![This is an image](/resources/docs.png)
 
 ## Google Drive
 
-![This is an image](drive.png)
+![This is an image](/resources/drive.png)
 
 ## Reddit
 
-![This is an image](reddit.png)
+![This is an image](/resources/reddit.png)
 
 ## Youtube
 
-![This is an image](youtube.png)
+![This is an image](/resources/youtube.png)
 
 ## WhatsApp
 
-![This is an image](whatsapp.png)
+![This is an image](/resources/whatsapp.png)
 
 ## Credits
 
