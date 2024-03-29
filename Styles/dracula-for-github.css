@@ -1,0 +1,102 @@
+* {
+  --bg-1: #282A36;
+  --bg-2: #21222c;
+  --bg-3: #191A21;
+
+  --highlight-1: #44485C;
+  --highlight-2: #626785;
+
+  --accent-1: var(--purple);
+  --accent-2: var(--pink);
+
+  --text-1: #F8F8F2;
+  --text-2: #D4D4CF;
+
+  --red: #ff5555;
+  --red-dark: #B33B3B;
+  --orange: #FFB86C;
+  --orange-dark: #B3804B;
+  --yellow: #F1FA8C;
+  --yellow-dark: #A7AD61;
+  --green: #50FA7B;
+  --green-dark: #37AD55;
+  --cyan: #8BE9FD;
+  --cyan-dark: #61A1B0;
+  --blue: #7aa2f7;
+  --blue-dark: #546FAB;
+  --purple-light: #CCA9FF;
+  --purple: #BD93F9;
+  --purple-dark: #A37ED6;
+  --pink-light: #FF9ED4;
+  --pink: #FF79C6;
+  --pink-dark: #DB67A9;
+
+  --test: #00ff00;
+
+  --graph1: #ff79c6ff;
+  --graph2: #ff79c6bb;
+  --graph3: #ff79c688;
+  --graph4: #ff79c633;
+
+  --AppHeader-bg: var(--bg-3) !important;
+
+  --button-default-bgColor-rest: var(--bg-3);
+  --button-default-borderColor-rest: var(--bg-3);
+  --button-default-bgColor-hover: var(--highlight-1);
+  --button-default-borderColor-hover: var(--highlight-1);
+  --button-default-bgColor-active: var(--highlight-2);
+  --button-default-borderColor-active: var(--highlight-2);
+  --button-default-fgColor-rest: var(--text-1);
+  --buttonCounter-default-bgColor-rest: var(--bg-1);
+
+  --button-primary-bgColor-rest: var(--purple);
+  --button-primary-bgColor-hover: var(--purple-light);
+  --button-primary-bgColor-active: var(--purple-dark);
+  --button-primary-bgColor-disabled: var(--blue-dark);
+
+  --bgColor-default: var(--bg-1);
+  --bgColor-inset: var(--bg-2);
+  --bgColor-muted: var(--bg-2);
+  --bgColor-neutral-muted: var(--highlight-1);
+  --bgColor-emphasis: var(--bg-2) !important;
+  --bgColor-accent-emphasis: var(--accent-1);
+
+  --overlay-bgColor: var(--bg-1);
+
+  --fgColor-default: var(--text-1);
+  --fgColor-onEmphasis: var(--text-1);
+  --fgColor-disabled: var(--highlight-2);
+  --fgColor-muted: var(--text-2) !important;
+  --fgColor-danger: var(--red);
+  --fgColor-attention: var(--orange);
+  --fgColor-success: var(--green);
+  --fgColor-accent: var(--accent-1);
+  --fgColor-link: var(--accent-1);
+
+  --border: var(--highlight-1);
+  --borderColor-default: var(--highlight-1);
+  --borderColor-muted: var(--bg-1);
+  --borderColor-neutral-muted: var(--bg-3);
+  --borderColor-danger-emphasis: var(--red);
+  --borderColor-attention-emphasis: var(--orange);
+
+  --control-borderColor-rest: var(--bg-2);
+  --control-transparent-bgColor-active: var(--highlight-2);
+  --control-transparent-bgColor-hover: var(--highlight-1);
+  --control-transparent-bgColor-selected: var(--highlight-2);
+
+  --color-calendar-graph-day-bg: var(--bg-2);
+  --color-calendar-graph-day-L1-bg: var(--graph4);
+  --color-calendar-graph-day-L2-bg: var(--graph3);
+  --color-calendar-graph-day-L3-bg: var(--graph2);
+  --color-calendar-graph-day-L4-bg: var(--graph1);
+  --color-calendar-halloween-graph-day-L2-bg: var(--red);
+  --color-calendar-halloween-graph-day-L3-bg: var(--orange);
+  --color-calendar-halloween-graph-day-L4-bg: var(--green);
+
+  --color-user-mention-fg: var(--text-1);
+  --color-user-mention-bg: var(--orange);
+  --page-header-bgColor: var(--red);
+
+  --underlineNav-borderColor-active: var(--pink);
+}
