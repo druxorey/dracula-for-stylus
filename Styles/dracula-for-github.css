@@ -1,19 +1,20 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/stylus-themes
-@version          1.1.2
+@version          1.1.4
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
+
   * {
-    --bg-lighter: #626785;
+    --bg-lighter: #585B6E;
     --bg-light: #44475A;
     --bg: #282A36;
-    --bg-dark: #21222c;
-    --bg-darker: #191A21;
+    --bg-dark: #1E202C;
+    --bg-darker: #191B27;
 
     --fg: #F8F8F2;
     --fg-dark: #DFDFD9;
@@ -53,13 +54,13 @@
     --accent-1: var(--purple);
     --accent-2: var(--pink);
 
-    --AppHeader-bg: var(--bg-darker) !important;
+    --AppHeader-bg: var(--bg-dark) !important;
 
     --borderColor-accent-emphasis: var(--accent-2);
 
     --buttonCounter-default-bgColor-rest: var(--bg);
-    --button-default-bgColor-rest: var(--bg-darker);
-    --button-default-borderColor-rest: var(--bg-darker);
+    --button-default-bgColor-rest: var(--bg-dark);
+    --button-default-borderColor-rest: var(--bg-dark);
     --button-default-bgColor-hover: var(--bg-light);
     --button-default-borderColor-hover: var(--bg-light);
     --button-default-bgColor-active: var(--bg-lighter);
@@ -117,4 +118,13 @@
 
     --underlineNav-borderColor-active: var(--pink);
   }
+
+  :root {
+    background-color: var(--bg);
+  }
+
+  .TextInput-wrapper {
+    background-color: var(--bg-dark);
+  }
+
 }
