@@ -1,52 +1,28 @@
 # StylusThemes
-This repository contains a collection of themes for Stylus, the best add-on to customize your browser. Here you will find themes of all kinds: dark, light, colorful, minimalist, etc. You just have to choose the one you like the most and apply it with a single click. Do not wait any longer and give a touch of style to your navigation!
+This repository contains CSS files for the [Stylus](https://github.com/openstyles/stylus) browser extension that allows users to customize the appearance of websites by applying custom CSS styles.
 
-# Color Scheme
+## Color Scheme
+We’ve chosen the Dracula color scheme, which combines dark and vibrant tones. To apply this color scheme to your websites, you can find an example CSS file with default values [here](example.css).
 
-<span style="background-color: #585B6E; border-radius: 10px; padding: 0.5em; color:white;">--bg-lighter: #585B6E;</span>
-<span style="background-color: #44475A; border-radius: 10px; padding: 0.5em; color:white;">--bg-light: #44475A;</span>
-<span style="background-color: #282A36; border-radius: 10px; padding: 0.5em; color:white;">--bg: #282A36;</span>
-<span style="background-color: #1E202C; border-radius: 10px; padding: 0.5em; color:white;">--bg-dark: #1E202C;</span>
-<span style="background-color: #191B27; border-radius: 10px; padding: 0.5em; color:white;">--bg-darker: #191B27;</span>
+# Stylus Installation
 
-<span style="background-color: #F8F8F2; border-radius: 10px; padding: 0.5em; color:black;">--fg: #F8F8F2;</span>
-<span style="background-color: #DFDFD9; border-radius: 10px; padding: 0.5em; color:black;">--fg-dark: #DFDFD9;</span>
+### 1) Download Stylus
+- Search  for "Stylus" in your browser’s extension store (e.g., Chrome Web Store or Mozilla Add-ons).
+- Install the Stylus extension. 
+- Once installed, you’ll see the Stylus icon in your toolbar.
 
-<span style="background-color: #6272A4; border-radius: 10px; padding: 0.5em; color:white;">--comment: #6272A4;</span>
+If you have any questions, refer to the [official Stylus documentation on GitHub.](https://github.com/openstyles/stylus/blob/master/README.md)
 
-<span style="background-color: #ff6e6e; border-radius: 10px; padding: 0.5em; color:black;">--red-light:#ff6e6e;</span>
-<span style="background-color: #ff5555; border-radius: 10px; padding: 0.5em; color:black;">--red: #ff5555;</span>
-<span style="background-color: #E63C3C; border-radius: 10px; padding: 0.5em; color:black;">--red-dark: #E63C3C;</span>
+### 2) Applying Styles
+- Visit [my profile](https://userstyles.world/user/druxorey)  in userstyles world:
+- Find the style you want to apply on userstyles.world.
+- Click “Install Style” or “Install with Stylus” on the style’s page.
 
-<span style="background-color: #FFD185; border-radius: 10px; padding: 0.5em; color:black;">--orange-light: #FFD185;</span>
-<span style="background-color: #FFB86C; border-radius: 10px; padding: 0.5em; color:black;">--orange: #FFB86C;</span>
-<span style="background-color: #E69F53; border-radius: 10px; padding: 0.5em; color:black;">--orange-dark: #E69F53;</span>
+### 3) Customize the Style:
+If you want to modify the style, click the Stylus icon in the toolbar and then choose the installed style and click “Edit.”
 
-<span style="background-color: #ffffa5; border-radius: 10px; padding: 0.5em; color:black;">--yellow-light: #ffffa5;</span>
-<span style="background-color: #F1FA8C; border-radius: 10px; padding: 0.5em; color:black;">--yellow: #F1FA8C;</span>
-<span style="background-color: #D8E173; border-radius: 10px; padding: 0.5em; color:black;">--yellow-dark: #D8E173;</span>
-
-<span style="background-color: #69ff94; border-radius: 10px; padding: 0.5em; color:black;">--green-light: #69ff94;</span>
-<span style="background-color: #50FA7B; border-radius: 10px; padding: 0.5em; color:black;">--green: #50FA7B;</span>
-<span style="background-color: #37EB62; border-radius: 10px; padding: 0.5em; color:black;">--green-dark: #37EB62;</span>
-
-<span style="background-color: #a4ffff; border-radius: 10px; padding: 0.5em; color:black;">--cyan-light: #a4ffff;</span>
-<span style="background-color: #8BE9FD; border-radius: 10px; padding: 0.5em; color:black;">--cyan: #8BE9FD;</span>
-<span style="background-color: #72D0E4; border-radius: 10px; padding: 0.5em; color:black;">--cyan-dark: #72D0E4;</span>
-
-<span style="background-color: #6DCCFF; border-radius: 10px; padding: 0.5em; color:black;">--blue-light: #6DCCFF;</span>
-<span style="background-color: #54B3FF; border-radius: 10px; padding: 0.5em; color:black;">--blue: #54B3FF;</span>
-<span style="background-color: #3B9AE6; border-radius: 10px; padding: 0.5em; color:black;">--blue-dark: #3B9AE6;</span>
-
-<span style="background-color: #d6acff; border-radius: 10px; padding: 0.5em; color:black;">--purple-light: #d6acff;</span>
-<span style="background-color: #BD93F9; border-radius: 10px; padding: 0.5em; color:black;">--purple: #BD93F9;</span>
-<span style="background-color: #A47AE0; border-radius: 10px; padding: 0.5em; color:black;">--purple-dark: #A47AE0;</span>    
-
-<span style="background-color: #ff92df; border-radius: 10px; padding: 0.5em; color:black;">--pink-light: #ff92df;</span>
-<span style="background-color: #FF79C6; border-radius: 10px; padding: 0.5em; color:black;">--pink: #FF79C6;</span>
-<span style="background-color: #E660AD; border-radius: 10px; padding: 0.5em; color:black;">--pink-dark: #E660AD;</span> 
-    
-# Screenshots
+# Examples
+Below are screenshots demonstrating how websites look when the Dracula theme from this repository is applied:
 
 ## GitHub
 
@@ -72,7 +48,5 @@ This repository contains a collection of themes for Stylus, the best add-on to c
 
 ![This is an image](/resources/whatsapp.png)
 
-
-## Credits
-
-- Original color theme by https://github.com/dracula/dracula-theme
+# Contribute
+- Original color theme by [Zeno Rocha](https://github.com/dracula/dracula-theme)
