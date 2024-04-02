@@ -1,0 +1,138 @@
+/* ==UserStyle==
+@name             Dracula for Whatsapp
+@namespace        github.com/druxorey/stylus-themes
+@version          1.2.0
+@description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
+@author           Druxorey
+@license          GNU General Public License v3.0
+==/UserStyle== */
+
+@-moz-document domain("web.whatsapp.com") {
+
+  #app>div>div:last-child {
+    width: 100%;
+    max-width: none;
+    margin: 0px;
+    top: 0;
+    height: 100%;
+  }
+
+  * {
+    --bg-lighter: #585B6E;
+    --bg-light: #44475A;
+    --bg: #282A36;
+    --bg-dark: #1E202C;
+    --bg-darker: #191B27;
+
+    --fg: #F8F8F2;
+    --fg-dark: #DFDFD9;
+
+    --comment: #6272A4;
+
+    --red-light: #ff6e6e;
+    --red: #ff5555;
+    --red-dark: #E63C3C;
+    --orange-light: #FFD185;
+    --orange: #FFB86C;
+    --orange-dark: #E69F53;
+    --yellow-light: #ffffa5;
+    --yellow: #F1FA8C;
+    --yellow-dark: #D8E173;
+    --green-light: #69ff94;
+    --green: #50FA7B;
+    --green-dark: #37EB62;
+    --cyan-light: #a4ffff;
+    --cyan: #8BE9FD;
+    --cyan-dark: #72D0E4;
+    --blue-light: #6DCCFF;
+    --blue: #54B3FF;
+    --blue-dark: #3B9AE6;
+    --purple-light: #d6acff;
+    --purple: #BD93F9;
+    --purple-dark: #A47AE0;
+    --pink-light: #ff92df;
+    --pink: #FF79C6;
+    --pink-dark: #E660AD;
+
+    --accent-1: var(--purple);
+    --accent-2: var(--pink);
+  }
+
+  .dark {
+    --background-default: var(--bg);
+    --background-default-active: var(--bg-dark);
+    --background-default-hover: var(--bg-light);
+    --background-lighter: var(--bg-dark);
+    --background-lightest-hover: var(--bg-light);
+    --border-default: var(--bg-light);
+    --border-list: var(--bg);
+    --butterbar-default-background: var(--bg-darker);
+    --butterbar-primary: var(--accent-1);
+    --butterbar-secondary: var(--fg);
+    --button-primary-background: var(--bg-light);
+    --button-primary-background-hover: var(--bg-lighter);
+    --button-round-background: var(--bg-light);
+    --button-secondary: var(--fg);
+    --button-secondary-hover: var(--accent-1);
+    --chat-marker-background: var(--bg-dark);
+    --chat-marker-border: var(--bg-dark);
+    --compose-input-background: var(--bg);
+    --compose-input-border: var(--bg);
+    --conversation-panel-background: var(--bg);
+    --drawer-background: var(--bg-darker);
+    --drawer-background-deep: var(--bg);
+    --drawer-gallery-background: var(--bg-dark);
+    --drawer-section-background: var(--bg-dark) !important;
+    --dropdown-background: var(--bg-darker);
+    --dropdown-background-hover: var(--bg-light);
+    --icon-ack: var(--pink);
+    --incoming-background: var(--bg-dark);
+    --incoming-background-deeper: var(--bg);
+    --input-empty-value-placeholder: var(--accent-1);
+    --intro-background: var(--bg-dark);
+    --intro-secondary: var(--fg--dark);
+    --link: var(--accent-2);
+    --media-viewer-background: var(--bg);
+    --message-primary: var(--fg);
+    --modal-background: var(--bg-dark);
+    --modal-backdrop: var(--bg);
+    --outgoing-background: var(--bg-light);
+    --outgoing-background-deeper: var(--bg-lighter);
+    --panel-background-colored: var(--bg-dark);
+    --panel-background-lighter: var(--bg);
+    --panel-header-background: var(--bg-dark);
+    --rich-text-panel-background: var(--bg-dark);
+    --search-input-background: var(--bg-darker);
+    --search-input-container-background: var(--bg-dark);
+    --search-input-container-background-active: var(--bg-dark);
+    --secondary-lighter: var(--purple-dark);
+    --startup-background: var(--bg);
+    --switch-button-checked-color: var(--purple-light);
+    --switch-button-color: var(--bg-lighter);
+    --switch-track-checked-color: var(--purple-dark);
+    --switch-track-color: var(--bg-light);
+    --system-message-background: var(--bg-dark);
+    --system-message-text: var(--fg-dark);
+    --teal: var(--accent-2);
+    --text-critical: var(--red);
+    --text-secondary-emphasized: var(--fg--dark);
+    --text-teal: var(--accent-1);
+    --typing: var(--accent-1);
+    --unread-background: var(--bg-dark);
+    --unread-marker-background: var(--accent-1);
+    --unread-marker-text: var(--bg-dark);
+    --unread-timestamp: var(--accent-2);
+  }
+
+  svg {
+    filter: saturate(0.5) brightness(1.2) hue-rotate(305deg);
+  }
+
+  .dark .color-1 {
+    color: var(--red) !important;
+  }
+
+  .dark .color-2 {
+    color: var(--red) !important;
+  }
+}
