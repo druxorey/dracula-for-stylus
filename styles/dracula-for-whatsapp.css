@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/stylus-themes
-@version          1.2.0
+@version          1.2.1
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -96,6 +96,7 @@
     --message-primary: var(--fg);
     --modal-background: var(--bg-dark);
     --modal-backdrop: var(--bg);
+    --notification-e2e-background: var(--bg-darker);
     --outgoing-background: var(--bg-light);
     --outgoing-background-deeper: var(--bg-lighter);
     --panel-background-colored: var(--bg-dark);
