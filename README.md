@@ -28,6 +28,10 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 
 ![This is an image](/resources/github.png)
 
+## WhatsApp
+
+![This is an image](/resources/whatsapp.png)
+
 ## Google Docs (Not updated)
 
 ![This is an image](/resources/docs.png)
@@ -43,10 +47,6 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 ## Youtube (Not updated)
 
 ![This is an image](/resources/youtube.png)
-
-## WhatsApp (Not updated)
-
-![This is an image](/resources/whatsapp.png)
 
 # Contribute
 - Original color theme by [Zeno Rocha](https://github.com/dracula/dracula-theme)
