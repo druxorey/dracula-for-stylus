@@ -21,6 +21,9 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 ## GitHub
 ![This is an image](/resources/github.png)
 
+## Reddit
+![This is an image](/resources/reddit.png)
+
 ## WhatsApp
 ![This is an image](/resources/whatsapp.png)
 
@@ -29,9 +32,6 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 
 ## Google Drive (Outdated)
 ![This is an image](/resources/drive.png)
-
-## Reddit (Outdated)
-![This is an image](/resources/reddit.png)
 
 ## Youtube (Outdated)
 ![This is an image](/resources/youtube.png)
