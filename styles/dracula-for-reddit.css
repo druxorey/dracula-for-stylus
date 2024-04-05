@@ -1,0 +1,189 @@
+/* ==UserStyle==
+@name             Dracula for Reddit
+@namespace        github.com/druxorey/stylus-themes
+@version          1.2.0
+@description      Are you tired of the same boring colors on Reddit? Then try this modern color style based on the Dracula theme
+@author           Druxorey
+@license          GNU General Public License v3.0
+==/UserStyle== */
+
+@-moz-document domain("reddit.com") {
+
+    * {
+        --bg-lighter: #585B6E;
+        --bg-light: #44475A;
+        --bg: #282A36;
+        --bg-dark: #1E202C;
+        --bg-darker: #191B27;
+
+        --fg: #F8F8F2;
+        --fg-dark: #DFDFD9;
+
+        --comment: #6272A4;
+
+        --red-light: #ff6e6e;
+        --red: #ff5555;
+        --red-dark: #E63C3C;
+        --orange-light: #FFD185;
+        --orange: #FFB86C;
+        --orange-dark: #E69F53;
+        --yellow-light: #ffffa5;
+        --yellow: #F1FA8C;
+        --yellow-dark: #D8E173;
+        --green-light: #69ff94;
+        --green: #50FA7B;
+        --green-dark: #37EB62;
+        --cyan-light: #a4ffff;
+        --cyan: #8BE9FD;
+        --cyan-dark: #72D0E4;
+        --blue-light: #6DCCFF;
+        --blue: #54B3FF;
+        --blue-dark: #3B9AE6;
+        --purple-light: #d6acff;
+        --purple: #BD93F9;
+        --purple-dark: #A47AE0;
+        --pink-light: #ff92df;
+        --pink: #FF79C6;
+        --pink-dark: #E660AD;
+
+        --accent-1: var(--purple);
+        --accent-2: var(--pink);
+
+        --color-primary-onBackground: var(--red) !important;
+        --color-primary-onBackground-selected: var(--red);
+        --color-neutral-border: var(--bg-dark) !important;
+
+        --color-neutral-content: var(--accent-1) !important;
+        --color-neutral-content-disabled: var(--red) !important;
+        --color-neutral-content-weak: var(--fg) !important;
+        --color-neutral-content-strong: var(--accent-1) !important;
+        --color-neutral-background: var(--bg) !important;
+        --color-neutral-background-selected: var(--accent-1) !important;
+        --color-neutral-background-weak: var(--bg-dark) !important;
+        --color-neutral-background-medium: var(--red) !important;
+        --color-neutral-background-strong: var(--bg) !important;
+        --color-neutral-background-hover: var(--bg-darker) !important;
+        --color-neutral-border-weak: transparent !important;
+        --color-neutral-border-strong: var(--accent-1) !important;
+        --color-tone-1: var(--yellow) !important;
+        --color-tone-2: var(--accent-2) !important;
+        --color-tone-3: var(--green) !important;
+        --color-tone-4: var(--bg-light) !important;
+        --color-tone-5: transparent !important;
+        --color-tone-6: var(--bg-lighter) !important;
+        --color-tone-7: var(--green) !important;
+        --color-primary: var(--blue) !important;
+        --color-primary-hover: var(--accent-2) !important;
+        --color-primary-background: var(--bg-light) !important;
+        --color-primary-background-hover: var(--blue) !important;
+        --color-primary-background-selected: var(--blue) !important;
+        --color-secondary: var(--fg) !important;
+        --color-secondary-hover: var(--fg-dark);
+        --color-secondary-weak: var(--accent-1) !important;
+        --color-secondary-background: var(--bg) !important;
+        --color-secondary-background-hover: var(--bg-light) !important;
+        --color-secondary-background-selected: var(--bg-light) !important;
+        --shreddit-content-background: transparent !important;
+
+        --button-border-color: var(--yellow);
+        --button-border-color-activated: transparent !important;
+        --button-color-background-activated: var(--bg-light) !important;
+        --button-color-text-activated: var(--accent-1) !important;
+        --button-color-overlay: var(--yellow) !important;
+        --button-border-color-hover: transparent !important;
+        --button-color-background-hover: var(--bg-light) !important;
+        --button-color-text: transparent !important;
+
+        --color-button-secondary-text: var(--fg) !important;
+        --color-button-secondary-text-activated: var(--fg) !important;
+        --color-button-secondary-text-disabled: var(--fg) !important;
+        --color-button-secondary-border: transparent !important;
+        --color-button-secondary-background: var(--bg) !important;
+        --color-button-secondary-background-focus: var(--yellow) !important;
+        --color-button-secondary-background-hover: var(--bg-lighter) !important;
+        --color-button-secondary-background-activated: var(--yellow) !important;
+        --color-button-secondary-background-disabled: var(--yellow) !important;
+
+        --color-action-upvote: var(--green);
+        --color-action-downvote: var(--red);
+        --color-media-background: var(--bg-light);
+        --color-media-onbackground: var(--accent-1);
+        --color-media-onbackground-disabled: var(--bg-lighter);
+
+        --newCommunityTheme-bodyText: var(--fg);
+        --newCommunityTheme-metaText: var(--orange);
+        --newCommunityTheme-button: var(--fg);
+        --newCommunityTheme-body: var(--bg);
+        --newRedditTheme-actionIcon: var(--fg);
+        --newCommunityTheme-line: transparent;
+        --newRedditTheme-line: transparent;
+        --newRedditTheme-linkText: var(--accent-1);
+        --newCommunityTheme-navIconFaded10: var(--orange);
+        --newCommunityTheme-active: var(--orange);
+        --newCommunityTheme-field: var(--bg-darker);
+        --newRedditTheme-button: var(--accent-1);
+        --newCommunityTheme-actionIcon: var(--accent-1);
+        --newCommunityTheme-bodyTextAlpha20: transparent;
+        --newRedditTheme-post: var(--bg);
+        --newRedditTheme-body: var(--bg);
+        --newRedditTheme-field: var(--bg-dark);
+        --newCommunityTheme-navIcon: var(--fg);
+        --newRedditTheme-actionIconAlpha50: var(--orange);
+        --newRedditTheme-buttonAlpha05: var(--bg-light);
+        --newRedditTheme-bodyText: var(--fg);
+        --newCommunityTheme-buttonAlpha50: var(--bg-lighter);
+        --pseudo-before-background: var(--bg-dark) !important;
+        --newRedditTheme-metaText: var(--fg);
+        --newRedditTheme-navIconFaded10: var(--bg);
+
+        --newCommunityTheme-postLine: transparent;
+        --newRedditTheme-widgetColors-sidebarWidgetBackgroundColor: var(--bg);
+        --newCommunityTheme-widgetColors-sidebarWidgetHeaderColor: var(--orange);
+        --newRedditTheme-widgetColors-sidebarWidgetBorderColor: transparent;
+        --post-icon-color: var(--orange);
+        --newCommunityTheme-postIcon: var(--accent-1);
+        --posttitletextcolor: var(--fg);
+
+        color: var(--fg);
+
+    }
+
+    header>:last-child {
+        background-color: var(--bg-dark);
+    }
+
+    nav,
+    #left-sidebar {
+        background-color: var(--bg-dark);
+    }
+
+    .bg-neutral-background {
+        background-color: var(--bg-dark);
+    }
+
+    svg {
+        fill: var(--fg);
+    }
+
+    .theme-beta,
+    ._24UNt1hkbrZxLzs5vkvuDh,
+    ._1VP69d9lk-Wk9zokOaylL {
+        background-color: var(--bg) !important;
+    }
+
+    ._2FKpII1jz0h6xCAw1kQAvS {
+        background-color: var(--green) !important;
+    }
+
+    ._1poyrkZ7g36PawDueRza-J,
+    ._11R7M_VOgKO1RJyRSRErT3,
+    ._1Qs6zz6oqdrQbR7yE_ntfY {
+        background-color: var(--bg) !important;
+    }
+
+    ._3AStxql1mQsrZuUIFP9xSg *,
+    .nU4Je7n-eSXStTBAPMYt8 * {
+        color: var(--accent-1) !important;
+    }
+
+}
