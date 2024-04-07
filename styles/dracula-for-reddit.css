@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Reddit
 @namespace        github.com/druxorey/stylus-themes
-@version          1.2.0
+@version          1.2.1
 @description      Are you tired of the same boring colors on Reddit? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -65,13 +65,13 @@
         --color-neutral-background-hover: var(--bg-darker) !important;
         --color-neutral-border-weak: transparent !important;
         --color-neutral-border-strong: var(--accent-1) !important;
-        --color-tone-1: var(--yellow) !important;
+        --color-tone-1: var(--accent-1) !important;
         --color-tone-2: var(--accent-2) !important;
-        --color-tone-3: var(--green) !important;
+        --color-tone-3: var(--fg) !important;
         --color-tone-4: var(--bg-light) !important;
         --color-tone-5: transparent !important;
         --color-tone-6: var(--bg-lighter) !important;
-        --color-tone-7: var(--green) !important;
+        --color-tone-7: var(--bg) !important;
         --color-primary: var(--blue) !important;
         --color-primary-hover: var(--accent-2) !important;
         --color-primary-background: var(--bg-light) !important;
