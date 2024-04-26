@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/stylus-themes
-@version          1.2.1
+@version          1.2.2
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -78,6 +78,7 @@
     --chat-marker-border: var(--bg-dark);
     --compose-input-background: var(--bg);
     --compose-input-border: var(--bg);
+    --communities-green:var(--accent-1);
     --conversation-panel-background: var(--bg);
     --drawer-background: var(--bg-darker);
     --drawer-background-deep: var(--bg);
@@ -96,12 +97,14 @@
     --message-primary: var(--fg);
     --modal-background: var(--bg-dark);
     --modal-backdrop: var(--bg);
+    --navbar-background:var(--bg-dark);
     --notification-e2e-background: var(--bg-darker);
     --outgoing-background: var(--bg-light);
     --outgoing-background-deeper: var(--bg-lighter);
     --panel-background-colored: var(--bg-dark);
     --panel-background-lighter: var(--bg);
     --panel-header-background: var(--bg-dark);
+    --round-icon-background:var(--accent-1);
     --rich-text-panel-background: var(--bg-dark);
     --search-input-background: var(--bg-darker);
     --search-input-container-background: var(--bg-dark);
@@ -123,6 +126,39 @@
     --unread-marker-background: var(--accent-1);
     --unread-marker-text: var(--bg-dark);
     --unread-timestamp: var(--accent-2);
+      
+    --background-lighter-hover: var(--green);
+    --reactions-panel-search-background-color: var(--green);
+    --search-input-background-active: var(--green);
+
+    --input-placeholder-rgb: var(--red);
+    --intro-border: var(--red);
+    --panel-input-background: var(--red);
+
+    --outgoing-background-rgb: var(--blue);
+    --search-container-background: var(--blue);
+    --panel-background-deeper: var(--bg-dark);
+
+    --incoming-background-rgb: var(--yellow);
+    --sticker-button-background: var(--yellow);
+    --media-editor-image-caption-input-background: var(--bg-light);
+    --media-editor-video-caption-input-background: var(--yellow);
+
+    --filters-item-color: var(--orange);
+    --filters-container-background: var(--orange);
+    --popup-panel-background: var(--bg-light);
+
+    --unread-marker-timestamp: var(--pink);
+    --button-plain-background: var(--bg-light);
+
+    --panel-background-colored-deeper: var(--purple);
+    --avatar-background: var(--purple);
+    --reactions-panel-background-color: var(--purple);
+
+    --filters-item-background: var(--cyan);
+    --filters-item-background-hover: var(--cyan);
+    --filters-item-active-background: var(--cyan);
+    --filters-item-active-color: var(--cyan);
   }
 
   svg {
