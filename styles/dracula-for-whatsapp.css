@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/stylus-themes
-@version          1.2.2
+@version          1.2.3
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -59,31 +59,45 @@
   }
 
   .dark {
+    --active-tab-marker: var(--accent-1);
+
     --background-default: var(--bg);
     --background-default-active: var(--bg-dark);
     --background-default-hover: var(--bg-light);
     --background-lighter: var(--bg-dark);
     --background-lightest-hover: var(--bg-light);
+    
     --border-default: var(--bg-light);
     --border-list: var(--bg);
+    --panel-background-colored: var(--bg-dark);
+    --panel-background-lighter: var(--bg);
+    --panel-background-deeper: var(--bg-dark);
+    --panel-header-background: var(--bg-dark);
+    --panel-input-background: var(--bg);
+    
     --butterbar-default-background: var(--bg-darker);
     --butterbar-primary: var(--accent-1);
     --butterbar-secondary: var(--fg);
+    
     --button-primary-background: var(--bg-light);
     --button-primary-background-hover: var(--bg-lighter);
     --button-round-background: var(--bg-light);
+    --button-plain-background: var(--bg-light);
     --button-secondary: var(--fg);
     --button-secondary-hover: var(--accent-1);
+
+    --drawer-background: var(--bg-darker);
+    --drawer-background-deep: var(--bg);
+    --drawer-gallery-background: var(--bg-dark);
+    --drawer-section-background: var(--bg-dark) !important;
+
     --chat-marker-background: var(--bg-dark);
     --chat-marker-border: var(--bg-dark);
     --compose-input-background: var(--bg);
     --compose-input-border: var(--bg);
     --communities-green:var(--accent-1);
     --conversation-panel-background: var(--bg);
-    --drawer-background: var(--bg-darker);
-    --drawer-background-deep: var(--bg);
-    --drawer-gallery-background: var(--bg-dark);
-    --drawer-section-background: var(--bg-dark) !important;
+
     --dropdown-background: var(--bg-darker);
     --dropdown-background-hover: var(--bg-light);
     --icon-ack: var(--pink);
@@ -93,7 +107,11 @@
     --intro-background: var(--bg-dark);
     --intro-secondary: var(--fg--dark);
     --link: var(--accent-2);
+
+    --media-editor-image-caption-input-background: var(--bg-light);
+    --media-editor-video-caption-input-background: var(--bg-dark);
     --media-viewer-background: var(--bg);
+
     --message-primary: var(--fg);
     --modal-background: var(--bg-dark);
     --modal-backdrop: var(--bg);
@@ -101,14 +119,15 @@
     --notification-e2e-background: var(--bg-darker);
     --outgoing-background: var(--bg-light);
     --outgoing-background-deeper: var(--bg-lighter);
-    --panel-background-colored: var(--bg-dark);
-    --panel-background-lighter: var(--bg);
-    --panel-header-background: var(--bg-dark);
+
+    --popup-panel-background: var(--bg-light);
     --round-icon-background:var(--accent-1);
     --rich-text-panel-background: var(--bg-dark);
-    --search-input-background: var(--bg-darker);
-    --search-input-container-background: var(--bg-dark);
+
+    --search-input-background: var(--bg-dark);
+    --search-input-container-background: var(--bg);
     --search-input-container-background-active: var(--bg-dark);
+
     --secondary-lighter: var(--purple-dark);
     --startup-background: var(--bg);
     --switch-button-checked-color: var(--purple-light);
@@ -117,11 +136,13 @@
     --switch-track-color: var(--bg-light);
     --system-message-background: var(--bg-dark);
     --system-message-text: var(--fg-dark);
+
     --teal: var(--accent-2);
     --text-critical: var(--red);
     --text-secondary-emphasized: var(--fg--dark);
     --text-teal: var(--accent-1);
     --typing: var(--accent-1);
+
     --unread-background: var(--bg-dark);
     --unread-marker-background: var(--accent-1);
     --unread-marker-text: var(--bg-dark);
@@ -133,23 +154,17 @@
 
     --input-placeholder-rgb: var(--red);
     --intro-border: var(--red);
-    --panel-input-background: var(--red);
 
     --outgoing-background-rgb: var(--blue);
     --search-container-background: var(--blue);
-    --panel-background-deeper: var(--bg-dark);
 
     --incoming-background-rgb: var(--yellow);
     --sticker-button-background: var(--yellow);
-    --media-editor-image-caption-input-background: var(--bg-light);
-    --media-editor-video-caption-input-background: var(--yellow);
 
     --filters-item-color: var(--orange);
     --filters-container-background: var(--orange);
-    --popup-panel-background: var(--bg-light);
 
     --unread-marker-timestamp: var(--pink);
-    --button-plain-background: var(--bg-light);
 
     --panel-background-colored-deeper: var(--purple);
     --avatar-background: var(--purple);
