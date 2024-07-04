@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/stylus-themes
-@version          1.3.0
+@version          1.3.1
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -11,6 +11,9 @@
 
     #app>div>div:last-child {
         width: 100%;
+        max-width: none;
+        margin: 0px;
+        top: 0;
         height: 100%;
     }
 
