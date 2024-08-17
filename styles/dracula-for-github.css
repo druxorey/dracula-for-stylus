@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/stylus-themes
-@version          1.1.4
+@version          1.2.0
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -9,122 +9,150 @@
 
 @-moz-document domain("github.com") {
 
-  * {
-    --bg-lighter: #585B6E;
-    --bg-light: #44475A;
-    --bg: #282A36;
-    --bg-dark: #1E202C;
-    --bg-darker: #191B27;
+    :root {
+        --color-background-1: #525568;
+        --color-background-2: #44475A;
+        --color-background-3: #353747;
+        --color-background-4: #282A36;
+        --color-background-5: #21222C;
 
-    --fg: #F8F8F2;
-    --fg-dark: #DFDFD9;
+        --color-foreground-1: #F8F8F2;
+        --color-foreground-2: #D9DADF;
+        --color-foreground-3: #B9BBCB;
 
-    --comment: #6272A4;
+        --color-comment: #6272A4;
+        --color-transparent: #00000000;
 
-    --red-light: #ff6e6e;
-    --red: #ff5555;
-    --red-dark: #E63C3C;
-    --orange-light: #FFD185;
-    --orange: #FFB86C;
-    --orange-dark: #E69F53;
-    --yellow-light: #ffffa5;
-    --yellow: #F1FA8C;
-    --yellow-dark: #D8E173;
-    --green-light: #69ff94;
-    --green: #50FA7B;
-    --green-dark: #37EB62;
-    --cyan-light: #a4ffff;
-    --cyan: #8BE9FD;
-    --cyan-dark: #72D0E4;
-    --blue-light: #6DCCFF;
-    --blue: #54B3FF;
-    --blue-dark: #3B9AE6;
-    --purple-light: #d6acff;
-    --purple: #BD93F9;
-    --purple-dark: #A47AE0;
-    --pink-light: #ff92df;
-    --pink: #FF79C6;
-    --pink-dark: #E660AD;
+        --color-red-1: #FF6E6E;
+        --color-red-2: #FF5555;
+        --color-red-3: #E63C3C;
+        --color-orange-1: #FFD185;
+        --color-orange-2: #FFB86C;
+        --color-orange-3: #E69F53;
+        --color-yellow-1: #FFFFA5;
+        --color-yellow-2: #F1FA8C;
+        --color-yellow-3: #D8E173;
+        --color-green-1: #69FF94;
+        --color-green-2: #50FA7B;
+        --color-green-3: #37EB62;
+        --color-cyan-1: #A4FFFF;
+        --color-cyan-2: #8BE9FD;
+        --color-cyan-3: #72D0E4;
+        --color-blue-1: #6DCCFF;
+        --color-blue-2: #54B3FF;
+        --color-blue-3: #3B9AE6;
+        --color-purple-1: #D6ACFF;
+        --color-purple-2: #BD93F9;
+        --color-purple-3: #A47AE0;
+        --color-pink-1: #FF92DF;
+        --color-pink-2: #FF79C6;
+        --color-pink-3: #E660AD;
 
-    --graph1: #ff79c633;
-    --graph2: #ff79c688;
-    --graph3: #ff79c6bb;
-    --graph4: #ff79c6ff;
+        --color-graph-1: #FF79C633;
+        --color-graph-2: #FF79C688;
+        --color-graph-3: #FF79C6BB;
+        --color-graph-4: #FF79C6FF;
 
-    --accent-1: var(--purple);
-    --accent-2: var(--pink);
+        --color-accent-1: var(--color-purple-2);
+        --color-accent-2: var(--color-pink-2);
+    }
+    
+    body {
+        --buttonCounter-default-bgColor-rest: var(--color-background-4);
+        --button-default-bgColor-rest: var(--color-background-5);
+        --button-default-borderColor-disabled: var(--color-transparent);
+        --button-default-borderColor-rest: var(--color-transparent);
+        --button-default-bgColor-disabled: var(--color-background-5);
+        --button-default-bgColor-hover: var(--color-background-3);
+        --button-default-borderColor-hover: var(--color-transparent);
+        --button-default-bgColor-active: var(--color-background-3);
+        --button-default-borderColor-active: var(--color-transparent);
+        --button-default-fgColor-rest: var(--color-foreground-1);
+        --button-star-iconColor: var(--color-yellow-2);
+        
+        --button-primary-bgColor-rest: var(--color-purple-2);
+        --button-primary-bgColor-hover: var(--color-purple-1);
+        --button-primary-bgColor-active: var(--color-purple-3);
+        --button-primary-bgColor-disabled: var(--color-blue-2);
+        
+        --bgColor-accent-muted: var(--color-background-2);
+        --bgColor-default: var(--color-background-4);
+        --bgColor-inset: var(--color-background-5);
+        --bgColor-muted: var(--color-background-5);
+        --bgColor-neutral-muted: var(--color-background-2);
+        --bgColor-emphasis: var(--color-background-5) !important;
+        --bgColor-accent-emphasis: var(--color-accent-1);
 
-    --AppHeader-bg: var(--bg-dark) !important;
+        --overlay-bgColor: var(--color-background-4);
 
-    --borderColor-accent-emphasis: var(--accent-2);
+        --fgColor-default: var(--color-foreground-1);
+        --fgColor-onEmphasis: var(--color-foreground-1);
+        --fgColor-disabled: var(--color-background-2);
+        --fgColor-muted: var(--color-foreground-2);
+        --fgColor-danger: var(--color-red-2);
+        --fgColor-attention: var(--color-orange-2);
+        --fgColor-success: var(--color-green-2);
+        --fgColor-accent: var(--color-accent-1);
+        --fgColor-link: var(--color-accent-1);
 
-    --buttonCounter-default-bgColor-rest: var(--bg);
-    --button-default-bgColor-rest: var(--bg-dark);
-    --button-default-borderColor-rest: var(--bg-dark);
-    --button-default-bgColor-hover: var(--bg-light);
-    --button-default-borderColor-hover: var(--bg-light);
-    --button-default-bgColor-active: var(--bg-lighter);
-    --button-default-borderColor-active: var(--bg-lighter);
-    --button-default-fgColor-rest: var(--fg);
-    --button-star-iconColor: var(--yellow);
+        --focus-outlineColor: var(--color-accent-2);
+        
+        --border: var(--color-background-2);
+        --borderColor-accent-emphasis: var(--color-accent-2);
+        --borderColor-default: var(--color-transparent);
+        --borderColor-muted: var(--color-background-2);
+        --borderColor-neutral-muted: var(--color-background-2);
+        --borderColor-danger-emphasis: var(--color-red-2);
+        --borderColor-attention-emphasis: var(--color-orange-2);
 
-    --button-primary-bgColor-rest: var(--purple);
-    --button-primary-bgColor-hover: var(--purple-light);
-    --button-primary-bgColor-active: var(--purple-dark);
-    --button-primary-bgColor-disabled: var(--blue-dark);
+        --control-borderColor-rest: var(--color-background-5);
+        --control-transparent-bgColor-active: var(--color-accent-1);
+        --control-transparent-bgColor-hover: var(--color-background-3);
+        --control-transparent-bgColor-selected: var(--color-background-2);
 
-    --bgColor-default: var(--bg);
-    --bgColor-inset: var(--bg-dark);
-    --bgColor-muted: var(--bg-dark);
-    --bgColor-neutral-muted: var(--bg-light);
-    --bgColor-emphasis: var(--bg-dark) !important;
-    --bgColor-accent-emphasis: var(--accent-1);
+        --color-calendar-graph-day-bg: var(--color-background-5);
+        --color-calendar-graph-day-L1-bg: var(--color-graph-1);
+        --color-calendar-graph-day-L2-bg: var(--color-graph-2);
+        --color-calendar-graph-day-L3-bg: var(--color-graph-3);
+        --color-calendar-graph-day-L4-bg: var(--color-graph-4);
 
-    --overlay-bgColor: var(--bg);
+        --color-user-mention-fg: var(--color-foreground-1);
+        --color-user-mention-bg: var(--color-orange-2);
+        --page-header-bgColor: var(--color-background-5);
 
-    --fgColor-default: var(--fg);
-    --fgColor-onEmphasis: var(--fg);
-    --fgColor-disabled: var(--bg-lighter);
-    --fgColor-muted: var(--fg-dark) !important;
-    --fgColor-danger: var(--red);
-    --fgColor-attention: var(--orange);
-    --fgColor-success: var(--green);
-    --fgColor-accent: var(--accent-1);
-    --fgColor-link: var(--accent-1);
+        --underlineNav-borderColor-active: var(--color-pink-2);
+    }
 
-    --focus-outlineColor: var(--accent-2);
+    .TextInput-wrapper, .react-directory-row,.kHyYUy {
+        background-color: var(--color-background-5);
+    }
 
-    --border: var(--bg-light);
-    --borderColor-default: var(--bg-light);
-    --borderColor-muted: var(--bg);
-    --borderColor-neutral-muted: var(--bg-darker);
-    --borderColor-danger-emphasis: var(--red);
-    --borderColor-attention-emphasis: var(--orange);
+    .pinned-item-list-item-content {
+        background: var(--color-background-5);
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0rem 0rem 1rem var(--color-background-5);
+    }
 
-    --control-borderColor-rest: var(--bg-dark);
-    --control-transparent-bgColor-active: var(--bg-lighter);
-    --control-transparent-bgColor-hover: var(--bg-light);
-    --control-transparent-bgColor-selected: var(--bg-lighter);
+    .kHyYUy:hover {
+        background-color: var(--color-background-4);
+    }
 
-    --color-calendar-graph-day-bg: var(--bg-dark);
-    --color-calendar-graph-day-L1-bg: var(--graph1);
-    --color-calendar-graph-day-L2-bg: var(--graph2);
-    --color-calendar-graph-day-L3-bg: var(--graph3);
-    --color-calendar-graph-day-L4-bg: var(--graph4);
+    .UnderlineNav {
+        box-shadow: none;
+    }
 
-    --color-user-mention-fg: var(--fg);
-    --color-user-mention-bg: var(--orange);
-    --page-header-bgColor: var(--red);
+    .form-control {
+        background: var(--color-background-5);
+        border: none;
+    }
 
-    --underlineNav-borderColor-active: var(--pink);
-  }
+    .iXWA-dl,.AppHeader {
+        box-shadow: 0rem 0rem 1rem var(--color-background-5);
 
-  :root {
-    background-color: var(--bg);
-  }
+    }
 
-  .TextInput-wrapper {
-    background-color: var(--bg-dark);
-  }
-
+    .p-3 {
+        padding: 0.25rem !important;
+    }
 }
