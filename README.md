@@ -19,22 +19,22 @@ This repository contains CSS files for the [Stylus](https://github.com/openstyle
 Below are screenshots demonstrating how websites look when the Dracula theme from this repository is applied:
 
 ## GitHub
-![This is an image](/resources/github.webp)
+![This is an image](/resources/dracula-for-github.webp)
 
 ## Reddit
-![This is an image](/resources/reddit.webp)
+![This is an image](/resources/dracula-for-reddit.webp)
 
 ## WhatsApp
-![This is an image](/resources/whatsapp.webp)
+![This is an image](/resources/dracula-for-whatsapp.webp)
 
 ## Google Docs (Outdated)
-![This is an image](/resources/docs.webp)
+![This is an image](/resources/dracula-for-google-docs.webp)
 
 ## Google Drive (Outdated)
-![This is an image](/resources/drive.webp)
+![This is an image](/resources/dracula-for-google-drive.webp)
 
 ## Youtube (Outdated)
-![This is an image](/resources/youtube.webp)
+![This is an image](/resources/dracula-for-youtube.webp)
 
 # Contribute
 
