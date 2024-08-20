@@ -27,6 +27,9 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 ## WhatsApp
 ![This is an image](/resources/dracula-for-whatsapp.webp)
 
+## Brave Search
+![This is an image](/resources/dracula-for-brave.webp)
+
 ## Google Docs (Outdated)
 ![This is an image](/resources/dracula-for-google-docs.webp)
 

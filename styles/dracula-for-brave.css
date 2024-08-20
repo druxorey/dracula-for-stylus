@@ -1,0 +1,86 @@
+/* ==UserStyle==
+@name             Dracula for Brave
+@namespace        github.com/druxorey/stylus-themes
+@version          1.0.0
+@description      Are you tired of the same boring colors on Brave? Then try this modern color style based on the Dracula theme
+@author           Druxorey
+@license          GNU General Public License v3.0
+==/UserStyle== */
+
+@-moz-document domain("search.brave.com") {
+
+    :root {
+        --color-background-1: #525568;
+        --color-background-2: #44475A;
+        --color-background-3: #353747;
+        --color-background-4: #282A36;
+        --color-background-5: #21222C;
+
+        --color-foreground-1: #F8F8F2;
+        --color-foreground-2: #D9DADF;
+        --color-foreground-3: #B9BBCB;
+
+        --color-comment: #6272A4;
+        --color-transparent: #00000000;
+
+        --color-red-1: #FF6E6E;
+        --color-red-2: #FF5555;
+        --color-red-3: #E63C3C;
+        --color-orange-1: #FFD185;
+        --color-orange-2: #FFB86C;
+        --color-orange-3: #E69F53;
+        --color-yellow-1: #FFFFA5;
+        --color-yellow-2: #F1FA8C;
+        --color-yellow-3: #D8E173;
+        --color-green-1: #69FF94;
+        --color-green-2: #50FA7B;
+        --color-green-3: #37EB62;
+        --color-cyan-1: #A4FFFF;
+        --color-cyan-2: #8BE9FD;
+        --color-cyan-3: #72D0E4;
+        --color-blue-1: #6DCCFF;
+        --color-blue-2: #54B3FF;
+        --color-blue-3: #3B9AE6;
+        --color-purple-1: #D6ACFF;
+        --color-purple-2: #BD93F9;
+        --color-purple-3: #A47AE0;
+        --color-pink-1: #FF92DF;
+        --color-pink-2: #FF79C6;
+        --color-pink-3: #E660AD;
+
+        --color-accent-1: var(--color-purple-2);
+        --color-accent-2: #BD93F944;
+        --color-accent-3: var(--color-pink-2);
+        --color-accent-4: #FF79C644;
+    }
+
+    body {
+        --color-page-background: var(--color-background-4);
+        --color-serp-header-background: var(--color-background-4);
+        --color-serp-snippet-background: var(--color-background-5);
+        
+        --color-text-primary: var(--color-foreground-1);
+        --color-text-secondary: var(--color-foreground-2);
+        --color-text-tertiary: var(--color-foreground-3);
+        
+        --color-link-default: var(--color-accent-1);
+        --color-link-visited: var(--color-comment);
+        --color-text-interactive: var(--color-accent-1);
+            
+        --color-icon-default: var(--color-red-2);
+        --color-icon-disabled: var(--color-red-3);
+        
+        --color-container-background: var(--color-background-5);
+        --color-divider-subtle: var(--color-background-3);
+        --color-serp-bar-bg:var(--color-background-5);
+    }
+    
+    .snippet.svelte-qm0fz7 {
+        transition: 0.25s ease;
+        box-shadow: 0rem 0rem 1rem var(--color-background-5);
+    }
+    .snippet.svelte-qm0fz7:hover {
+        text-shadow: 0 0 0.05rem var(--color-foreground-1);
+        transition: 0.25s ease;
+    }
+}
