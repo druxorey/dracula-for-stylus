@@ -30,6 +30,9 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 ## Brave Search
 ![This is an image](/resources/dracula-for-brave.webp)
 
+## Wikipedia
+![This is an image](/resources/dracula-for-wikipedia.webp)
+
 ## Google Docs (Outdated)
 ![This is an image](/resources/dracula-for-google-docs.webp)
 
