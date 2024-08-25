@@ -1,27 +1,41 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/stylus-themes
-@version          1.2.0
+@version          1.3.0
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
+@preprocessor   less
+@var select dracula-style "Style" {
+  "Dark": "dark",
+  "Light": "light",
+}
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
 
     :root {
-        --color-background-1: #525568;
-        --color-background-2: #44475A;
-        --color-background-3: #353747;
-        --color-background-4: #282A36;
-        --color-background-5: #21222C;
+        --color-dark-background-1: #525568;
+        --color-dark-background-2: #44475A;
+        --color-dark-background-3: #353747;
+        --color-dark-background-4: #282A36;
+        --color-dark-background-5: #21222C;
 
-        --color-foreground-1: #F8F8F2;
-        --color-foreground-2: #D9DADF;
-        --color-foreground-3: #B9BBCB;
+        --color-dark-foreground-1: #F8F8F2;
+        --color-dark-foreground-2: #D9DADF;
+        --color-dark-foreground-3: #B9BBCB;
+
+        --color-light-foreground-1: #44475A;
+        --color-light-foreground-2: #353747;
+        --color-light-foreground-3: #282A36;
+
+        --color-light-background-4: #F3F4F6;
+        --color-light-background-1: #E8E8EE;
+        --color-light-background-5: #DCDDE5;
+        --color-light-background-3: #D0D2DC;
+        --color-light-background-2: #C4C7D4;
 
         --color-comment: #6272A4;
-        --color-transparent: #00000000;
 
         --color-red-1: #FF6E6E;
         --color-red-2: #FF5555;
@@ -56,39 +70,41 @@
         --color-accent-1: var(--color-purple-2);
         --color-accent-2: var(--color-pink-2);
     }
-    
+
+    html {background-color: e("var(--color-@{dracula-style}-background-4)") !important;}
+
     body {
-        --buttonCounter-default-bgColor-rest: var(--color-background-4);
-        --button-default-bgColor-rest: var(--color-background-5);
-        --button-default-borderColor-disabled: var(--color-transparent);
-        --button-default-borderColor-rest: var(--color-transparent);
-        --button-default-bgColor-disabled: var(--color-background-5);
-        --button-default-bgColor-hover: var(--color-background-3);
-        --button-default-borderColor-hover: var(--color-transparent);
-        --button-default-bgColor-active: var(--color-background-3);
-        --button-default-borderColor-active: var(--color-transparent);
-        --button-default-fgColor-rest: var(--color-foreground-1);
+        --buttonCounter-default-bgColor-rest: e("var(--color-@{dracula-style}-background-4)");
+        --button-default-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
+        --button-default-borderColor-disabled: transparent;
+        --button-default-borderColor-rest: transparent;
+        --button-default-bgColor-disabled: e("var(--color-@{dracula-style}-background-5)");
+        --button-default-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
+        --button-default-borderColor-hover: transparent;
+        --button-default-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
+        --button-default-borderColor-active: transparent;
+        --button-default-fgColor-rest: e("var(--color-@{dracula-style}-foreground-1)");
         --button-star-iconColor: var(--color-yellow-2);
-        
+
         --button-primary-bgColor-rest: var(--color-purple-2);
         --button-primary-bgColor-hover: var(--color-purple-1);
         --button-primary-bgColor-active: var(--color-purple-3);
         --button-primary-bgColor-disabled: var(--color-blue-2);
-        
-        --bgColor-accent-muted: var(--color-background-2);
-        --bgColor-default: var(--color-background-4);
-        --bgColor-inset: var(--color-background-5);
-        --bgColor-muted: var(--color-background-5);
-        --bgColor-neutral-muted: var(--color-background-2);
-        --bgColor-emphasis: var(--color-background-5) !important;
+
+        --bgColor-accent-muted: e("var(--color-@{dracula-style}-background-2)");
+        --bgColor-default: e("var(--color-@{dracula-style}-background-4)");
+        --bgColor-inset: e("var(--color-@{dracula-style}-background-5)");
+        --bgColor-muted: e("var(--color-@{dracula-style}-background-5)");
+        --bgColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
+        --bgColor-emphasis: e("var(--color-@{dracula-style}-background-5)") !important;
         --bgColor-accent-emphasis: var(--color-accent-1);
 
-        --overlay-bgColor: var(--color-background-4);
+        --overlay-bgColor: e("var(--color-@{dracula-style}-background-4)");
 
-        --fgColor-default: var(--color-foreground-1);
-        --fgColor-onEmphasis: var(--color-foreground-1);
-        --fgColor-disabled: var(--color-background-2);
-        --fgColor-muted: var(--color-foreground-2);
+        --fgColor-default: e("var(--color-@{dracula-style}-foreground-1)");
+        --fgColor-onEmphasis: e("var(--color-@{dracula-style}-foreground-1)");
+        --fgColor-disabled: e("var(--color-@{dracula-style}-background-2)");
+        --fgColor-muted: e("var(--color-@{dracula-style}-foreground-2)");
         --fgColor-danger: var(--color-red-2);
         --fgColor-attention: var(--color-orange-2);
         --fgColor-success: var(--color-green-2);
@@ -96,46 +112,52 @@
         --fgColor-link: var(--color-accent-1);
 
         --focus-outlineColor: var(--color-accent-2);
-        
-        --border: var(--color-background-2);
+
+        --border: e("var(--color-@{dracula-style}-background-2)");
         --borderColor-accent-emphasis: var(--color-accent-2);
-        --borderColor-default: var(--color-transparent);
-        --borderColor-muted: var(--color-background-2);
-        --borderColor-neutral-muted: var(--color-background-2);
+        --borderColor-default: transparent;
+        --borderColor-muted: e("var(--color-@{dracula-style}-background-2)");
+        --borderColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
         --borderColor-danger-emphasis: var(--color-red-2);
         --borderColor-attention-emphasis: var(--color-orange-2);
 
-        --control-borderColor-rest: var(--color-background-5);
+        --controlKnob-bgColor-rest: e("var(--color-@{dracula-style}-background-2)");
+        --controlKnob-borderColor-rest: transparent;
+        --controlTrack-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
+        --controlTrack-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
+        --controlTrack-bgColor-hover: var(--color-accent-1);
+        --control-borderColor-rest: e("var(--color-@{dracula-style}-background-5)");
         --control-transparent-bgColor-active: var(--color-accent-1);
-        --control-transparent-bgColor-hover: var(--color-background-3);
-        --control-transparent-bgColor-selected: var(--color-background-2);
+        --control-transparent-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
+        --control-transparent-bgColor-selected: e("var(--color-@{dracula-style}-background-2)");
 
-        --color-calendar-graph-day-bg: var(--color-background-5);
+        --color-calendar-graph-day-bg: e("var(--color-@{dracula-style}-background-5)");
         --color-calendar-graph-day-L1-bg: var(--color-graph-1);
         --color-calendar-graph-day-L2-bg: var(--color-graph-2);
         --color-calendar-graph-day-L3-bg: var(--color-graph-3);
         --color-calendar-graph-day-L4-bg: var(--color-graph-4);
 
-        --color-user-mention-fg: var(--color-foreground-1);
+        --color-user-mention-fg: e("var(--color-@{dracula-style}-foreground-1)");
         --color-user-mention-bg: var(--color-orange-2);
-        --page-header-bgColor: var(--color-background-5);
+        --page-header-bgColor: e("var(--color-@{dracula-style}-background-5)");
 
         --underlineNav-borderColor-active: var(--color-pink-2);
     }
 
-    .TextInput-wrapper, .react-directory-row,.kHyYUy {
-        background-color: var(--color-background-5);
+    .TextInput-wrapper, .react-directory-row, .kHyYUy {
+        background-color: e("var(--color-@{dracula-style}-background-5)");
+        box-shadow: none;
     }
 
     .pinned-item-list-item-content {
-        background: var(--color-background-5);
+        background: e("var(--color-@{dracula-style}-background-5)");
         padding: 1rem;
         border-radius: 1rem;
-        box-shadow: 0rem 0rem 1rem var(--color-background-5);
+        box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-background-5)");
     }
 
-    .kHyYUy:hover {
-        background-color: var(--color-background-4);
+    .kHyYUy:hover, .AppHeader-search {
+        background-color: e("var(--color-@{dracula-style}-background-4)");
     }
 
     .UnderlineNav {
@@ -143,12 +165,13 @@
     }
 
     .form-control {
-        background: var(--color-background-5);
+        background: e("var(--color-@{dracula-style}-background-5)");
         border: none;
     }
 
     .iXWA-dl,.AppHeader {
-        box-shadow: 0rem 0rem 1rem var(--color-background-5);
+        box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-background-5)");
+        border:none;
 
     }
 
