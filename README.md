@@ -24,11 +24,11 @@ Below are screenshots demonstrating how websites look when the Dracula theme fro
 ## Reddit
 ![This is an image](/resources/dracula-for-reddit.webp)
 
-## WhatsApp
-![This is an image](/resources/dracula-for-whatsapp.webp)
-
 ## Brave Search
 ![This is an image](/resources/dracula-for-brave.webp)
+
+## WhatsApp
+![This is an image](/resources/dracula-for-whatsapp.webp)
 
 ## Wikipedia
 ![This is an image](/resources/dracula-for-wikipedia.webp)
