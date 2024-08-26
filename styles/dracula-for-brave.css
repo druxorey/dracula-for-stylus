@@ -1,27 +1,49 @@
 /* ==UserStyle==
 @name             Dracula for Brave
 @namespace        github.com/druxorey/stylus-themes
-@version          1.0.0
+@version          1.1.0
 @description      Are you tired of the same boring colors on Brave? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
+@preprocessor   less
+@var select dracula-style "Style" {
+  "Dark": "dark",
+  "Light": "light",
+}
 ==/UserStyle== */
 
 @-moz-document domain("search.brave.com") {
 
     :root {
-        --color-background-1: #525568;
-        --color-background-2: #44475A;
-        --color-background-3: #353747;
-        --color-background-4: #282A36;
-        --color-background-5: #21222C;
+        --color-dark-background-1: #525568;
+        --color-dark-background-2: #44475A;
+        --color-dark-background-3: #353747;
+        --color-dark-background-4: #282A36;
+        --color-dark-background-5: #21222C;
 
-        --color-foreground-1: #F8F8F2;
-        --color-foreground-2: #D9DADF;
-        --color-foreground-3: #B9BBCB;
+        --color-dark-shadow-1: #353747;
+        --color-dark-shadow-2: #21222C;
+        --color-dark-shadow-3: #1A1C24;
+
+        --color-dark-foreground-1: #F8F8F2;
+        --color-dark-foreground-2: #e3e3e2;
+        --color-dark-foreground-3: #C6C7CC;
+
+        --color-light-foreground-3: #44475A;
+        --color-light-foreground-2: #282A36;
+        --color-light-foreground-1: #21222C;
+
+        --color-light-background-5: #F3F4F6;
+        --color-light-background-4: #E8E8EE;
+        --color-light-background-3: #DCDDE5;
+        --color-light-background-2: #D0D2DC;
+        --color-light-background-1: #C4C7D4;
+
+        --color-light-shadow-1: #DCDDE5;
+        --color-light-shadow-2: #C4C7D4;
+        --color-light-shadow-3: #B2B5C2;
 
         --color-comment: #6272A4;
-        --color-transparent: #00000000;
 
         --color-red-1: #FF6E6E;
         --color-red-2: #FF5555;
@@ -48,39 +70,62 @@
         --color-pink-2: #FF79C6;
         --color-pink-3: #E660AD;
 
-        --color-accent-1: var(--color-purple-2);
+        --color-accent-1: #BD93F9;
         --color-accent-2: #BD93F944;
-        --color-accent-3: var(--color-pink-2);
-        --color-accent-4: #FF79C644;
+        --color-important-1: #FF79C6;
+        --color-important-2: #FF79C644;
     }
 
     body {
-        --color-page-background: var(--color-background-4);
-        --color-serp-header-background: var(--color-background-4);
-        --color-serp-snippet-background: var(--color-background-5);
-        
-        --color-text-primary: var(--color-foreground-1);
-        --color-text-secondary: var(--color-foreground-2);
-        --color-text-tertiary: var(--color-foreground-3);
-        
+        --color-page-background: e("var(--color-@{dracula-style}-background-4)");
+        --color-serp-bar-bg: e("var(--color-@{dracula-style}-background-5)");
+        --color-serp-breadcrumbs: e("var(--color-@{dracula-style}-foreground-3)");;
+        --color-serp-container-:e("var(--color-@{dracula-style}-background-4)");
+        --color-serp-container-interactive: e("var(--color-@{dracula-style}-background-2)");
+        --color-serp-divider-subtle-container:e("var(--color-@{dracula-style}-background-2)");
+        --color-serp-header-background: e("var(--color-@{dracula-style}-background-4)");
+        --color-serp-highlight-background: e("var(--color-@{dracula-style}-background-2)");
+        --color-serp-snippet-background: e("var(--color-@{dracula-style}-background-5)");
+
+        --color-text-primary: e("var(--color-@{dracula-style}-foreground-1)");
+        --color-text-secondary: e("var(--color-@{dracula-style}-foreground-1)");
+        --color-text-tertiary: e("var(--color-@{dracula-style}-foreground-2)");
+        --color-text-interactive: var(--color-accent-1);
+
         --color-link-default: var(--color-accent-1);
         --color-link-visited: var(--color-comment);
-        --color-text-interactive: var(--color-accent-1);
-            
+
         --color-icon-default: var(--color-red-2);
         --color-icon-disabled: var(--color-red-3);
-        
-        --color-container-background: var(--color-background-5);
-        --color-divider-subtle: var(--color-background-3);
-        --color-serp-bar-bg:var(--color-background-5);
+
+        --color-container-background: e("var(--color-@{dracula-style}-background-5)");
+        --color-divider-subtle: e("var(--color-@{dracula-style}-background-2)");
     }
-    
+
     .snippet.svelte-qm0fz7 {
         transition: 0.25s ease;
-        box-shadow: 0rem 0rem 1rem var(--color-background-5);
     }
     .snippet.svelte-qm0fz7:hover {
-        text-shadow: 0 0 0.05rem var(--color-foreground-1);
+        text-shadow: 0 0 0.005rem e("var(--color-@{dracula-style}-foreground-1)");
         transition: 0.25s ease;
+    }
+    .llm-output, .svelte-43tr6t{
+        color: e("var(--color-@{dracula-style}-foreground-1)");
+    }
+
+    :root:not(.light) {
+        .llm-output{
+            --highlight-color: var(--color-accent-2);
+        }
+        .bottom-fade.svelte-h9rkzz {
+            background: linear-gradient(0deg,e("var(--color-@{dracula-style}-background-5)") var(--offset, 1rem),rgba(255,255,255,0))
+        }
+        #searchform-actions.svelte-hjp3ip.svelte-hjp3ip:before {
+            background: none
+        }
+        .button.type--footer-prominent.svelte-19i47us.svelte-19i47us:not(:disabled):not([disabled=true]):hover, 
+        .button.type--footer-prominent:not(:disabled):not([disabled=true]).active.svelte-19i47us.svelte-19i47us {
+            background:e("var(--color-@{dracula-style}-background-4)");
+        }
     }
 }
