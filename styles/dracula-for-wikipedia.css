@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Wikipedia
 @namespace        github.com/druxorey/stylus-themes
-@version          1.0.0
+@version          1.0.1
 @description      Are you tired of the same boring colors on Wikipedia? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -67,24 +67,29 @@
         --background-color-base: e("var(--color-@{dracula-style}-background-4)");
         --background-color-interactive: e("var(--color-@{dracula-style}-background-5)");
         --background-color-interactive-subtle: e("var(--color-@{dracula-style}-background-3)");
+        --background-color-neutral-subtle: e("var(--color-@{dracula-style}-background-3)");
+        --background-color-neutral: e("var(--color-@{dracula-style}-background-2)");
         --color-base: e("var(--color-@{dracula-style}-foreground-1)");
         --color-progressive: var(--color-purple-2);
         --color-subtle: var(--color-pink-2);
         --color-destructive: var(--color-green-2);
-        --border-color-subtle:e("var(--color-@{dracula-style}-background-2)");
+        --border-color-subtle: e("var(--color-@{dracula-style}-background-2)");
         --border-color-muted: transparent;
         --border-color-inverted: transparent;
+        --border-color-base: e("var(--color-@{dracula-style}-background-2)");
     }
 
     main {
         font-size: 18px;
+    }
 
+    a {
+        color: var(--color-purple-2);
     }
 
     .mw-parser-output .main-box-header {
         color:e("var(--color-@{dracula-style}-purple-2)");
     }
-
 
     .mw-parser-output .main-top-left {
         background: e("var(--color-@{dracula-style}-background-5)");
@@ -95,7 +100,6 @@
         border: none;
     }
 
-
     .content figure[typeof~='mw:File/Thumb'],
     .content figure[typeof~='mw:File/Frame'] {
         margin: 1rem;
@@ -105,5 +109,28 @@
 
     .branding-box {
         display: none;
+    }
+
+    .vgr-single .wikitable {
+        background: e("var(--color-@{dracula-style}-background-3)");
+
+    }
+
+    .mw-parser-output .video-game-reviews caption {
+        background: e("var(--color-@{dracula-style}-background-1)");
+    }
+
+    .mw-parser-output .vgr-hrow th {
+        background: e("var(--color-@{dracula-style}-background-2)");
+
+    }
+
+    .mw-parser-output .video-game-reviews td,
+    .mw-parser-output .video-game-reviews th,
+    .mw-parser-output .video-game-reviews caption,
+    .vgr-title {
+        height: 2rem;
+        border: 1px solid transparent;
+        color: e("var(--color-@{dracula-style}-foreground-1)");
     }
 }
