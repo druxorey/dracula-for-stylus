@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/stylus-themes
-@version          1.4.0
+@version          1.4.1
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -29,7 +29,6 @@
         --color-foreground-3: #B9BBCB;
 
         --color-comment: #6272A4;
-        --color-transparent: #00000000;
 
         --color-red-1: #FF6E6E;
         --color-red-2: #FF5555;
@@ -64,17 +63,29 @@
 
     .dark {
         --active-tab-marker: var(--color-accent-1);
+        --archived-chat-marker-background: var(--color-background-2);
+        --archived-chat-marker-border: transparent;
+        --icon-search-back: var(--color-accent-1);
         --avatar-background: var(--color-accent-1);
+        --secondary: var(--color-foreground-3);
+        --outgoing-background-deeper-rgb: transparent;
+        --media-editor-document-caption-input-background:var(--color-background-4);
+        --media-editor-thumb-border-active: var(--color-accent-1);
+        --input-button-more: var(--color-accent-3);
+        --input-floating-toolbar-background:var(--color-background-3);
+        --input-floating-toolbar-icon:var(--color-foreground-3);
+        --input-floating-toolbar-button-hover:var(--color-background-2);
 
         --background-default: var(--color-background-4);
         --background-default-active: var(--color-background-2);
         --background-default-hover: var(--color-background-3);
         --background-lighter: var(--color-background-2);
         --background-lighter-hover: var(--color-background-1);
+        --background-lighter-active: var(--color-background-3);
         --background-lightest-hover: var(--color-background-1);
 
         --border-default: var(--color-background-2);
-        --border-list: var(--color-transparent);
+        --border-list: transparent;
 
         --butterbar-default-background: var(--color-background-5);
         --butterbar-primary: var(--color-accent-1);
@@ -89,11 +100,11 @@
 
         --chat-marker-background: var(--color-background-4);
         --chat-marker-border: var(--color-background-4);
-        --conversation-panel-border: var(--color-transparent);
-        --border-stronger: var(--color-transparent);
+        --conversation-panel-border: transparent;
+        --border-stronger: transparent;
 
         --compose-input-background: var(--color-background-5);
-        --compose-input-border: var(--color-transparent);
+        --compose-input-border: transparent;
 
         --communities-green: var(--color-accent-1);
         --conversation-panel-background: var(--color-background-5);
@@ -103,7 +114,7 @@
         --drawer-gallery-background: var(--color-background-4);
         --drawer-section-background: var(--color-background-4) !important;
 
-        --dropdown-background: var(--color-background-5);
+        --dropdown-background: var(--color-background-3);
         --dropdown-background-hover: var(--color-background-4);
 
         --filters-container-background: var(--color-background-4);
@@ -128,6 +139,7 @@
         --intro-secondary: var(--color-foreground-1--dark);
 
         --link: var(--color-accent-1);
+        --highlight: var(--color-accent-3);
 
         --media-editor-image-caption-input-background: var(--color-background-2);
         --media-editor-video-caption-input-background: var(--color-background-5);
@@ -139,7 +151,7 @@
         --modal-backdrop: var(--color-background-4);
 
         --navbar-background: var(--color-background-5);
-        --navbar-border: var(--color-transparent);
+        --navbar-border: transparent;
 
         --notification-e2e-background: var(--color-background-5);
 
@@ -182,7 +194,7 @@
         --switch-track-checked-color: var(--color-purple-3);
         --switch-track-color: var(--color-background-2);
 
-        --system-message-background: var(--color-background-5);
+        --system-message-background: var(--color-background-3);
         --system-message-text: var(--color-foreground-2);
 
         --teal: var(--color-accent-3);
@@ -206,10 +218,7 @@
 
         --wds-emerald-400: var(--color-accent-1);
         --wds-sky-blue-300: var(--color-accent-3);
-    }
-
-    svg {
-        filter: saturate(0);
+        --wds-yellow-400: var(--color-accent-1);
     }
 
     .dark .color-1 {
