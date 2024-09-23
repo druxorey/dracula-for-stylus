@@ -1,4 +1,4 @@
-# StylusThemes
+# Dracula For Stylus
 This repository contains CSS files for the [Stylus](https://github.com/openstyles/stylus) browser extension that allows users to customize the appearance of websites by applying custom styles and colors using the [Dracula](https://github.com/dracula/dracula-theme) color scheme, you can find an example CSS file with default color values [here](example.css).
 
 # Styles Installation
