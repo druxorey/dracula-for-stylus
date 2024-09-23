@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Brave
-@namespace        github.com/druxorey/stylus-themes
-@version          1.1.0
+@namespace        github.com/druxorey/dracula-for-stylus
+@version          1.1.1
 @description      Are you tired of the same boring colors on Brave? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -26,7 +26,7 @@
         --color-dark-shadow-3: #1A1C24;
 
         --color-dark-foreground-1: #F8F8F2;
-        --color-dark-foreground-2: #e3e3e2;
+        --color-dark-foreground-2: #E3E3E2;
         --color-dark-foreground-3: #C6C7CC;
 
         --color-light-foreground-3: #44475A;
