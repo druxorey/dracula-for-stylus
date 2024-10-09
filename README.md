@@ -1,13 +1,16 @@
 
 <h1 align="center">Dracula For Stylus</h1>
 
+<p align="center">Are you tired of the same boring colors on your websites? Then try these themes</p>
+
+![banner](/resources/banner.png)
+
 <p align="center">
 <a href="colorscheme-template.css"><img src="https://img.shields.io/badge/template-BD93F9?style=for-the-badge"></a>
 <a href="#styles-installation"><img src="https://img.shields.io/badge/installation-FF79C6?style=for-the-badge"></a>
 <a href="https://userstyles.world/user/druxorey"><img src="https://img.shields.io/badge/userstyles-BD93F9?style=for-the-badge"></a>
 </p>
 
-<p align="center">Are you tired of the same boring colors on your websites? Then try these themes</p>
 
 This repository contains CSS files for the [Stylus](https://github.com/openstyles/stylus) browser extension that allows users to customize the appearance of websites by applying custom styles and colors using the [Dracula](https://github.com/dracula/dracula-theme) color scheme, you can find an example CSS file with default color values [here](example.css).
 
