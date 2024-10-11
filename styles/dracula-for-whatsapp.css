@@ -1,10 +1,15 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
-@namespace        github.com/druxorey/stylus-themes
-@version          1.4.1
+@namespace        github.com/druxorey/dracula-for-stylus
+@version          1.5.0
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
+@preprocessor     less
+@var select dracula-style "Style" {
+  "Dark": "dark",
+  "Light": "light",
+}
 ==/UserStyle== */
 
 @-moz-document domain("whatsapp.com") {
@@ -18,15 +23,33 @@
     }
 
     :root {
-        --color-background-1: #525568;
-        --color-background-2: #44475A;
-        --color-background-3: #353747;
-        --color-background-4: #282A36;
-        --color-background-5: #21222C;
+		--color-dark-background-1: #525568;
+		--color-dark-background-2: #44475A;
+		--color-dark-background-3: #353747;
+		--color-dark-background-4: #282A36;
+		--color-dark-background-5: #21222C;
 
-        --color-foreground-1: #F8F8F2;
-        --color-foreground-2: #D9DADF;
-        --color-foreground-3: #B9BBCB;
+		--color-dark-shadow-1: #353747;
+		--color-dark-shadow-2: #21222C;
+		--color-dark-shadow-3: #1A1C24;
+
+		--color-dark-foreground-1: #F8F8F2;
+		--color-dark-foreground-2: #E3E3E2;
+		--color-dark-foreground-3: #C6C7CC;
+
+		--color-light-foreground-3: #44475A;
+		--color-light-foreground-2: #282A36;
+		--color-light-foreground-1: #21222C;
+
+		--color-light-background-5: #F3F4F6;
+		--color-light-background-4: #E8E8EE;
+		--color-light-background-3: #DCDDE5;
+		--color-light-background-2: #D0D2DC;
+		--color-light-background-1: #C4C7D4;
+
+		--color-light-shadow-1: #DCDDE5;
+		--color-light-shadow-2: #C4C7D4;
+		--color-light-shadow-3: #B2B5C2;
 
         --color-comment: #6272A4;
 
@@ -59,160 +82,180 @@
         --color-accent-2: #BD93F944;
         --color-accent-3: var(--color-pink-2);
         --color-accent-4: #FF79C644;
+        
+        --app-background:blue;
+        --app-background-deeper:blue;
+        
+        --splashscreen-startup-background: yellow;
+        --splashscreen-startup-background-rgb: 255, 255, 255;
+        --splashscreen-startup-icon: yellow;
+        --splashscreen-primary-title: rgba(255, 255, 255);
+        --splashscreen-secondary-lighter: yellow;
+        --splashscreen-progress-primary: yellow;
+        --splashscreen-progress-background: yellow;
     }
 
     .dark {
+        --primary-strong: e("var(--color-@{dracula-style}-foreground-1)");
+        --primary: e("var(--color-@{dracula-style}-foreground-1)");
+        --primary-strongest: e("var(--color-@{dracula-style}-foreground-1)");
+        --quoted-message-text: e("var(--color-@{dracula-style}-foreground-3)");
+        --bubble-meta: e("var(--color-@{dracula-style}-foreground-3)");
+        --bubble-meta-icon: e("var(--color-@{dracula-style}-foreground-1)");
+        --secondary-stronger: e("var(--color-@{dracula-style}-foreground-1)");
+
         --active-tab-marker: var(--color-accent-1);
-        --archived-chat-marker-background: var(--color-background-2);
+        --archived-chat-marker-background: e("var(--color-@{dracula-style}-background-2)");
         --archived-chat-marker-border: transparent;
         --icon-search-back: var(--color-accent-1);
         --avatar-background: var(--color-accent-1);
-        --secondary: var(--color-foreground-3);
+        --secondary: e("var(--color-@{dracula-style}-foreground-3)");
         --outgoing-background-deeper-rgb: transparent;
-        --media-editor-document-caption-input-background:var(--color-background-4);
+        --media-viewer-background-rgb: 142,123,123;
+        --media-editor-document-caption-input-background: e("var(--color-@{dracula-style}-background-4)");
         --media-editor-thumb-border-active: var(--color-accent-1);
         --input-button-more: var(--color-accent-3);
-        --input-floating-toolbar-background:var(--color-background-3);
-        --input-floating-toolbar-icon:var(--color-foreground-3);
-        --input-floating-toolbar-button-hover:var(--color-background-2);
+        --input-floating-toolbar-background: e("var(--color-@{dracula-style}-background-3)");
+        --input-floating-toolbar-icon: e("var(--color-@{dracula-style}-foreground-3)");
+        --input-floating-toolbar-button-hover: e("var(--color-@{dracula-style}-background-2)");
 
-        --background-default: var(--color-background-4);
-        --background-default-active: var(--color-background-2);
-        --background-default-hover: var(--color-background-3);
-        --background-lighter: var(--color-background-2);
-        --background-lighter-hover: var(--color-background-1);
-        --background-lighter-active: var(--color-background-3);
-        --background-lightest-hover: var(--color-background-1);
+        --background-default: e("var(--color-@{dracula-style}-background-4)");
+        --background-default-active: e("var(--color-@{dracula-style}-background-2)");
+        --background-default-hover: e("var(--color-@{dracula-style}-background-3)");
+        --background-lighter: e("var(--color-@{dracula-style}-background-2)");
+        --background-lighter-hover: e("var(--color-@{dracula-style}-background-1)");
+        --background-lighter-active: e("var(--color-@{dracula-style}-background-3)");
+        --background-lightest-hover: e("var(--color-@{dracula-style}-background-1)");
 
-        --border-default: var(--color-background-2);
+        --border-default: e("var(--color-@{dracula-style}-background-2)");
         --border-list: transparent;
 
-        --butterbar-default-background: var(--color-background-5);
+        --butterbar-default-background: e("var(--color-@{dracula-style}-background-5)");
         --butterbar-primary: var(--color-accent-1);
-        --butterbar-secondary: var(--color-foreground-1);
+        --butterbar-secondary: e("var(--color-@{dracula-style}-foreground-1)");
 
-        --button-primary-background: var(--color-background-2);
-        --button-primary-background-hover: var(--color-background-1);
-        --button-round-background: var(--color-background-2);
-        --button-plain-background: var(--color-background-2);
-        --button-secondary: var(--color-foreground-1);
+        --button-primary-background: e("var(--color-@{dracula-style}-background-2)");
+        --button-primary-background-hover: e("var(--color-@{dracula-style}-background-1)");
+        --button-round-background: e("var(--color-@{dracula-style}-background-2)");
+        --button-plain-background: e("var(--color-@{dracula-style}-background-2)");
+        --button-secondary: e("var(--color-@{dracula-style}-foreground-1)");
         --button-secondary-hover: var(--color-accent-1);
 
-        --chat-marker-background: var(--color-background-4);
-        --chat-marker-border: var(--color-background-4);
+        --chat-marker-background: e("var(--color-@{dracula-style}-background-4)");
+        --chat-marker-border: e("var(--color-@{dracula-style}-background-4)");
         --conversation-panel-border: transparent;
         --border-stronger: transparent;
 
-        --compose-input-background: var(--color-background-5);
+        --compose-input-background: e("var(--color-@{dracula-style}-background-5)");
         --compose-input-border: transparent;
 
         --communities-green: var(--color-accent-1);
-        --conversation-panel-background: var(--color-background-5);
+        --conversation-panel-background: e("var(--color-@{dracula-style}-background-5)");
 
-        --drawer-background: var(--color-background-4);
-        --drawer-background-deep: var(--color-background-4);
-        --drawer-gallery-background: var(--color-background-4);
-        --drawer-section-background: var(--color-background-4) !important;
+        --drawer-background: e("var(--color-@{dracula-style}-background-4)");
+        --drawer-background-deep: e("var(--color-@{dracula-style}-background-4)");
+        --drawer-gallery-background: e("var(--color-@{dracula-style}-background-4)");
+        --drawer-section-background: e("var(--color-@{dracula-style}-background-4)") !important;
 
-        --dropdown-background: var(--color-background-3);
-        --dropdown-background-hover: var(--color-background-4);
+        --dropdown-background: e("var(--color-@{dracula-style}-background-3)");
+        --dropdown-background-hover: e("var(--color-@{dracula-style}-background-4)");
 
-        --filters-container-background: var(--color-background-4);
+        --filters-container-background: e("var(--color-@{dracula-style}-background-4)");
         --filters-item-active-background: var(--color-accent-1);
-        --filters-item-active-color: var(--color-background-4);
-        --filters-item-background: var(--color-background-2);
-        --filters-item-background-hover: var(--color-background-1);
-        --filters-item-color: var(--color-foreground-1);
+        --filters-item-active-color: e("var(--color-@{dracula-style}-background-4)");
+        --filters-item-background: e("var(--color-@{dracula-style}-background-2)");
+        --filters-item-background-hover: e("var(--color-@{dracula-style}-background-1)");
+        --filters-item-color: e("var(--color-@{dracula-style}-foreground-1)");
 
         --icon-ack: var(--color-pink-2);
         --icon-bright-highlight: var(--color-accent-3);
 
-        --incoming-background: var(--color-background-3);
-        --incoming-background-deeper: var(--color-background-2);
+        --incoming-background: e("var(--color-@{dracula-style}-background-3)");
+        --incoming-background-deeper: e("var(--color-@{dracula-style}-background-2)");
         --incoming-background-rgb: var(--color-purple-2);
 
         --input-empty-value-placeholder: var(--color-accent-1);
         --input-placeholder-rgb: var(--color-red-2);
 
-        --intro-background: var(--color-background-4);
+        --intro-background: e("var(--color-@{dracula-style}-background-4)");
         --intro-border: var(--color-red-2);
-        --intro-secondary: var(--color-foreground-1--dark);
+        --intro-secondary: e("var(--color-@{dracula-style}-foreground-1)");
 
         --link: var(--color-accent-1);
         --highlight: var(--color-accent-3);
 
-        --media-editor-image-caption-input-background: var(--color-background-2);
-        --media-editor-video-caption-input-background: var(--color-background-5);
-        --media-viewer-background: var(--color-background-4);
+        --media-editor-image-caption-input-background: e("var(--color-@{dracula-style}-background-2)");
+        --media-editor-video-caption-input-background: e("var(--color-@{dracula-style}-background-5)");
+        --media-viewer-background: e("var(--color-@{dracula-style}-background-4)");
 
-        --message-primary: var(--color-foreground-1);
+        --message-primary: e("var(--color-@{dracula-style}-foreground-1)");
 
-        --modal-background: var(--color-background-5);
-        --modal-backdrop: var(--color-background-4);
+        --modal-background: e("var(--color-@{dracula-style}-background-5)");
+        --modal-backdrop: e("var(--color-@{dracula-style}-background-4)");
 
-        --navbar-background: var(--color-background-5);
+        --navbar-background: e("var(--color-@{dracula-style}-background-5)");
         --navbar-border: transparent;
 
-        --notification-e2e-background: var(--color-background-5);
+        --notification-e2e-background: e("var(--color-@{dracula-style}-background-5)");
 
-        --outgoing-background: var(--color-background-2);
-        --outgoing-background-deeper: var(--color-background-1);
+        --outgoing-background: e("var(--color-@{dracula-style}-background-2)");
+        --outgoing-background-deeper: e("var(--color-@{dracula-style}-background-1)");
         --outgoing-background-rgb: var(--color-blue-2);
 
-        --panel-background-colored: var(--color-background-5);
+        --panel-background-colored: e("var(--color-@{dracula-style}-background-5)");
         --panel-background-colored-deeper: var(--color-purple-2);
-        --panel-background-deeper: var(--color-background-5);
-        --panel-background-lighter: var(--color-background-4);
-        --panel-header-background: var(--color-background-4);
-        --panel-input-background: var(--color-background-4);
+        --panel-background-deeper: e("var(--color-@{dracula-style}-background-5)");
+        --panel-background-lighter: e("var(--color-@{dracula-style}-background-4)");
+        --panel-header-background: e("var(--color-@{dracula-style}-background-4)");
+        --panel-input-background: e("var(--color-@{dracula-style}-background-4)");
 
-        --popup-panel-background: var(--color-background-2);
+        --popup-panel-background: e("var(--color-@{dracula-style}-background-2)");
 
-        --ptt-ooc-background: var(--color-background-3);
+        --ptt-ooc-background: e("var(--color-@{dracula-style}-background-3)");
 
         --reactions-panel-background-color: var(--color-purple-2);
         --reactions-panel-search-background-color: var(--color-green-2);
 
-        --rich-text-panel-background: var(--color-background-4);
+        --rich-text-panel-background: e("var(--color-@{dracula-style}-background-4)");
 
         --round-icon-background: var(--color-accent-1);
 
         --search-container-background: var(--color-blue-2);
-        --search-input-background: var(--color-background-5);
+        --search-input-background: e("var(--color-@{dracula-style}-background-5)");
         --search-input-background-active: var(--color-green-2);
-        --search-input-container-background: var(--color-background-4);
-        --search-input-container-background-active: var(--color-background-5);
+        --search-input-container-background: e("var(--color-@{dracula-style}-background-4)");
+        --search-input-container-background-active: e("var(--color-@{dracula-style}-background-5)");
 
         --secondary-lighter: var(--color-purple-3);
 
-        --startup-background: var(--color-background-4);
+        --startup-background: e("var(--color-@{dracula-style}-background-4)");
 
         --sticker-button-background: var(--color-yellow-2);
 
         --switch-button-checked-color: var(--color-purple-1);
-        --switch-button-color: var(--color-background-1);
+        --switch-button-color: e("var(--color-@{dracula-style}-background-1)");
         --switch-track-checked-color: var(--color-purple-3);
-        --switch-track-color: var(--color-background-2);
+        --switch-track-color: e("var(--color-@{dracula-style}-background-2)");
 
-        --system-message-background: var(--color-background-3);
-        --system-message-text: var(--color-foreground-2);
+        --system-message-background: e("var(--color-@{dracula-style}-background-3)");
+        --system-message-text: e("var(--color-@{dracula-style}-foreground-2)");
 
         --teal: var(--color-accent-3);
         --teal-lighter: var(--color-accent-1);
 
         --text-critical: var(--color-red-2);
-        --text-secondary-emphasized: var(--color-foreground-1--dark);
+        --text-secondary-emphasized: e("var(--color-@{dracula-style}-foreground-1)");
         --text-teal: var(--color-accent-1);
 
-        --toast-background: var(--color-background-3);
-        --toast-text: var(--color-foreground-1);
+        --toast-background: e("var(--color-@{dracula-style}-background-3)");
+        --toast-text: e("var(--color-@{dracula-style}-foreground-1)");
 
         --typing: var(--color-accent-1);
 
-        --unread-background: var(--color-background-5);
+        --unread-background: e("var(--color-@{dracula-style}-background-5)");
         --unread-bar-background: var(--color-accent-2);
         --unread-marker-background: var(--color-accent-1);
-        --unread-marker-text: var(--color-background-5);
+        --unread-marker-text: e("var(--color-@{dracula-style}-background-5)");
         --unread-marker-timestamp: var(--color-pink-2);
         --unread-timestamp: var(--color-accent-3);
 
