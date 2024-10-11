@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.3.3
+@version          1.3.4
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
-@preprocessor   less
+@preprocessor     less
 @var select dracula-style "Style" {
   "Dark": "dark",
   "Light": "light",
@@ -14,184 +14,190 @@
 
 @-moz-document domain("github.com") {
 
-    :root {
-        --color-dark-background-1: #525568;
-        --color-dark-background-2: #44475A;
-        --color-dark-background-3: #353747;
-        --color-dark-background-4: #282A36;
-        --color-dark-background-5: #21222C;
+	:root {
+		--color-dark-background-1: #525568;
+		--color-dark-background-2: #44475A;
+		--color-dark-background-3: #353747;
+		--color-dark-background-4: #282A36;
+		--color-dark-background-5: #21222C;
 
-        --color-dark-shadow-1: #353747;
-        --color-dark-shadow-2: #21222C;
-        --color-dark-shadow-3: #1A1C24;
+		--color-dark-shadow-1: #353747;
+		--color-dark-shadow-2: #21222C;
+		--color-dark-shadow-3: #1A1C24;
 
-        --color-dark-foreground-1: #F8F8F2;
-        --color-dark-foreground-2: #e3e3e2;
-        --color-dark-foreground-3: #C6C7CC;
+		--color-dark-foreground-1: #F8F8F2;
+		--color-dark-foreground-2: #e3e3e2;
+		--color-dark-foreground-3: #C6C7CC;
 
-        --color-light-foreground-3: #44475A;
-        --color-light-foreground-2: #282A36;
-        --color-light-foreground-1: #21222C;
+		--color-light-foreground-3: #44475A;
+		--color-light-foreground-2: #282A36;
+		--color-light-foreground-1: #21222C;
 
-        --color-light-background-4: #F3F4F6;
-        --color-light-background-5: #E8E8EE;
-        --color-light-background-3: #DCDDE5;
-        --color-light-background-2: #D0D2DC;
-        --color-light-background-1: #C4C7D4;
+		--color-light-background-4: #F3F4F6;
+		--color-light-background-5: #E8E8EE;
+		--color-light-background-3: #DCDDE5;
+		--color-light-background-2: #D0D2DC;
+		--color-light-background-1: #C4C7D4;
 
-        --color-light-shadow-1: #DCDDE5;
-        --color-light-shadow-2: #C4C7D4;
-        --color-light-shadow-3: #B2B5C2;
+		--color-light-shadow-1: #DCDDE5;
+		--color-light-shadow-2: #C4C7D4;
+		--color-light-shadow-3: #B2B5C2;
 
-        --color-comment: #6272A4;
+		--color-comment: #6272A4;
 
-        --color-red-1: #FF6E6E;
-        --color-red-2: #FF5555;
-        --color-red-3: #E63C3C;
-        --color-orange-1: #FFD185;
-        --color-orange-2: #FFB86C;
-        --color-orange-3: #E69F53;
-        --color-yellow-1: #FFFFA5;
-        --color-yellow-2: #F1FA8C;
-        --color-yellow-3: #D8E173;
-        --color-green-1: #69FF94;
-        --color-green-2: #50FA7B;
-        --color-green-3: #37EB62;
-        --color-cyan-1: #A4FFFF;
-        --color-cyan-2: #8BE9FD;
-        --color-cyan-3: #72D0E4;
-        --color-blue-1: #6DCCFF;
-        --color-blue-2: #54B3FF;
-        --color-blue-3: #3B9AE6;
-        --color-purple-1: #D6ACFF;
-        --color-purple-2: #BD93F9;
-        --color-purple-3: #A47AE0;
-        --color-pink-1: #FF92DF;
-        --color-pink-2: #FF79C6;
-        --color-pink-3: #E660AD;
+		--color-red-1: #FF6E6E;
+		--color-red-2: #FF5555;
+		--color-red-3: #E63C3C;
+		--color-orange-1: #FFD185;
+		--color-orange-2: #FFB86C;
+		--color-orange-3: #E69F53;
+		--color-yellow-1: #FFFFA5;
+		--color-yellow-2: #F1FA8C;
+		--color-yellow-3: #D8E173;
+		--color-green-1: #69FF94;
+		--color-green-2: #50FA7B;
+		--color-green-3: #37EB62;
+		--color-cyan-1: #A4FFFF;
+		--color-cyan-2: #8BE9FD;
+		--color-cyan-3: #72D0E4;
+		--color-blue-1: #6DCCFF;
+		--color-blue-2: #54B3FF;
+		--color-blue-3: #3B9AE6;
+		--color-purple-1: #D6ACFF;
+		--color-purple-2: #BD93F9;
+		--color-purple-3: #A47AE0;
+		--color-pink-1: #FF92DF;
+		--color-pink-2: #FF79C6;
+		--color-pink-3: #E660AD;
 
-        --color-graph-1: #FF79C633;
-        --color-graph-2: #FF79C688;
-        --color-graph-3: #FF79C6BB;
-        --color-graph-4: #FF79C6FF;
+		--color-graph-1: #FF79C633;
+		--color-graph-2: #FF79C688;
+		--color-graph-3: #FF79C6BB;
+		--color-graph-4: #FF79C6FF;
 
-        --color-accent-1: #BD93F9;
-        --color-accent-2: #BD93F944;
-        --color-important-1: #FF79C6;
-        --color-important-2: #FF79C644;
-    }
+		--color-accent-1: #BD93F9;
+		--color-accent-2: #BD93F944;
+		--color-important-1: #FF79C6;
+		--color-important-2: #FF79C644;
+	}
 
-    html {background-color: e("var(--color-@{dracula-style}-background-4)") !important;}
+	html {background-color: e("var(--color-@{dracula-style}-background-4)") !important;}
 
-    body {
-        --buttonCounter-default-bgColor-rest: e("var(--color-@{dracula-style}-background-4)");
+	body {
+		--buttonCounter-default-bgColor-rest: e("var(--color-@{dracula-style}-background-4)");
 
-        --button-danger-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
-        --button-default-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
-        --button-default-borderColor-disabled: transparent;
-        --button-default-borderColor-rest: transparent;
-        --button-default-bgColor-disabled: e("var(--color-@{dracula-style}-background-5)");
-        --button-default-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
-        --button-default-borderColor-hover: transparent;
-        --button-default-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
-        --button-default-borderColor-active: transparent;
-        --button-default-fgColor-rest: e("var(--color-@{dracula-style}-foreground-1)");
-        --button-primary-fgColor-disabled: e("var(--color-@{dracula-style}-foreground-3)");
-        --button-star-iconColor: var(--color-yellow-2);
+		--button-danger-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
+		--button-default-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
+		--button-default-borderColor-disabled: transparent;
+		--button-default-borderColor-rest: transparent;
+		--button-default-bgColor-disabled: e("var(--color-@{dracula-style}-background-5)");
+		--button-default-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
+		--button-default-borderColor-hover: transparent;
+		--button-default-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
+		--button-default-borderColor-active: transparent;
+		--button-default-fgColor-rest: e("var(--color-@{dracula-style}-foreground-1)");
+		--button-primary-fgColor-disabled: e("var(--color-@{dracula-style}-foreground-3)");
+		--button-star-iconColor: var(--color-yellow-2);
 
-        --button-primary-bgColor-rest: var(--color-accent-1);
-        --button-primary-bgColor-hover: var(--color-purple-1);
-        --button-primary-bgColor-active: var(--color-purple-3);
-        --button-primary-bgColor-disabled: var(--color-comment);
-        --button-primary-borderColor-disabled: var(--color-comment);
+		--button-primary-bgColor-rest: var(--color-accent-1);
+		--button-primary-bgColor-hover: var(--color-purple-1);
+		--button-primary-bgColor-active: var(--color-purple-3);
+		--button-primary-bgColor-disabled: var(--color-comment);
+		--button-primary-borderColor-disabled: var(--color-comment);
 
-        --bgColor-accent-muted: e("var(--color-@{dracula-style}-background-2)");
-        --bgColor-attention-muted: var(--color-accent-2);
-        --bgColor-default: e("var(--color-@{dracula-style}-background-4)");
-        --bgColor-inset: e("var(--color-@{dracula-style}-background-5)");
-        --bgColor-muted: e("var(--color-@{dracula-style}-background-5)");
-        --bgColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
-        --bgColor-emphasis: e("var(--color-@{dracula-style}-background-5)") !important;
-        --bgColor-accent-emphasis: var(--color-accent-1);
+		--bgColor-accent-muted: e("var(--color-@{dracula-style}-background-2)");
+		--bgColor-attention-muted: var(--color-accent-2);
+		--bgColor-default: e("var(--color-@{dracula-style}-background-4)");
+		--bgColor-inset: e("var(--color-@{dracula-style}-background-5)");
+		--bgColor-muted: e("var(--color-@{dracula-style}-background-5)");
+		--bgColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
+		--bgColor-emphasis: e("var(--color-@{dracula-style}-background-5)") !important;
+		--bgColor-accent-emphasis: var(--color-accent-1);
 
-        --overlay-bgColor: e("var(--color-@{dracula-style}-background-4)");
+		--overlay-bgColor: e("var(--color-@{dracula-style}-background-4)");
 
-        --fgColor-default: e("var(--color-@{dracula-style}-foreground-1)");
-        --fgColor-onEmphasis: e("var(--color-@{dracula-style}-foreground-1)");
-        --fgColor-disabled: e("var(--color-@{dracula-style}-background-2)");
-        --fgColor-muted: e("var(--color-@{dracula-style}-foreground-2)");
-        --fgColor-danger: var(--color-red-2);
-        --fgColor-attention: var(--color-orange-2);
-        --fgColor-success: var(--color-green-2);
-        --fgColor-accent: var(--color-accent-1);
-        --fgColor-link: var(--color-accent-1);
+		--fgColor-default: e("var(--color-@{dracula-style}-foreground-1)");
+		--fgColor-onEmphasis: e("var(--color-@{dracula-style}-foreground-1)");
+		--fgColor-disabled: e("var(--color-@{dracula-style}-background-2)");
+		--fgColor-muted: e("var(--color-@{dracula-style}-foreground-2)");
+		--fgColor-danger: var(--color-red-2);
+		--fgColor-attention: var(--color-orange-2);
+		--fgColor-success: var(--color-green-2);
+		--fgColor-accent: var(--color-accent-1);
+		--fgColor-link: var(--color-accent-1);
 
-        --focus-outlineColor: var(--color-accent-2);
+		--focus-outlineColor: var(--color-accent-2);
 
-        --border: e("var(--color-@{dracula-style}-background-2)");
-        --borderColor-accent-emphasis: var(--color-accent-2);
-        --borderColor-default: e("var(--color-@{dracula-style}-background-3)");
-        --borderColor-muted: e("var(--color-@{dracula-style}-background-2)");
-        --borderColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
-        --borderColor-danger-emphasis: var(--color-red-2);
-        --borderColor-attention-emphasis: var(--color-orange-2);
-        --borderColor-attention-muted: transparent;
-        --borderColor-accent-muted:transparent;
+		--border: e("var(--color-@{dracula-style}-background-2)");
+		--borderColor-accent-emphasis: var(--color-accent-2);
+		--borderColor-default: e("var(--color-@{dracula-style}-background-3)");
+		--borderColor-muted: e("var(--color-@{dracula-style}-background-2)");
+		--borderColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
+		--borderColor-danger-emphasis: var(--color-red-2);
+		--borderColor-attention-emphasis: var(--color-orange-2);
+		--borderColor-attention-muted: transparent;
+		--borderColor-accent-muted:transparent;
 
-        --controlKnob-bgColor-rest: e("var(--color-@{dracula-style}-background-2)");
-        --controlKnob-borderColor-rest: transparent;
-        --controlTrack-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
-        --controlTrack-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
-        --controlTrack-bgColor-hover: var(--color-accent-1);
-        --control-borderColor-rest: e("var(--color-@{dracula-style}-background-5)");
-        --control-transparent-bgColor-active: var(--color-accent-1);
-        --control-transparent-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
-        --control-transparent-bgColor-selected: e("var(--color-@{dracula-style}-background-2)");
+		--controlKnob-bgColor-rest: e("var(--color-@{dracula-style}-background-2)");
+		--controlKnob-borderColor-rest: transparent;
+		--controlTrack-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
+		--controlTrack-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
+		--controlTrack-bgColor-hover: var(--color-accent-1);
+		--control-borderColor-rest: e("var(--color-@{dracula-style}-background-5)");
+		--control-transparent-bgColor-active: var(--color-accent-1);
+		--control-transparent-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
+		--control-transparent-bgColor-selected: e("var(--color-@{dracula-style}-background-2)");
 
-        --color-calendar-graph-day-bg: e("var(--color-@{dracula-style}-background-5)");
-        --color-calendar-graph-day-L1-bg: var(--color-graph-1);
-        --color-calendar-graph-day-L2-bg: var(--color-graph-2);
-        --color-calendar-graph-day-L3-bg: var(--color-graph-3);
-        --color-calendar-graph-day-L4-bg: var(--color-graph-4);
+		--color-calendar-graph-day-bg: e("var(--color-@{dracula-style}-background-5)");
+		--color-calendar-graph-day-L1-bg: var(--color-graph-1);
+		--color-calendar-graph-day-L2-bg: var(--color-graph-2);
+		--color-calendar-graph-day-L3-bg: var(--color-graph-3);
+		--color-calendar-graph-day-L4-bg: var(--color-graph-4);
 
-        --color-user-mention-fg: e("var(--color-@{dracula-style}-foreground-1)");
-        --color-user-mention-bg: var(--color-orange-2);
-        --page-header-bgColor: e("var(--color-@{dracula-style}-background-5)");
+		--color-user-mention-fg: e("var(--color-@{dracula-style}-foreground-1)");
+		--color-user-mention-bg: var(--color-orange-2);
+		--page-header-bgColor: e("var(--color-@{dracula-style}-background-5)");
 
-        --underlineNav-borderColor-active: var(--color-pink-2);
-    }
+		--underlineNav-borderColor-active: var(--color-pink-2);
 
-    .TextInput-wrapper, .react-directory-row, .kHyYUy {
-        background-color: e("var(--color-@{dracula-style}-background-5)");
-        box-shadow: none;
-    }
+		--menu-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
+	}
 
-    .pinned-item-list-item-content {
-        background: e("var(--color-@{dracula-style}-background-5)");
-        padding: 1rem;
-        border-radius: 1rem;
-        box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-shadow-2)");
-    }
+	.TextInput-wrapper, .react-directory-row, .kHyYUy {
+		background-color: e("var(--color-@{dracula-style}-background-5)");
+		box-shadow: none;
+	}
 
-    .kHyYUy:hover, .AppHeader-search {
-        background-color: e("var(--color-@{dracula-style}-background-4)");
-    }
+	.pinned-item-list-item-content {
+		background: e("var(--color-@{dracula-style}-background-5)");
+		padding: 1rem;
+		border-radius: 1rem;
+		box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-shadow-2)");
+	}
 
-    .UnderlineNav {
-        box-shadow: none;
-    }
+	.kHyYUy:hover, .AppHeader-search {
+		background-color: e("var(--color-@{dracula-style}-background-4)");
+	}
 
-    .form-control {
-        background: e("var(--color-@{dracula-style}-background-5)");
-        border: none;
-    }
+	.UnderlineNav {
+		box-shadow: none;
+	}
 
-    .iXWA-dl,.AppHeader {
-        box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-shadow-2)");
-        border:none;
-    }
+	.form-control {
+		background: e("var(--color-@{dracula-style}-background-5)");
+		border: none;
+	}
 
-    .p-3 {
-        padding: 0.25rem !important;
-    }
+	.iXWA-dl,.AppHeader {
+		box-shadow: 0rem 0rem 1rem e("var(--color-@{dracula-style}-shadow-2)");
+		border:none;
+	}
+
+	.p-3 {
+		padding: 0.25rem !important;
+	}
+	
+	:root, [data-color-mode=light][data-light-theme*=light], [data-color-mode=dark][data-dark-theme*=light] {
+		background: e("var(--color-@{dracula-style}-background-5)");
+	}
 }
