@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.3.4
+@version          1.3.5
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -10,12 +10,23 @@
   "Dark": "dark",
   "Light": "light",
 }
+@var select accent-color "Accent Color" {
+  "Red": "#FF5555",
+  "Orange": "#FFB86C",
+  "Yellow": "#F1FA8C",
+  "Green": "#50FA7B",
+  "Blue": "#54B3FF",
+  "Cyan": "#8BE9FD",
+  "Purple": "#BD93F9",
+  "Pink": "#FF79C6",
+}
+
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
-
-	:root {
-		--color-dark-background-1: #525568;
+    
+    :root {
+        --color-dark-background-1: #525568;
 		--color-dark-background-2: #44475A;
 		--color-dark-background-3: #353747;
 		--color-dark-background-4: #282A36;
@@ -42,7 +53,7 @@
 		--color-light-shadow-1: #DCDDE5;
 		--color-light-shadow-2: #C4C7D4;
 		--color-light-shadow-3: #B2B5C2;
-
+ 
 		--color-comment: #6272A4;
 
 		--color-red-1: #FF6E6E;
@@ -70,15 +81,7 @@
 		--color-pink-2: #FF79C6;
 		--color-pink-3: #E660AD;
 
-		--color-graph-1: #FF79C633;
-		--color-graph-2: #FF79C688;
-		--color-graph-3: #FF79C6BB;
-		--color-graph-4: #FF79C6FF;
-
-		--color-accent-1: #BD93F9;
-		--color-accent-2: #BD93F944;
-		--color-important-1: #FF79C6;
-		--color-important-2: #FF79C644;
+		--color-accent: @accent-color;
 	}
 
 	html {background-color: e("var(--color-@{dracula-style}-background-4)") !important;}
@@ -99,20 +102,20 @@
 		--button-primary-fgColor-disabled: e("var(--color-@{dracula-style}-foreground-3)");
 		--button-star-iconColor: var(--color-yellow-2);
 
-		--button-primary-bgColor-rest: var(--color-accent-1);
-		--button-primary-bgColor-hover: var(--color-purple-1);
-		--button-primary-bgColor-active: var(--color-purple-3);
+		--button-primary-bgColor-rest: var(--color-accent);
+		--button-primary-bgColor-hover: var(--color-accent);
+		--button-primary-bgColor-active: var(--color-accent);
 		--button-primary-bgColor-disabled: var(--color-comment);
 		--button-primary-borderColor-disabled: var(--color-comment);
 
 		--bgColor-accent-muted: e("var(--color-@{dracula-style}-background-2)");
-		--bgColor-attention-muted: var(--color-accent-2);
+		--bgColor-attention-muted: var(--color-accent);
 		--bgColor-default: e("var(--color-@{dracula-style}-background-4)");
 		--bgColor-inset: e("var(--color-@{dracula-style}-background-5)");
 		--bgColor-muted: e("var(--color-@{dracula-style}-background-5)");
 		--bgColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
 		--bgColor-emphasis: e("var(--color-@{dracula-style}-background-5)") !important;
-		--bgColor-accent-emphasis: var(--color-accent-1);
+		--bgColor-accent-emphasis: var(--color-accent);
 
 		--overlay-bgColor: e("var(--color-@{dracula-style}-background-4)");
 
@@ -123,13 +126,13 @@
 		--fgColor-danger: var(--color-red-2);
 		--fgColor-attention: var(--color-orange-2);
 		--fgColor-success: var(--color-green-2);
-		--fgColor-accent: var(--color-accent-1);
-		--fgColor-link: var(--color-accent-1);
+		--fgColor-accent: var(--color-accent);
+		--fgColor-link: var(--color-accent);
 
-		--focus-outlineColor: var(--color-accent-2);
+		--focus-outlineColor: var(--color-accent);
 
 		--border: e("var(--color-@{dracula-style}-background-2)");
-		--borderColor-accent-emphasis: var(--color-accent-2);
+		--borderColor-accent-emphasis: var(--color-accent);
 		--borderColor-default: e("var(--color-@{dracula-style}-background-3)");
 		--borderColor-muted: e("var(--color-@{dracula-style}-background-2)");
 		--borderColor-neutral-muted: e("var(--color-@{dracula-style}-background-2)");
@@ -142,23 +145,23 @@
 		--controlKnob-borderColor-rest: transparent;
 		--controlTrack-bgColor-rest: e("var(--color-@{dracula-style}-background-5)");
 		--controlTrack-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
-		--controlTrack-bgColor-hover: var(--color-accent-1);
+		--controlTrack-bgColor-hover: var(--color-accent);
 		--control-borderColor-rest: e("var(--color-@{dracula-style}-background-5)");
-		--control-transparent-bgColor-active: var(--color-accent-1);
+		--control-transparent-bgColor-active: var(--color-accent);
 		--control-transparent-bgColor-hover: e("var(--color-@{dracula-style}-background-3)");
 		--control-transparent-bgColor-selected: e("var(--color-@{dracula-style}-background-2)");
 
 		--color-calendar-graph-day-bg: e("var(--color-@{dracula-style}-background-5)");
-		--color-calendar-graph-day-L1-bg: var(--color-graph-1);
-		--color-calendar-graph-day-L2-bg: var(--color-graph-2);
-		--color-calendar-graph-day-L3-bg: var(--color-graph-3);
-		--color-calendar-graph-day-L4-bg: var(--color-graph-4);
+		--color-calendar-graph-day-L1-bg: fade(@accent-color, 25%);
+		--color-calendar-graph-day-L2-bg: fade(@accent-color, 50%);
+		--color-calendar-graph-day-L3-bg: fade(@accent-color, 75%);
+		--color-calendar-graph-day-L4-bg: fade(@accent-color, 100%);
 
 		--color-user-mention-fg: e("var(--color-@{dracula-style}-foreground-1)");
-		--color-user-mention-bg: var(--color-orange-2);
+		--color-user-mention-bg: var(--color-accent);
 		--page-header-bgColor: e("var(--color-@{dracula-style}-background-5)");
 
-		--underlineNav-borderColor-active: var(--color-pink-2);
+		--underlineNav-borderColor-active: var(--color-accent);
 
 		--menu-bgColor-active: e("var(--color-@{dracula-style}-background-3)");
 	}
