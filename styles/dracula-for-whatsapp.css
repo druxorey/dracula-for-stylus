@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.5.1
+@version          1.5.2
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
 ==/UserStyle== */
 
 @-moz-document domain("whatsapp.com") {
-
+    
     #app>div>div:last-child {
         width: 100%;
         max-width: none;
@@ -238,6 +238,7 @@
         --teal: var(--color-accent-3);
         --teal-lighter: var(--color-accent-1);
 
+        --text-primary:var(--color-light-foreground-1);
         --text-critical: var(--color-red-2);
         --text-secondary-emphasized: var(--color-light-foreground-1);
         --text-teal: var(--color-accent-1);
@@ -257,6 +258,7 @@
         --wds-emerald-400: var(--color-accent-1);
         --wds-sky-blue-300: var(--color-accent-3);
         --wds-yellow-400: var(--color-accent-1);
+        --WDS-cool-gray-1000: var(--color-dark-background-4);
     }
 
     .dark {
@@ -407,6 +409,7 @@
         --teal: var(--color-accent-3);
         --teal-lighter: var(--color-accent-1);
 
+        --text-primary:var(--color-dark-foreground-1);
         --text-critical: var(--color-red-2);
         --text-secondary-emphasized: var(--color-dark-foreground-1);
         --text-teal: var(--color-accent-1);
@@ -426,6 +429,7 @@
         --wds-emerald-400: var(--color-accent-1);
         --wds-sky-blue-300: var(--color-accent-3);
         --wds-yellow-400: var(--color-accent-1);
+        --WDS-cool-gray-1000: var(--color-dark-background-4);
     }
 
     .dark .color-1 {
