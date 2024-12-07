@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.5.2
+@version          1.5.3
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -31,10 +31,10 @@
 		--color-dark-foreground-1: #F8F8F2;
 		--color-dark-foreground-2: #E3E3E2;
 		--color-dark-foreground-3: #C6C7CC;
-
-		--color-light-foreground-3: #44475A;
+        
+        --color-light-foreground-1: #44475A;
 		--color-light-foreground-2: #282A36;
-		--color-light-foreground-1: #21222C;
+		--color-light-foreground-3: #21222C;    
 
 		--color-light-background-1: #F3F4F6;
 		--color-light-background-2: #E8E8EE;
@@ -120,9 +120,9 @@
         --background-lighter: var(--color-light-background-2);
         --background-lighter-hover: var(--color-light-background-4);
         --background-lighter-active: var(--color-light-background-7);
-        --background-lightest-hover: var(--color-light-background-4);
+        --background-lightest-hover: var(--color-light-background-2);
 
-        --border-default: var(--color-light-background-2);
+        --border-default: transparent;
         --border-list: transparent;
 
         --butterbar-default-background: var(--color-light-background-3);
@@ -130,10 +130,12 @@
         --butterbar-secondary: var(--color-light-foreground-1);
 
         --button-primary-background: var(--color-light-background-2);
-        --button-primary-background-hover: var(--color-light-background-4);
+        --button-primary-background-hover: var(--color-light-background-1);
         --button-round-background: var(--color-light-background-2);
         --button-plain-background: var(--color-light-background-2);
         --button-secondary: var(--color-light-foreground-1);
+        --button-secondary-background:var(--color-light-background-2);
+        --button-secondary-background-hover: var(--color-light-background-1);
         --button-secondary-hover: var(--color-accent-1);
 
         --chat-marker-background: var(--color-light-background-1);
@@ -258,7 +260,20 @@
         --wds-emerald-400: var(--color-accent-1);
         --wds-sky-blue-300: var(--color-accent-3);
         --wds-yellow-400: var(--color-accent-1);
-        --WDS-cool-gray-1000: var(--color-dark-background-4);
+        --WDS-cool-gray-1000: var(--color-light-background-4);
+        
+        --gray-500: var(--color-light-foreground-2);
+        --checkbox-background: var(--color-accent-1);
+        --button-primary: var(--color-light-foreground-2);
+        --chat-meta: var(--color-light-foreground-2);
+        
+        --splashscreen-startup-background: #F7F5F3;
+        --splashscreen-startup-background-rgb: 247, 245, 243;
+        --splashscreen-startup-icon: rgba(0, 0, 0, 0.1);
+        --splashscreen-primary-title: #0A1014;
+        --splashscreen-secondary-lighter: #5B6368;
+        --splashscreen-progress-primary: #1DAA61;
+        --splashscreen-progress-background: rgba(0, 0, 0, 0.1);
     }
 
     .dark {
@@ -293,7 +308,7 @@
         --background-lighter-active: var(--color-dark-background-3);
         --background-lightest-hover: var(--color-dark-background-1);
 
-        --border-default: var(--color-dark-background-2);
+        --border-default: transparent;
         --border-list: transparent;
 
         --butterbar-default-background: var(--color-dark-background-5);
@@ -430,6 +445,11 @@
         --wds-sky-blue-300: var(--color-accent-3);
         --wds-yellow-400: var(--color-accent-1);
         --WDS-cool-gray-1000: var(--color-dark-background-4);
+        
+        --gray-500: var(--color-dark-foreground-2);
+        --checkbox-background: var(--color-accent-1);
+        --button-primary: var(--color-dark-foreground-2);
+        --chat-meta: var(--color-dark-foreground-2);
     }
 
     .dark .color-1 {
