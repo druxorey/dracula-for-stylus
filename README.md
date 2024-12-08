@@ -45,20 +45,19 @@ This repository contains CSS files for the [Stylus](https://github.com/openstyle
 ### Wikipedia
 ![This is an image](/resources/dracula-for-wikipedia.webp)
 
+### Youtube
+![This is an image](/resources/dracula-for-youtube.webp)
+
 ### Google Docs (Outdated)
 ![This is an image](/resources/dracula-for-google-docs.webp)
 
 ### Google Drive (Outdated)
 ![This is an image](/resources/dracula-for-google-drive.webp)
 
-### Youtube (Outdated)
-![This is an image](/resources/dracula-for-youtube.webp)
-
 ## Future Projects
 
 - [ ] Dracula for Google Docs (rewrite)
 - [ ] Dracula for Google Drive (rewrite)
-- [ ] Dracula for YouTube (rewrite)
 - [ ] Dracula for Reddit (rewrite)
 - [ ] Dracula for Ditlep
 - [ ] Dracula for ArchWiki
