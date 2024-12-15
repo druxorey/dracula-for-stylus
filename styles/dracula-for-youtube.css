@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Youtube
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.0.0
+@version          1.1.0
 @description      Are you tired of the same boring colors on Youtube? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -11,14 +11,14 @@
   "Light": "light",
 }
 @var select accent-color "Accent Color" {
-	"Red": "#FF5555",
-	"Orange": "#FFB86C",
-	"Yellow": "#F1FA8C",
-	"Green": "#50FA7B",
-	"Blue": "#54B3FF",
-	"Cyan": "#8BE9FD",
-	"Purple": "#BD93F9",
-	"Pink": "#FF79C6",
+	"Red": "red",
+	"Orange": "orange",
+	"Yellow": "yellow",
+	"Green": "green",
+	"Blue": "blue",
+	"Cyan": "cyan",
+	"Purple": "purple",
+	"Pink": "pink",
 }
 
 @var checkbox media-bar "Enable black bars" 0
@@ -28,6 +28,7 @@
 
     :root {
         --color-comment: #6272A4;
+
         --color-red-1: #FF6E6E;
         --color-red-2: #FF5555;
         --color-red-3: #E63C3C;
@@ -52,6 +53,10 @@
         --color-pink-1: #FF92DF;
         --color-pink-2: #FF79C6;
         --color-pink-3: #E660AD;
+
+        --color-accent-1: e("var(--color-@{accent-color}-1)");
+        --color-accent-2: e("var(--color-@{accent-color}-2)");
+        --color-accent-3: e("var(--color-@{accent-color}-3)");
     }
 
     :root:not([dark]) {
@@ -68,6 +73,8 @@
         --color-shadow-1: #DCDDE5;
         --color-shadow-2: #C4C7D4;
         --color-shadow-3: #B2B5C2;
+        
+        background: var(--color-background-4) !important;
     }
 
     :root[dark] {
@@ -84,6 +91,8 @@
         --color-shadow-1: #353747;
         --color-shadow-2: #21222C;
         --color-shadow-3: #1A1C24;
+        
+        background: var(--color-background-4) !important;
     }
 
     [fill="red"],
@@ -91,8 +100,9 @@
     [fill="#FF0000"],
     [fill="#f03"],
     [fill="#FF0033"] {
-        fill: var(--color-purple-2) !important;
+        fill: var(--color-accent-2) !important;
     }
+
 
     &,
     [dark],
@@ -101,32 +111,58 @@
     &[dark],
     &[system-icons],
     &[darker-dark-theme] {
+        --yt-spec-raised-background: var(--color-background-3);
+        --yt-spec-general-background-a: var(--color-background-4);
         --yt-spec-additive-background: var(--color-background-2);
         --yt-spec-badge-chip-background: var(--color-background-3);
         --yt-spec-base-background: var(--color-background-4);
         --yt-spec-brand-background-primary: var(--color-background-4);
         --yt-spec-menu-background: var(--color-background-3);
-        --yt-spec-text-secondary: var(--color-purple-2);
+        --yt-spec-text-secondary: var(--color-accent-2);
         --yt-spec-text-primary: var(--color-foreground-1);
         --yt-spec-icon-active-other: var(--color-foreground-1);
         --yt-spec-wordmark-text: var(--color-foreground-1);
-        --ytd-searchbox-background: var(--color-background-5);
-        --ytd-searchbox-legacy-button-color: var(--color-background-5);
-        --ytd-searchbox-legacy-button-border-color: transparent;
-        --ytd-searchbox-legacy-border-color: transparent;
+    }
+
+    .ytSuggestionComponentRemoveLinkDark {
+        color: var(--color-accent-2);
+    }
+    
+    .ytp-progress-list {
+        background: var(--color-background-2);
+    }
+    
+    .ytp-load-progress {
+        background: var(--color-foreground-3);
+    }
+    
+    .ytSearchboxComponentInputBoxDark,
+    .ytSearchboxComponentSearchButtonDark {
+        background-color: var(--color-background-3);
+        color: var(--color-foreground-1);
+        border-color: var(--color-background-3);
+    }
+    
+    .ytSearchboxComponentSuggestionsContainer,
+    .ytSearchboxComponentSuggestionsContainerDark {
+      background: var(--yt-spec-raised-background) !important;
+      border-color: var(--yt-spec-raised-background) !important;
+    }
+
+    .ytSearchboxComponentInputBoxDark.ytSearchboxComponentInputBoxHasFocus {
+        border-color: var(--color-accent-3);
     }
 
     .yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
-        background-color: var(--color-purple-2);
+        background-color: var(--color-accent-2);
     }
 
     .yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color {
-        color: var(--color-pink-2);
+        color: var(--color-accent-2);
     }
 
     .yt-content-metadata-view-model-wiz--medium-text .yt-content-metadata-view-model-wiz__metadata-text {
-        color: var(--color-purple-2);
-
+        color: var(--color-accent-2);
     }
 
     .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
@@ -150,7 +186,7 @@
     }
 
     .yt-page-navigation-progress {
-        background: var(--color-purple-2) !important;
+        background: var(--color-accent-2) !important;
     }
 
     ytd-searchbox[has-focus] #container.ytd-searchbox {
@@ -165,7 +201,7 @@
             [fill="rgb(3,3,3)"],
             [fill="rgb(0,0,0)"],
             [fill="rgb(255,255,255)"] {
-                fill: #00ff00 !important;
+                fill: var(--color-pink-2) !important;
             }
 
             [stroke="rgb(0,0,0)"],
@@ -176,7 +212,7 @@
             /* Accent for filled-in thumbs up (like button) */
             [animated-icon-type="LIKE"] {
                 g path[fill] {
-                    fill: var(--color-purple-2) !important;
+                    fill: var(--color-accent-2) !important;
 
                     +[stroke] {
                         stroke: #00ff00 !important;
@@ -190,11 +226,11 @@
         }
 
         &.yt-spec-button-shape-next--outline {
-            color: #00ff00;
-            border-color: #00ff00;
+            color: var(--color-pink-2);
+            border-color: var(--color-pink-2);
 
             &:hover {
-                background-color: #00ff00;
+                background-color: #FF79C650;
             }
         }
 
@@ -213,11 +249,22 @@
 
         &.yt-spec-button-shape-next--filled {
             color: var(--color-foreground-1);
-            background-color: var(--color-purple-2);
+            background-color: var(--color-accent-2);
 
             &:hover {
-                background-color: var(--color-purple-3);
+                background-color: var(--color-accent-3);
             }
         }
+    }
+
+    ytd-playlist-panel-video-renderer[can-reorder]:hover,
+    ytd-playlist-panel-video-renderer[can-reorder][menu-opened],
+    ytd-playlist-panel-video-renderer[can-reorder].dragging {
+        box-shadow: 0 2px 8px var(--color-shadow-2);
+    }
+
+    .ytp-swatch-background-color,
+    .ytp-play-progress {
+        background: var(--color-accent-2) !important;
     }
 }
