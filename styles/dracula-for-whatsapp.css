@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.5.5
+@version          1.5.6
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -269,11 +269,14 @@
 		--unread-marker-timestamp: var(--color-pink-2);
 		--unread-timestamp: var(--color-accent-3);
 
+        --WDS-accent: var(--color-accent-1);
+		--WDS-cool-gray-1000: var(--color-background-4);
+        --WDS-content-action-emphasized: var(--color-accent-2);
 		--wds-emerald-400: var(--color-accent-1);
+        --wds-green-400: var(--color-accent-1);
 		--wds-sky-blue-300: var(--color-accent-3);
 		--wds-teal-500: var(--color-accent-2);
 		--wds-yellow-400: var(--color-accent-1);
-		--WDS-cool-gray-1000: var(--color-background-4);
 
 		--teal: var(--color-accent-3);
 		--teal-lighter: var(--color-accent-1);
@@ -287,8 +290,14 @@
 		--outgoing-background: var(--color-background-4);
 		--outgoing-background-deeper: var(--color-background-2);
 	}
-	
-	._al_o {
+
+	/* Removing whatsapp welcome svg */
+    .x1rg5ohu.xdj266r.xkrivgy.xat24cr.x1gryazu {
 		display: none;
 	}
+
+	/* Archived chat notification  */
+    .x17daq4n {
+        color: var(--color-accent-2);
+    }
 }
