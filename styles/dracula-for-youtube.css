@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Youtube
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.1.2
+@version          1.1.3
 @description      Are you tired of the same boring colors on Youtube? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -18,6 +18,7 @@
 }
 
 @var checkbox media-bar "Enable black bars" 0
+@var checkbox video-box "Enable video box" 0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://www.youtube.com/") {
@@ -321,8 +322,8 @@
 	}
 	
 	div#content.style-scope.ytd-rich-item-renderer {
-		background: var(--color-background-3);
-		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
+		background: if(@video-box = 1, var(--color-background-3), transparent);
+		box-shadow: 0rem 0rem 1rem if(@video-box = 1, var(--color-shadow-2), transparent);
 		padding: 1rem;
 		border-radius: 10px
 	}
@@ -343,7 +344,7 @@
 		border: none;
 		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
 	}
-	
+
 	div#items.style-scope.ytd-watch-next-secondary-results-renderer {
 		background: var(--color-background-3);
 		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
