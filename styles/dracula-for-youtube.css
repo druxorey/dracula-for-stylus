@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Youtube
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.1.1
+@version          1.1.2
 @description      Are you tired of the same boring colors on Youtube? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -107,11 +107,11 @@
 	&[system-icons],
 	&[darker-dark-theme] {
 		--yt-spec-raised-background: var(--color-background-3);
-		--yt-spec-general-background-a: var(--color-background-4);
+		--yt-spec-general-background-a: var(--color-background-3);
 		--yt-spec-additive-background: var(--color-background-2);
 		--yt-spec-badge-chip-background: var(--color-background-3);
-		--yt-spec-base-background: var(--color-background-4);
-		--yt-spec-brand-background-primary: var(--color-background-4);
+		--yt-spec-base-background: var(--color-background-);
+		--yt-spec-brand-background-primary: var(--color-background-3);
 		--yt-spec-menu-background: var(--color-background-3);
 		--yt-spec-text-secondary: var(--color-accent-2);
 		--yt-spec-text-primary: var(--color-foreground-1);
@@ -141,8 +141,8 @@
 	
 	.ytSearchboxComponentSuggestionsContainer,
 	.ytSearchboxComponentSuggestionsContainerDark {
-	  background: var(--yt-spec-raised-background) !important;
-	  border-color: var(--yt-spec-raised-background) !important;
+		background: var(--yt-spec-raised-background) !important;
+		border-color: var(--yt-spec-raised-background) !important;
 	}
 
 	.ytSearchboxComponentInputBoxDark.ytSearchboxComponentInputBoxHasFocus {
@@ -168,7 +168,8 @@
 	#content.ytd-rich-item-renderer ytd-post-renderer.ytd-rich-item-renderer,
 	#content.ytd-rich-item-renderer ytd-shared-post-renderer.ytd-rich-item-renderer,
 	#content.ytd-rich-item-renderer ytd-mini-game-card-view-model.ytd-rich-item-renderer {
-		background-color: var(--color-background-2);
+		background-color: transparent;
+		border-radius: 10px;
 		border: none;
 	}
 
@@ -222,7 +223,7 @@
 		}
 
 		&.yt-spec-button-shape-next--outline {
-            background: var(--color-background-2);
+			background: var(--color-background-2);
 			color: var(--color-foreground-1);
 			border-color: var(--color-background-2);
 
@@ -292,7 +293,7 @@
 
 	.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--tonal,
 	.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text {
-		background: var(--color-background-3);
+		background: var(--color-background-2);
 	}
 
 	.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--tonal:hover,
@@ -313,5 +314,44 @@
 	#yt_to_text_profile path {
 		stroke: var(--color-accent-2);
 		stroke-width: 0.8;
+	}
+	
+	ytd-playlist-panel-video-renderer[selected][use-color-palette], ytd-playlist-panel-video-renderer[selected][use-color-palette]:hover:not(.dragging) {
+		background-color: var(--color-background-2);
+	}
+	
+	div#content.style-scope.ytd-rich-item-renderer {
+		background: var(--color-background-3);
+		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
+		padding: 1rem;
+		border-radius: 10px
+	}
+	
+	div#content.style-scope.ytd-rich-item-renderer:hover {
+		background: var(--color-background-2);
+	}
+	
+	#masthead-container, #chips-content {
+		background: var(--color-background-4);
+	}
+	
+	div#guide-content.style-scope.ytd-app {
+		background: var(--color-background-4);
+	}
+	
+	div#container.style-scope.ytd-playlist-panel-renderer {
+		border: none;
+		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
+	}
+	
+	div#items.style-scope.ytd-watch-next-secondary-results-renderer {
+		background: var(--color-background-3);
+		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
+		padding: 1rem;
+		border-radius: 10px
+	}
+	
+	div#description.item.style-scope.ytd-watch-metadata {
+		box-shadow: 0rem 0rem 1rem var(--color-shadow-2);
 	}
 }
