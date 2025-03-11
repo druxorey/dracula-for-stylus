@@ -58,9 +58,11 @@ This repository contains CSS files for the [Stylus](https://github.com/openstyle
 
 - [ ] Dracula for Google Docs (rewrite)
 - [ ] Dracula for Google Drive (rewrite)
-- [ ] Dracula for Reddit (rewrite)
-- [ ] Dracula for Ditlep
+- [ ] Dracula for MyAnimeList
 - [ ] Dracula for ArchWiki
+- [ ] Dracula for Deepseek
+- [ ] Dracula for Google Search
+- [ ] Dracula for Google Translate
 
 ## Contribute
 
