@@ -31,28 +31,31 @@ This repository contains CSS files for the [Stylus](https://github.com/openstyle
 ## Gallery
 
 ### GitHub
-![This is an image](/resources/dracula-for-github.webp)
+![GitHub Screenshot](/resources/dracula-for-github.webp)
 
 ### Reddit
-![This is an image](/resources/dracula-for-reddit.webp)
+![Reddit Screenshot](/resources/dracula-for-reddit.webp)
 
 ### Brave Search
-![This is an image](/resources/dracula-for-brave.webp)
+![Brave Screenshot](/resources/dracula-for-brave.webp)
 
 ### WhatsApp
-![This is an image](/resources/dracula-for-whatsapp.webp)
+![WhatsApp Screenshot](/resources/dracula-for-whatsapp.webp)
 
 ### Wikipedia
-![This is an image](/resources/dracula-for-wikipedia.webp)
+![Wikipedia Screenshot](/resources/dracula-for-wikipedia.webp)
 
 ### Youtube
-![This is an image](/resources/dracula-for-youtube.webp)
+![Youtube Screenshot](/resources/dracula-for-youtube.webp)
+
+### Gemini
+![Gemini Screenshot](/resources/dracula-for-gemini.webp)
 
 ### Google Docs (Outdated)
-![This is an image](/resources/dracula-for-google-docs.webp)
+![Google Docs Screenshot](/resources/dracula-for-google-docs.webp)
 
 ### Google Drive (Outdated)
-![This is an image](/resources/dracula-for-google-drive.webp)
+![Google Drive Screenshot](/resources/dracula-for-google-drive.webp)
 
 ## Future Projects
 
