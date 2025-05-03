@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Gemini
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.0.0
+@version          1.0.1
 @description      Are you tired of the same boring colors on Gemini? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -78,42 +78,32 @@
 	}
 	
 	:where(.theme-host):where(.dark-theme) {
-		--gem-sys-color--on-surface: var(--color-foreground-1);
-		--gem-sys-color--surface: var(--color-background-4);
-		--gem-sys-color--surface-container: var(--color-background-5);
-		--gem-sys-color--surface-container-low: var(--color-background-4);
-		
-		--gem-sys-color--surface-container-high: var(--color-background-2) !important;
-		--gem-sys-color--surface-container-high: var(--color-accent-2);
-		--gem-sys-color--surface-container-high--rgb: 255, 255, 0;
-		
-		--gem-sys-color--surface-container-highest: var(--color-background-2);
-		--gem-sys-color--surface-bright: red;
-
 		--gem-sys-color--outline-variant: var(--color-background-5);
-		--gem-sys-color--surface-variant: red !important;
-		
 		--gem-sys-color--primary: var(--color-accent-2);
 		--gem-sys-color--primary-container: var(--color-accent-2);
+		--gem-sys-color--surface: var(--color-background-4);
+		--gem-sys-color--surface--rgb: transparent;
+		--gem-sys-color--surface-container: var(--color-background-5);
+		--gem-sys-color--surface-container-low: var(--color-background-4);
+		--gem-sys-color--surface-container-high: var(--color-background-2) !important;
+		--gem-sys-color--surface-container-high: var(--color-accent-2);
+		--gem-sys-color--surface-container-highest: var(--color-background-2);
 		--gem-sys-color--on-primary: var(--color-background-2);
 		--gem-sys-color--on-primary-container: var(--color-foreground-1);
-		
-		--gem-sys-color--secondary-container: red;
-		--gem-sys-color--on-secondary-container: red;
-		--gem-sys-color--surface--rgb: red;
+		--gem-sys-color--on-surface: var(--color-foreground-1);
+		--gem-sys-color--on-surface-variant: var(--color-foreground-2);
+		--mat-menu-container-color: var(--color-background-5);
 	}
 		
 	:root .dark-theme {
 		--bard-color-new-conversation-button: var(--color-background-2);
-		--bard-color-bot-power-up-button-background: red;
-		--bard-color-response-container-flipped-background: red;
 	}
 	
 	.buttons-container.adv-upsell.ng-star-inserted {
 		display: if(@gemini-advanced = 1, none, block);
 	}
-
-	.ng-tns-c470482074-3.ui-improvements-phase-1.with-toolbox-drawer.ng-star-inserted {
+	
+	.text-input-field {
 		background: var(--color-background-5);
 	}
 }
