@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.6.0
+@version          1.6.1
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -86,8 +86,8 @@
 		--color-background-5: #1E1F29;
 
 		--color-foreground-1: #F8F8F2;
-		--color-foreground-2: #9e9fa6;
-		--color-foreground-3: #5a5d6d;
+		--color-foreground-2: #ADAFBC;
+		--color-foreground-3: #5A5D6D;
 
 		--color-shadow-1: #2F313F;
 		--color-shadow-2: #1E1F29;
@@ -114,16 +114,20 @@
 		--WDS-accent: var(--color-accent-2);
 		--WDS-accent-deemphasized: var(--color-background-2);
 		--WDS-accent-emphasized: var(--color-foreground-1);
-		--WDS-background-wash-inset: red;
+		--WDS-background-wash-inset: var(--color-background-5);
 		--WDS-content-action-emphasized: var(--color-accent-2);
 		--WDS-content-deemphasized: var(--color-foreground-2);
-		--WDS-green-800: red;
 		--WDS-persistent-always-branded: var(--color-accent-2);
 		--WDS-surface-default: var(--color-background-5);
-		--WDS-systems-bubble-surface-outgoing: red;
+		--WDS-surface-highlight: var(--color-background-2);
+
+		--unread-timestamp: var(--color-accent-2);
+		--highlight: var(--color-accent-1);
+		--media-editor-document-caption-input-background: var(--color-background-2);
+		--switch-track-checked-color: var(--color-accent-2);
 	}
 	
-    /* Whatsapp titlebar */
+	/* Whatsapp titlebar */
 	.xd32934.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x5ib6vp.xc73u3c {
 		background: var(--color-background-4) !important;
 	}
