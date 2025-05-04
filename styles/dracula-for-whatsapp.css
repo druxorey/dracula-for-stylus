@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Dracula for Whatsapp
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.6.1
+@version          1.6.2
 @description      Are you tired of the same boring colors on Whatsapp? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
@@ -116,23 +116,42 @@
 		--WDS-accent-emphasized: var(--color-foreground-1);
 		--WDS-background-wash-inset: var(--color-background-5);
 		--WDS-content-action-emphasized: var(--color-accent-2);
+		--WDS-content-external-link: var(--color-accent-2);
 		--WDS-content-deemphasized: var(--color-foreground-2);
 		--WDS-persistent-always-branded: var(--color-accent-2);
 		--WDS-surface-default: var(--color-background-5);
 		--WDS-surface-highlight: var(--color-background-2);
 
-		--unread-timestamp: var(--color-accent-2);
+		--communities-green: var(--color-accent-2); 
+		--focus-rgb: transparent;
 		--highlight: var(--color-accent-1);
+		--link: var(--color-accent-2);
 		--media-editor-document-caption-input-background: var(--color-background-2);
+		--media-editor-thumb-border-active: var(--color-accent-2);
 		--switch-track-checked-color: var(--color-accent-2);
+		--teal: var(--color-accent-2);
+		--text-teal: var(--color-accent-2);
+		--unread-marker-background: var(--color-accent-2);
+		--unread-timestamp: var(--color-accent-2);
 	}
 	
 	/* Whatsapp titlebar */
 	.xd32934.x9f619.x78zum5.x1okw0bk.x6s0dn4.x1peatla.x14ug900.x1280gxy.x889kno.x1a8lsjc.x5ib6vp.xc73u3c {
 		background: var(--color-background-4) !important;
 	}
+	
 	.x1rg5ohu.x173ssrc.x1xaadd7.x682dto.x1e01kqd.x12j7j87.x9bpaai.x1pg5gke.x1s688f.xo5v014.x1u28eo4.x2b8uid.x16dsc37.x18ba5f9.x1sbl2l.xy9co9w.x5r174s.x7h3shv {
 		background: var(--color-accent-2);
+	}
+	
+	/* Community Background Fix */
+	.x1280gxy {
+		background: var(--color-background-4) !important;
+	}
+	
+	/* Community Separator Fix */
+	.xsm26vf {
+		background: var(--color-background-4);
 	}
 
 	/* Removing whatsapp welcome svg */
