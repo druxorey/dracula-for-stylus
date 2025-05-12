@@ -51,6 +51,9 @@ This repository contains CSS files for the [Stylus](https://github.com/openstyle
 ### Gemini
 ![Gemini Screenshot](/resources/dracula-for-gemini.webp)
 
+### LeetCode
+![LeetCode Screenshot](/resources/dracula-for-leetcode.webp)
+
 ### Google Docs (Outdated)
 ![Google Docs Screenshot](/resources/dracula-for-google-docs.webp)
 
