@@ -1,15 +1,11 @@
 /* ==UserStyle==
 @name             Dracula for GitHub
 @namespace        github.com/druxorey/dracula-for-stylus
-@version          1.3.9
+@version          1.4.0
 @description      Are you tired of the same boring colors on GitHub? Then try this modern color style based on the Dracula theme
 @author           Druxorey
 @license          GNU General Public License v3.0
 @preprocessor     less
-@var select dracula-style "Style" {
-	"Dark": "dark",
-	"Light": "light",
-}
 @var select accent-color "Accent Color" {
 	"Red": "#FF5555",
 	"Orange": "#FFB86C",
@@ -23,100 +19,98 @@
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
-	
+	:root,
+	[data-color-mode="dark"][data-dark-theme="dark"] {
+		--drx-color-background-1: #525568;
+		--drx-color-background-2: #44475a;
+		--drx-color-background-3: #363948;
+		--drx-color-background-4: #282a36;
+		--drx-color-background-5: #1e1f29;
+
+		--drx-color-foreground-1: #f8f8f2;
+		--drx-color-foreground-2: #adafbc;
+		--drx-color-foreground-3: #5a5d6d;
+
+		--drx-color-shadow-1: #2f313f;
+		--drx-color-shadow-2: #1e1f29;
+		--drx-color-shadow-3: #1a1b23;
+
+		--drx-color-border: #363948;
+	}
+
+	:root,
+	[data-color-mode="light"][data-dark-theme="light"] {
+		--drx-color-background-4: #f4f4f6;
+		--drx-color-background-2: #e9e9ed;
+		--drx-color-background-5: #dddde3;
+		--drx-color-background-3: #c7c8d1;
+		--drx-color-background-1: #a5a7b6;
+
+		--drx-color-foreground-1: #44475a;
+		--drx-color-foreground-2: #7e808e;
+		--drx-color-foreground-3: #b9bac2;
+
+		--drx-color-shadow-3: #dddde3;
+		--drx-color-shadow-2: #a5a7b6;
+		--drx-color-shadow-1: #8f91a3;
+
+		--drx-color-border: #c7c8d1;
+	}
+
 	:root {
-		--color-dark-background-1: #525568;
-		--color-dark-background-2: #44475A;
-		--color-dark-background-3: #2F313F;
-		--color-dark-background-4: #282A36;
-		--color-dark-background-5: #1E1F29;
+		--color-comment: #6272a4;
 
-		--color-dark-border: #2F313F;
-
-		--color-dark-foreground-1: #F8F8F2;
-		--color-dark-foreground-2: #E3E3E2;
-		--color-dark-foreground-3: #C6C7CC;
-
-		--color-dark-shadow-1: #2F313F;
-		--color-dark-shadow-2: #1E1F29;
-		--color-dark-shadow-3: #1A1B23;
-
-		--color-light-background-4: #F4F4F6;
-		--color-light-background-5: #DDDDE3;
-		--color-light-background-2: #C7C8D1;
-		--color-light-background-1: #A5A7B6;
-		--color-light-background-3: #8F91A3;
-
-		--color-light-border: #DDDDE3;
-
-		--color-light-foreground-1: #44475A;
-		--color-light-foreground-2: #7E808E;
-		--color-light-foreground-3: #B9BAC2;
-
-		--color-light-shadow-1: #DDDDE3;
-		--color-light-shadow-2: #A5A7B6;
-		--color-light-shadow-3: #8F91A3;
-
-		--color-comment: #6272A4;
-
-		--color-red-1: #FF6E6E;
-		--color-red-2: #FF5555;
-		--color-red-3: #E63C3C;
-		--color-orange-1: #FFD185;
-		--color-orange-2: #FFB86C;
-		--color-orange-3: #E69F53;
-		--color-yellow-1: #FFFFA5;
-		--color-yellow-2: #F1FA8C;
-		--color-yellow-3: #D8E173;
-		--color-green-1: #69FF94;
-		--color-green-2: #50FA7B;
-		--color-green-3: #37EB62;
-		--color-cyan-1: #A4FFFF;
-		--color-cyan-2: #8BE9FD;
-		--color-cyan-3: #72D0E4;
-		--color-blue-1: #6DCCFF;
-		--color-blue-2: #54B3FF;
-		--color-blue-3: #3B9AE6;
-		--color-purple-1: #D6ACFF;
-		--color-purple-2: #BD93F9;
-		--color-purple-3: #A47AE0;
-		--color-pink-1: #FF92DF;
-		--color-pink-2: #FF79C6;
-		--color-pink-3: #E660AD;
+		--color-red-1: #ff6e6e;
+		--color-red-2: #ff5555;
+		--color-red-3: #e63c3c;
+		--color-orange-1: #ffd185;
+		--color-orange-2: #ffb86c;
+		--color-orange-3: #e69f53;
+		--color-yellow-1: #ffffa5;
+		--color-yellow-2: #f1fa8c;
+		--color-yellow-3: #d8e173;
+		--color-green-1: #69ff94;
+		--color-green-2: #50fa7b;
+		--color-green-3: #37eb62;
+		--color-cyan-1: #a4ffff;
+		--color-cyan-2: #8be9fd;
+		--color-cyan-3: #72d0e4;
+		--color-blue-1: #6dccff;
+		--color-blue-2: #54b3ff;
+		--color-blue-3: #3b9ae6;
+		--color-purple-1: #d6acff;
+		--color-purple-2: #bd93f9;
+		--color-purple-3: #a47ae0;
+		--color-pink-1: #ff92df;
+		--color-pink-2: #ff79c6;
+		--color-pink-3: #e660ad;
 
 		--color-accent: @accent-color;
 
-		--color-background-1: e("var(--color-@{dracula-style}-background-1)");
-		--color-background-2: e("var(--color-@{dracula-style}-background-2)");
-		--color-background-3: e("var(--color-@{dracula-style}-background-3)");
-		--color-background-4: e("var(--color-@{dracula-style}-background-4)");
-		--color-background-5: e("var(--color-@{dracula-style}-background-5)");
-
-		--color-foreground-1: e("var(--color-@{dracula-style}-foreground-1)");
-		--color-foreground-2: e("var(--color-@{dracula-style}-foreground-2)");
-		--color-foreground-3: e("var(--color-@{dracula-style}-foreground-3)");
-
-		--color-shadow-1: e("var(--color-@{dracula-style}-shadow-1)");
-		--color-shadow-2: e("var(--color-@{dracula-style}-shadow-2)");
-		--color-shadow-3: e("var(--color-@{dracula-style}-shadow-3)");
+		--drx-transition-speed: 0.25s;
+		--drx-border-radius: 10px;
+		--drx-border-width: 2px;
+		--drx-shadow-radius: 8px;
 	}
 
-	html {background-color: var(--color-background-4) !important;}
+	html {
+		background-color: var(--drx-color-background-4) !important;
+	}
 
 	body {
-		--buttonCounter-default-bgColor-rest: var(--color-background-4);
+		--buttonCounter-default-bgColor-rest: var(--drx-color-background-4);
 
-		--button-danger-bgColor-rest: var(--color-background-5);
-		--button-default-bgColor-rest: var(--color-background-5);
-		--button-default-borderColor-disabled: transparent;
-		--button-default-borderColor-rest: transparent;
-		--button-default-bgColor-disabled: var(--color-background-5);
-		--button-default-bgColor-hover: var(--color-background-2);
-		--button-default-borderColor-hover: transparent;
-		--button-default-bgColor-active: var(--color-background-2);
-		--button-default-borderColor-active: transparent;
-		--button-default-fgColor-rest: var(--color-foreground-1);
-		--button-primary-fgColor-disabled: var(--color-foreground-3);
+		--button-danger-bgColor-rest: var(--drx-color-background-5);
+		--button-default-bgColor-rest: var(--drx-color-background-2);
+		--button-default-borderColor-disabled: var(--drx-color-border);
+		--button-default-borderColor-rest: var(--drx-color-border);
+		--button-default-bgColor-disabled: var(--drx-color-background-5);
+		--button-default-bgColor-hover: var(--drx-color-background-1);
+		--button-default-borderColor-hover: var(--color-accent);
+		--button-default-bgColor-active: var(--drx-color-background-2);
+		--button-default-borderColor-active: var(--drx-color-background-1);
+		--button-default-fgColor-rest: var(--drx-color-foreground-1);
+		--button-primary-fgColor-disabled: var(--drx-color-foreground-3);
 		--button-star-iconColor: var(--color-yellow-2);
 
 		--button-primary-bgColor-rest: var(--color-accent);
@@ -125,21 +119,21 @@
 		--button-primary-bgColor-disabled: var(--color-comment);
 		--button-primary-borderColor-disabled: var(--color-comment);
 
-		--bgColor-accent-muted: var(--color-background-2);
+		--bgColor-accent-muted: var(--drx-color-background-3);
 		--bgColor-attention-muted: var(--color-accent);
-		--bgColor-default: var(--color-background-4);
-		--bgColor-inset: var(--color-background-5);
-		--bgColor-muted: var(--color-background-5);
-		--bgColor-neutral-muted: var(--color-background-2);
-		--bgColor-emphasis: var(--color-background-5) !important;
+		--bgColor-default: var(--drx-color-background-5);
+		--bgColor-inset: var(--drx-color-background-4);
+		--bgColor-muted: var(--drx-color-background-5);
+		--bgColor-neutral-muted: var(--drx-color-background-2);
+		--bgColor-emphasis: var(--drx-color-background-5) !important;
 		--bgColor-accent-emphasis: var(--color-accent);
 
-		--overlay-bgColor: var(--color-background-4);
+		--overlay-bgColor: var(--drx-color-background-4);
 
-		--fgColor-default: var(--color-foreground-1);
-		--fgColor-onEmphasis: var(--color-foreground-1);
-		--fgColor-disabled: var(--color-background-2);
-		--fgColor-muted: var(--color-foreground-2);
+		--fgColor-default: var(--drx-color-foreground-1);
+		--fgColor-onEmphasis: var(--drx-color-foreground-1);
+		--fgColor-disabled: var(--drx-color-foreground-3);
+		--fgColor-muted: var(--drx-color-foreground-2);
 		--fgColor-danger: var(--color-red-2);
 		--fgColor-attention: var(--color-orange-2);
 		--fgColor-success: var(--color-green-2);
@@ -148,80 +142,188 @@
 
 		--focus-outlineColor: var(--color-accent);
 
-		--border: var(--color-background-2);
+		--border: var(--drx-color-background-2);
 		--borderColor-accent-emphasis: var(--color-accent);
-		--borderColor-default: e("var(--color-@{dracula-style}-border)");
-		--borderColor-muted: var(--color-background-2);
-		--borderColor-neutral-muted: var(--color-background-2);
+		--borderColor-default: var(--drx-color-border);
+		--borderColor-muted: var(--drx-color-background-2);
+		--borderColor-neutral-muted: var(--drx-color-background-2);
 		--borderColor-danger-emphasis: var(--color-red-2);
 		--borderColor-attention-emphasis: var(--color-orange-2);
-		--borderColor-attention-muted: transparent;
-		--borderColor-accent-muted:transparent;
+		--borderColor-attention-muted: red;
+		--borderColor-accent-muted: red;
 
-		--controlKnob-bgColor-rest: var(--color-background-2);
-		--controlKnob-borderColor-rest: transparent;
-		--controlTrack-bgColor-rest: var(--color-background-5);
-		--controlTrack-bgColor-active: var(--color-background-2);
+		--controlKnob-bgColor-rest: var(--drx-color-background-2);
+		--controlKnob-borderColor-rest: red;
+		--controlTrack-bgColor-rest: var(--drx-color-background-5);
+		--controlTrack-bgColor-active: var(--drx-color-background-2);
 		--controlTrack-bgColor-hover: var(--color-accent);
-		--control-borderColor-rest: var(--color-background-5);
+		--control-borderColor-rest: var(--drx-color-background-5);
 		--control-transparent-bgColor-active: var(--color-accent);
-		--control-transparent-bgColor-hover: var(--color-background-2);
-		--control-transparent-bgColor-selected: var(--color-background-2);
+		--control-transparent-bgColor-hover: var(--drx-color-background-2);
+		--control-transparent-bgColor-selected: var(--drx-color-background-2);
 
-		--contribution-default-bgColor-0: var(--color-background-5);
+		--contribution-default-bgColor-0: var(--drx-color-background-5);
 		--contribution-default-bgColor-1: fade(@accent-color, 25%);
 		--contribution-default-bgColor-2: fade(@accent-color, 50%);
 		--contribution-default-bgColor-3: fade(@accent-color, 75%);
 		--contribution-default-bgColor-4: fade(@accent-color, 100%);
 
-		--color-user-mention-fg: var(--color-foreground-1);
+		--color-user-mention-fg: var(--drx-color-foreground-1);
 		--color-user-mention-bg: var(--color-accent);
-		--page-header-bgColor: var(--color-background-5);
+		--page-header-bgColor: var(--drx-color-background-5);
 
 		--underlineNav-borderColor-active: var(--color-accent);
 
-		--menu-bgColor-active: var(--color-background-2);
+		--menu-bgColor-active: var(--drx-color-background-2);
+
+		--borderWidth-thin: var(--drx-border-width);
 	}
 
-	.TextInput-wrapper, .react-directory-row, .kHyYUy {
-		background-color: var(--color-background-5);
+	.TextInput-wrapper,
+	.react-directory-row,
+	.kHyYUy {
+		background-color: var(--drx-color-background-4);
 		box-shadow: none;
 	}
 
-	.pinned-item-list-item-content {
-		background: var(--color-background-5);
-		padding: 1rem;
-		border-radius: 1rem;
-		box-shadow: var(--color-shadow-2) 0rem 0rem 1rem;
+	/* General buttons styling */
+	.Button.Button--iconOnly.Button--secondary.Button--medium.AppHeader-button,
+	.AppHeader .AppHeader-button,
+	.btn-sm.btn,
+	.Box-sc-g0xbh4-0.JMXqM.prc-Button-ButtonBase-c50BI.overview-ref-selector.width-full,
+	.prc-Button-ButtonBase-c50BI.prc-Button-IconButton-szpyj,
+	.form-control.width-full,
+	.btn,
+	.Box-sc-g0xbh4-0.vcvyP.TextInput-wrapper.prc-components-TextInputWrapper-i1ofR.prc-components-TextInputBaseWrapper-ueK9q {
+		background-color: var(--drx-color-background-2);
+		border: var(--drx-border-width) solid var(--drx-color-border);
 	}
 
-	.kHyYUy:hover, .AppHeader-search {
-		background-color: var(--color-background-5);
+	.pinned-item-list-item-content {
+		background: var(--drx-color-background-4);
+		padding: 1rem;
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-radius: var(--drx-border-radius);
+		border: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	.Box.mt-4 {
+		background-color: var(--drx-color-background-4);
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-radius: var(--drx-border-radius);
+		border: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	.col-12.col-lg-10,
+	.h-card.mt-5 {
+		padding: 1rem;
+		background-color: var(--drx-color-background-4);
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-radius: var(--drx-border-radius);
+		border: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	.mt-5 {
+		margin-top: 1.5rem !important;
+	}
+
+	.Layout.Layout--sidebarPosition-start .Layout-sidebar {
+		margin-right: 1rem;
+	}
+
+	.kHyYUy:hover,
+	.AppHeader-search {
+		background-color: var(--drx-color-background-5);
 	}
 
 	.UnderlineNav {
 		box-shadow: none;
 	}
 
+	.bgColor-muted.p-1.rounded-top-2 {
+		background: var(--drx-color-background-2) !important;
+	}
+
 	.form-control {
-		background: var(--color-background-5);
+		background: var(--drx-color-background-5);
 		border: none;
 	}
 
-	.iXWA-dl,.AppHeader {
-		box-shadow: var(--color-shadow-2) 0rem 0rem 1rem;
-		border: none;
+	.iXWA-dl,
+	.AppHeader {
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-bottom: var(--drx-border-width) solid var(--drx-color-border);
 	}
 
 	.p-3 {
 		padding: 0.25rem !important;
 	}
-	
+
+	/* Removes the border for general box elements */
 	.Box {
 		border: none;
 	}
-	
-	:root, [data-color-mode=light][data-light-theme*=light], [data-color-mode=dark][data-dark-theme*=light] {
-		background: var(--color-background-5);
+
+	/* Fix background for activity overview */
+	.Box.mb-5.p-3.activity-overview-box.border-top.border-xl-top-0 {
+		background: transparent;
+	}
+
+	/* Header of repository readme */
+	.OverviewRepoFiles-module__Box_3--Bi2jM {
+		background: var(--drx-color-background-2);
+	}
+
+	/* Body of repository readme */
+	.OverviewRepoFiles-module__Box_2--yIjMp {
+		background: var(--drx-color-background-4);
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-radius: var(--drx-border-radius);
+		border: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	.markdown-body h1,
+	.markdown-body h2,
+	.markdown-body h3,
+	.markdown-body h4,
+	.markdown-body h5,
+	.markdown-body h6 {
+		border-bottom: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	.markdown-body hr {
+		height: var(--drx-border-width);
+	}
+
+	/* Background for repository directories */
+	.Box-sc-g0xbh4-0.fdROMU {
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius) !important;
+		border: var(--drx-border-width) solid var(--drx-color-border) !important;
+	}
+
+	/* Repository settings edit box */
+	.Box.d-flex.flex-column.anim-fade-in.fast.Box-overlay--wide.overflow-x-hidden {
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius);
+		border-radius: var(--drx-border-radius);
+		border: var(--drx-border-width) solid var(--drx-color-border);
+	}
+
+	/* Fix border for AppHeader search keyboard shortcut */
+	.AppHeader-search-kbd {
+		border: none !important;
+	}
+
+	.dark-backdrop {
+		background: #44475a3f;
+	}
+
+	.color-shadow-large {
+		box-shadow: var(--drx-color-shadow-3) 0rem 0rem var(--drx-shadow-radius) !important;
+	}
+
+	:root,
+	[data-color-mode="light"][data-light-theme*="light"],
+	[data-color-mode="dark"][data-dark-theme*="light"] {
+		background: var(--drx-color-background-5);
 	}
 }
